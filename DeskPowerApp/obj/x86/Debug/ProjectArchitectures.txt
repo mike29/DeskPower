@@ -1,0 +1,2 @@
+C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\DeskPowerApp.csproj;x86
+C:\Users\Michael M. Simon\source\repos\DeskPowerApp\Draft.Model\DeskPowerApp.Model.csproj;neutral

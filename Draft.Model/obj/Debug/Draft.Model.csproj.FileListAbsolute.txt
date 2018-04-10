@@ -1,0 +1,5 @@
+C:\Users\Michael M. Simon\source\repos\DeskPowerApp\Draft.Model\bin\Debug\Draft.Model.dll
+C:\Users\Michael M. Simon\source\repos\DeskPowerApp\Draft.Model\bin\Debug\Draft.Model.pdb
+C:\Users\Michael M. Simon\source\repos\DeskPowerApp\Draft.Model\obj\Debug\Draft.Model.csproj.CoreCompileInputs.cache
+C:\Users\Michael M. Simon\source\repos\DeskPowerApp\Draft.Model\obj\Debug\Draft.Model.dll
+C:\Users\Michael M. Simon\source\repos\DeskPowerApp\Draft.Model\obj\Debug\Draft.Model.pdb

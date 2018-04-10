@@ -1,0 +1,1 @@
+c:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\DeskPowerApp.csproj;arm
