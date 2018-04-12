@@ -131,6 +131,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\img\BGJournalist.png" />
+    <Content Include="Assets\img\equipment.jpg" />
+    <Content Include="Assets\img\g-crescoli-365895-unsplash.jpg" />
+    <Content Include="Assets\img\gun.jpg" />
+    <Content Include="Assets\img\music.jpg" />
+    <Content Include="Assets\img\photo-1504.jpg" />
+    <Content Include="Assets\img\police.jpg" />
+    <Content Include="Assets\img\ptree.jpg" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />

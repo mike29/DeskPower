@@ -415,6 +415,27 @@
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\Assets\img\equipment.jpg">
+      <PackagePath>Assets\img\equipment.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\Assets\img\g-crescoli-365895-unsplash.jpg">
+      <PackagePath>Assets\img\g-crescoli-365895-unsplash.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\Assets\img\gun.jpg">
+      <PackagePath>Assets\img\gun.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\Assets\img\music.jpg">
+      <PackagePath>Assets\img\music.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\Assets\img\photo-1504.jpg">
+      <PackagePath>Assets\img\photo-1504.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\Assets\img\police.jpg">
+      <PackagePath>Assets\img\police.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\Assets\img\ptree.jpg">
+      <PackagePath>Assets\img\ptree.jpg</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>

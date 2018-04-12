@@ -31,13 +31,13 @@
     <AppXManifest Include="C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-04-12T14:26:12.745</Modified>
+      <Modified>2018-04-12T15:20:42.738</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\bin\x86\Debug\DeskPowerApp.exe">
       <PackagePath>entrypoint\DeskPowerApp.exe</PackagePath>
-      <Modified>2018-04-12T14:26:11.488</Modified>
+      <Modified>2018-04-12T15:20:31.734</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\NuGetPackages\microsoft.csharp\4.0.1\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -513,7 +513,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Michael M. Simon\source\repos\DeskPowerApp\Draft.Model\bin\Debug\DeskPowerApp.Model.dll">
       <PackagePath>DeskPowerApp.Model.dll</PackagePath>
-      <Modified>2018-04-12T00:21:01.035</Modified>
+      <Modified>2018-04-12T14:44:24.980</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\Assets\img\BGJournalist.png">
       <PackagePath>Assets\img\BGJournalist.png</PackagePath>
@@ -553,13 +553,41 @@
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2018-04-09T20:57:54.652</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\Assets\img\equipment.jpg">
+      <PackagePath>Assets\img\equipment.jpg</PackagePath>
+      <Modified>2018-04-12T14:37:28.775</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\Assets\img\g-crescoli-365895-unsplash.jpg">
+      <PackagePath>Assets\img\g-crescoli-365895-unsplash.jpg</PackagePath>
+      <Modified>2018-04-12T14:42:27.854</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\Assets\img\gun.jpg">
+      <PackagePath>Assets\img\gun.jpg</PackagePath>
+      <Modified>2018-04-12T15:16:39.115</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\Assets\img\music.jpg">
+      <PackagePath>Assets\img\music.jpg</PackagePath>
+      <Modified>2018-04-12T15:15:20.463</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\Assets\img\photo-1504.jpg">
+      <PackagePath>Assets\img\photo-1504.jpg</PackagePath>
+      <Modified>2018-04-12T14:42:18.635</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\Assets\img\police.jpg">
+      <PackagePath>Assets\img\police.jpg</PackagePath>
+      <Modified>2018-04-12T15:17:32.651</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\Assets\img\ptree.jpg">
+      <PackagePath>Assets\img\ptree.jpg</PackagePath>
+      <Modified>2018-04-12T15:14:35.191</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
       <Modified>2018-04-09T20:57:54.662</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\bin\x86\Debug\DeskPowerApp.xr.xml">
       <PackagePath>DeskPowerApp.xr.xml</PackagePath>
-      <Modified>2018-04-12T13:09:56.286</Modified>
+      <Modified>2018-04-12T15:10:49.181</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -600,11 +628,11 @@
     <AppxPackagedFile Include="C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-04-12T14:26:12.273</Modified>
+      <Modified>2018-04-12T15:20:42.333</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\bin\x86\Debug\Core\DeskPowerApp.exe">
       <PackagePath>DeskPowerApp.exe</PackagePath>
-      <Modified>2018-04-12T14:26:12.736</Modified>
+      <Modified>2018-04-12T15:20:42.731</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
