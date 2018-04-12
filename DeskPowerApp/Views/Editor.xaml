@@ -160,7 +160,8 @@
                                         Background="#5F5C5C">
 
                                 <AppBarButton 
-                                    x:Name="openFileButton"                                     
+                                    x:Name="openFileButton"    
+                                    Click="OpenButton_Click" 
                                     Icon="OpenFile"
                                     ToolTipService.ToolTip="Open file" 
                                     Margin="8,0,10,0"
@@ -169,6 +170,7 @@
                                 <AppBarButton 
                                     Icon="Save" 
                                     ToolTipService.ToolTip="Save file"
+                                    Click="SaveButton_Click" 
                                     RelativePanel.RightOf="openFileButton" 
                                     Margin="8,0,10,0"
                                     Foreground="#FFF"/>
@@ -176,6 +178,7 @@
                                 <AppBarButton 
                                     Icon="Bold"  
                                     ToolTipService.ToolTip="Bold"
+                                    Click="BoldButton_Click" 
                                     RelativePanel.LeftOf="italicButton" 
                                     Margin="0,0,10,0"
                                     Foreground="#FFF"/>
@@ -183,6 +186,7 @@
                                 <AppBarButton 
                                     x:Name="italicButton" 
                                     Icon="Italic" 
+                                    Click="ItalicButton_Click" 
                                     ToolTipService.ToolTip="Italic" 
                                     RelativePanel.LeftOf="underlineButton" 
                                     Margin="0,0,10,0"
@@ -191,6 +195,7 @@
                                 <AppBarButton 
                                     x:Name="underlineButton" 
                                     Icon="Underline" 
+                                    Click="UnderlineButton_Click"
                                     ToolTipService.ToolTip="Underline" 
                                     RelativePanel.AlignRightWithPanel="True" 
                                     Margin="0,0,10,0"
@@ -199,8 +204,10 @@
 
                             <!--RICH TEXT EDITOR-->
                         <RichEditBox  
+                            
+                            IsSpellCheckEnabled="True"
                             Margin="0,65,0,0"
-                            x:Name="editor" 
+                            x:Name="draftEditor" 
                             Height="700"   
                             Background="#EFECEC"
                             RelativePanel.AlignLeftWithPanel="True" 

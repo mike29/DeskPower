@@ -30,7 +30,7 @@
         <Controls:HamburgerMenu.PrimaryButtons>
             <!--  mainpage button  -->
             <Controls:HamburgerButtonInfo ClearHistory="True" PageType="views:MainPage">
-                <StackPanel Orientation="Horizontal" BorderThickness="0 0 0 1" BorderBrush="Yellow">
+                <StackPanel Orientation="Horizontal" BorderThickness="0 0 0 0.2" BorderBrush="black">
                     <SymbolIcon Width="48"
                                 Height="48"
                                 Symbol="Home" />
@@ -41,7 +41,7 @@
             </Controls:HamburgerButtonInfo>
 
             <Controls:HamburgerButtonInfo ClearHistory="True" PageType="views:Editor">
-                <StackPanel Orientation="Horizontal" BorderThickness="0 0 0 1" BorderBrush="Yellow" >
+                <StackPanel Orientation="Horizontal" BorderThickness="0 0 0 0.2" BorderBrush="black" >
                     <SymbolIcon Width="48"
                                 Height="48"
                                 Symbol="Edit" />
@@ -52,7 +52,7 @@
             </Controls:HamburgerButtonInfo>
 
             <Controls:HamburgerButtonInfo ClearHistory="True" PageType="views:MainPage" >
-                <StackPanel Orientation="Horizontal" BorderThickness="0 0 0 1" BorderBrush="yellow" >
+                <StackPanel Orientation="Horizontal" BorderThickness="0 0 0 0.2" BorderBrush="black" >
                     <SymbolIcon Width="48"
                                 Height="48"
                                 Symbol="PostUpdate" />
@@ -95,10 +95,11 @@
                 <Controls:HamburgerButtonInfo.NavigationTransitionInfo>
                     <SuppressNavigationTransitionInfo />
                 </Controls:HamburgerButtonInfo.NavigationTransitionInfo>
-                <StackPanel Orientation="Horizontal">
+                <StackPanel Orientation="Horizontal" >
                     <SymbolIcon Width="48"
                                 Height="48"
-                                Symbol="Setting" />
+                                Symbol="Setting" 
+                                />
                     <TextBlock Margin="12,0,0,0"
                                VerticalAlignment="Center"
                                Text="Settings" />

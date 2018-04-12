@@ -99,15 +99,16 @@
                 <!--Backgroud Head Image-->
                 <Grid Grid.Row="0" 
                       Grid.RowSpan="1"
-                      Height="400">
+                      Margin="0,48,0,0"                      
+                      Height="260">
                
                 <Image x:ConnectionId='9' 
                     Name="BigImage"
                     Stretch="UniformToFill" 
                     Source="ms-appx:///Assets/img/BGJournalist.png" 
-                    Height="300"
+                    Height="260"
                     RelativePanel.AlignLeftWithPanel="True"
-                    RelativePanel.AlignRightWithPanel="True" />
+                    RelativePanel.AlignRightWithPanel="True" Margin="0,0,0,20" />
                 </Grid>
       
             <GridView x:ConnectionId='8' Grid.Row="1"                       

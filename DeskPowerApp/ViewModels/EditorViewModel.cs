@@ -8,6 +8,8 @@ using Template10.Services.NavigationService;
 using Windows.UI.Xaml.Navigation;
 using System.Collections.ObjectModel;
 using DeskPowerApp.Model;
+using DeskPowerApp.Views;
+using Windows.UI.Xaml.Controls;
 
 namespace DeskPowerApp.ViewModels
 {
@@ -51,6 +53,66 @@ namespace DeskPowerApp.ViewModels
             await Task.CompletedTask;
         }
 
+        RichEditBox draftREBS;
+        public async Task OpenFileBtnClickedAsync()
+        {
+            // Open a text file.
+            Windows.Storage.Pickers.FileOpenPicker open =
+                new Windows.Storage.Pickers.FileOpenPicker();
+            open.SuggestedStartLocation =
+                Windows.Storage.Pickers.PickerLocationId.DocumentsLibrary;
+            open.FileTypeFilter.Add(".rtf");
+
+            Windows.Storage.StorageFile file = await open.PickSingleFileAsync();
+
+            if (file != null)
+            {
+                try
+                {
+                    Windows.Storage.Streams.IRandomAccessStream randAccStream =
+                await file.OpenAsync(Windows.Storage.FileAccessMode.Read);
+                
+                    // Load the file into the Document property of the RichEditBox.
+                    draftREBS.Document.LoadFromStream(Windows.UI.Text.TextSetOptions.FormatRtf, randAccStream);
+                }
+                catch (Exception)
+                {
+                    Windows.UI.Xaml.Controls.ContentDialog errorDialog = new Windows.UI.Xaml.Controls.ContentDialog()
+                    {
+                        Title = "File open error",
+                        Content = "Sorry, I couldn't open the file.",
+                        PrimaryButtonText = "Ok"
+                    };
+
+                    await errorDialog.ShowAsync();
+                }
+            }
+        }
+
+        private RichEditBox GetEditorBox()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SaveFileBtnClicked()
+        {
+            System.Diagnostics.Debug.WriteLine("Hello bebe");
+        }
+
+        public void BoldBtnClicked()
+        {
+            System.Diagnostics.Debug.WriteLine("Hello bebe");
+        }
+
+        public void ItalicBtnClicked()
+        {
+            System.Diagnostics.Debug.WriteLine("Hello bebe");
+        }
+
+        public void OpenFileBtnClicked()
+        {
+            System.Diagnostics.Debug.WriteLine("Hello bebe");
+        }
 
 
     }

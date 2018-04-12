@@ -247,6 +247,7 @@
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.RichEditBox">
+      <RootProperty Name="IsSpellCheckEnabled" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Height" />
       <RootProperty Name="Background" />

@@ -88,7 +88,7 @@
                             Background="#2C2626"
                             Height="{Binding ActualHeight, RelativeSource ={RelativeSource Mode=TemplatedParent}}">
         
-                        <ListView x:ConnectionId='15' 
+                        <ListView x:ConnectionId='17' 
                                                                   
                          Height="834">
                          
@@ -97,26 +97,26 @@
                                 x:Name="TripleLineDataTemplate" 
                                                          >
                                 
-                                <StackPanel x:ConnectionId='16'  
+                                <StackPanel x:ConnectionId='18'  
                                     Height="auto" 
                                     Padding="10" 
                                                                                   >
                                     
-                                    <TextBlock x:ConnectionId='17' 
+                                    <TextBlock x:ConnectionId='19' 
                                                                    
                                         TextWrapping="Wrap" 
                                         Style="{ThemeResource BaseTextBlockStyle}"    
                                         Foreground="#FFF"                                               
                                         Margin="0,0,0,0"/>
                                     
-                                    <TextBlock x:ConnectionId='18' 
+                                    <TextBlock x:ConnectionId='20' 
                                                                       
                                         Style="{ThemeResource CaptionTextBlockStyle}" 
                                         Foreground="#FFF" 
                                         Opacity=".8" 
                                         Margin="0,0,0,0"/>
                                     
-                                    <TextBlock x:ConnectionId='19' 
+                                    <TextBlock x:ConnectionId='21' 
                                                                          
                                         Style="{ThemeResource CaptionTextBlockStyle}" 
                                         Foreground="#FFF" 
@@ -160,37 +160,42 @@
                                         Background="#5F5C5C">
 
                                 <AppBarButton x:ConnectionId='12' 
-                                    x:Name="openFileButton"                                     
+                                    x:Name="openFileButton"    
+                                                             
                                     Icon="OpenFile"
                                     ToolTipService.ToolTip="Open file" 
                                     Margin="8,0,10,0"
                                     Foreground="#FFF"/>
 
-                                <AppBarButton 
+                                <AppBarButton x:ConnectionId='13' 
                                     Icon="Save" 
                                     ToolTipService.ToolTip="Save file"
+                                                             
                                     RelativePanel.RightOf="openFileButton" 
                                     Margin="8,0,10,0"
                                     Foreground="#FFF"/>
 
-                                <AppBarButton 
+                                <AppBarButton x:ConnectionId='14' 
                                     Icon="Bold"  
                                     ToolTipService.ToolTip="Bold"
+                                                             
                                     RelativePanel.LeftOf="italicButton" 
                                     Margin="0,0,10,0"
                                     Foreground="#FFF"/>
 
-                                <AppBarButton x:ConnectionId='13' 
+                                <AppBarButton x:ConnectionId='15' 
                                     x:Name="italicButton" 
                                     Icon="Italic" 
+                                                               
                                     ToolTipService.ToolTip="Italic" 
                                     RelativePanel.LeftOf="underlineButton" 
                                     Margin="0,0,10,0"
                                     Foreground="#FFF"/>
 
-                                <AppBarButton x:ConnectionId='14' 
+                                <AppBarButton x:ConnectionId='16' 
                                     x:Name="underlineButton" 
                                     Icon="Underline" 
+                                                                 
                                     ToolTipService.ToolTip="Underline" 
                                     RelativePanel.AlignRightWithPanel="True" 
                                     Margin="0,0,10,0"
@@ -199,8 +204,10 @@
 
                             <!--RICH TEXT EDITOR-->
                         <RichEditBox x:ConnectionId='11'  
+                            
+                            IsSpellCheckEnabled="True"
                             Margin="0,65,0,0"
-                            x:Name="editor" 
+                            x:Name="draftEditor" 
                             Height="700"   
                             Background="#EFECEC"
                             RelativePanel.AlignLeftWithPanel="True" 
