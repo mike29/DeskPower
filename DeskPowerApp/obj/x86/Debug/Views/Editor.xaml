@@ -1,17 +1,24 @@
 ﻿<Page x:ConnectionId='1'
+    
     x:Class="DeskPowerApp.Views.Editor"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:DeskPowerApp.Views"
     xmlns:controls="using:Template10.Controls"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="using:DeskPowerApp.ViewModels" 
+    xmlns:model="using:DeskPowerApp.Model"
+    xmlns:x1="using:System"
     mc:Ignorable="d">
 
+    <Page.DataContext>
+        <vm:EditorViewModel x:ConnectionId='2' x:Name="ViewModel"/>
+    </Page.DataContext>
+    
     <Grid  Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">      
             <VisualStateManager.VisualStateGroups>
-                <VisualStateGroup x:ConnectionId='2' x:Name="AdaptiveVisualStateGroup">
-                    <VisualState x:ConnectionId='3' x:Name="VisualStateNarrow">
+                <VisualStateGroup x:ConnectionId='3' x:Name="AdaptiveVisualStateGroup">
+                    <VisualState x:ConnectionId='4' x:Name="VisualStateNarrow">
                         <VisualState.StateTriggers>
                             <AdaptiveTrigger MinWindowWidth="{StaticResource NarrowMinWidth}" />
                         </VisualState.StateTriggers>
@@ -19,7 +26,7 @@
                             <!--  TODO: change properties for narrow view  -->
                         </VisualState.Setters>
                     </VisualState>
-                    <VisualState x:ConnectionId='4' x:Name="VisualStateNormal">
+                    <VisualState x:ConnectionId='5' x:Name="VisualStateNormal">
                         <VisualState.StateTriggers>
                             <AdaptiveTrigger MinWindowWidth="{StaticResource NormalMinWidth}" />
                         </VisualState.StateTriggers>
@@ -27,7 +34,7 @@
                             <!--  TODO: change properties for normal view  -->
                         </VisualState.Setters>
                     </VisualState>
-                    <VisualState x:ConnectionId='5' x:Name="VisualStateWide">
+                    <VisualState x:ConnectionId='6' x:Name="VisualStateWide">
                         <VisualState.StateTriggers>
                             <AdaptiveTrigger MinWindowWidth="{StaticResource WideMinWidth}" />
                         </VisualState.StateTriggers>
@@ -37,23 +44,23 @@
                     </VisualState>
                 </VisualStateGroup>
             </VisualStateManager.VisualStateGroups>
-
-            <!--  header  -->
-            <controls:PageHeader x:ConnectionId='6' 
+       
+        <!--  header  -->
+            <controls:PageHeader x:ConnectionId='7' 
                 x:Name="pageHeader"                                                    
                 RelativePanel.AlignLeftWithPanel="True"   
                 RelativePanel.AlignRightWithPanel="True" 
                 RelativePanel.AlignTopWithPanel="True"                                  
-                Text="Detail Page" />
+                Text="Draft Editor" />
         
         <!--  ALL CONTENTS  -->
-        <Grid x:ConnectionId='7' x:Name="FullScreenEditor"
+        <Grid x:ConnectionId='8' x:Name="FullScreenEditor"
              Margin="0,48,0,0"
               Background="#010101"
              RelativePanel.Below="pageHeader">            
        
             <!--CONTENT EDITOR THREE COLUMN CONTAINER-->
-            <Grid x:ConnectionId='8' 
+            <Grid x:ConnectionId='9' 
                     x:Name="controlGrid"
                     HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
                     Width="{Binding ActualWidth, RelativeSource = {RelativeSource Mode=TemplatedParent}}" 
@@ -71,25 +78,72 @@
                 </Grid.ColumnDefinitions>
                 
                 <!--VIEW LIST OF DRAFTS SECTION-->
-                <StackPanel 
-                            Grid.Column="0"                               
+                <ScrollViewer 
+                 BringIntoViewOnFocusChange="True"
+                  VerticalScrollBarVisibility="Auto">
+                    <StackPanel 
+                            Grid.Column="0"  
+                            Margin="0,0,0,0"
+                            Padding="2"
                             Background="#2C2626"
                             Height="{Binding ActualHeight, RelativeSource ={RelativeSource Mode=TemplatedParent}}">
+        
+                        <ListView x:ConnectionId='15' 
+                                                                  
+                         Height="834">
+                         
+                        <ListView.ItemTemplate>
+                            <DataTemplate 
+                                x:Name="TripleLineDataTemplate" 
+                                                         >
+                                
+                                <StackPanel x:ConnectionId='16'  
+                                    Height="auto" 
+                                    Padding="10" 
+                                                                                  >
+                                    
+                                    <TextBlock x:ConnectionId='17' 
+                                                                   
+                                        TextWrapping="Wrap" 
+                                        Style="{ThemeResource BaseTextBlockStyle}"    
+                                        Foreground="#FFF"                                               
+                                        Margin="0,0,0,0"/>
+                                    
+                                    <TextBlock x:ConnectionId='18' 
+                                                                      
+                                        Style="{ThemeResource CaptionTextBlockStyle}" 
+                                        Foreground="#FFF" 
+                                        Opacity=".8" 
+                                        Margin="0,0,0,0"/>
+                                    
+                                    <TextBlock x:ConnectionId='19' 
+                                                                         
+                                        Style="{ThemeResource CaptionTextBlockStyle}" 
+                                        Foreground="#FFF" 
+                                        Opacity=".6" 
+                                        Margin="0,0,0,0"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                 
                 </StackPanel>
-                
+                </ScrollViewer>
+
                 <!--CONTENT EDITOR SECTION-->
                 <StackPanel 
                             Grid.Column="1"                     
                             Background="#211E1E">
-                    <ScrollViewer 
+                    <Grid 
                                 Padding="12,8,0,0" 
                                 RelativePanel.AlignBottomWithPanel="True"
                                 RelativePanel.AlignLeftWithPanel="True"
                                 RelativePanel.AlignRightWithPanel="True"
                                 RelativePanel.Below="FullScreenEditor"
-                                VerticalScrollBarVisibility="Auto">
+                                Height="759">
                         
                          <!--TEXT AREA AND FORMAT BUTTONS-->
+                        <!--Fixthe the stack panel that holds the buttons -->
                         <RelativePanel Margin="0,0,10,5" 
                                        HorizontalAlignment="Stretch" 
                                        Background="#FFF">
@@ -103,58 +157,82 @@
                             <StackPanel Orientation="Horizontal" 
                                         RelativePanel.AlignLeftWithPanel="True" 
                                         RelativePanel.AlignRightWithPanel="True" 
-                                        Background="#f1f1f1">
+                                        Background="#5F5C5C">
 
-                                <AppBarButton x:ConnectionId='10' 
-                                    x:Name="openFileButton" 
+                                <AppBarButton x:ConnectionId='12' 
+                                    x:Name="openFileButton"                                     
                                     Icon="OpenFile"
                                     ToolTipService.ToolTip="Open file" 
-                                    Margin="8,0,10,0"/>
+                                    Margin="8,0,10,0"
+                                    Foreground="#FFF"/>
 
                                 <AppBarButton 
                                     Icon="Save" 
                                     ToolTipService.ToolTip="Save file"
                                     RelativePanel.RightOf="openFileButton" 
-                                    Margin="8,0,10,0"/>
+                                    Margin="8,0,10,0"
+                                    Foreground="#FFF"/>
 
                                 <AppBarButton 
                                     Icon="Bold"  
                                     ToolTipService.ToolTip="Bold"
                                     RelativePanel.LeftOf="italicButton" 
-                                    Margin="0,0,10,0"/>
+                                    Margin="0,0,10,0"
+                                    Foreground="#FFF"/>
 
-                                <AppBarButton x:ConnectionId='11' 
+                                <AppBarButton x:ConnectionId='13' 
                                     x:Name="italicButton" 
                                     Icon="Italic" 
                                     ToolTipService.ToolTip="Italic" 
-                                    RelativePanel.LeftOf="underlineButton" Margin="0,0,10,0"/>
+                                    RelativePanel.LeftOf="underlineButton" 
+                                    Margin="0,0,10,0"
+                                    Foreground="#FFF"/>
 
-                                <AppBarButton x:ConnectionId='12' 
+                                <AppBarButton x:ConnectionId='14' 
                                     x:Name="underlineButton" 
                                     Icon="Underline" 
                                     ToolTipService.ToolTip="Underline" 
                                     RelativePanel.AlignRightWithPanel="True" 
-                                    Margin="0,0,10,0"/>
+                                    Margin="0,0,10,0"
+                                    Foreground="#FFF"/>
                             </StackPanel>
 
                             <!--RICH TEXT EDITOR-->
-                        <RichEditBox x:ConnectionId='9'                             
+                        <RichEditBox x:ConnectionId='11'  
+                            Margin="0,65,0,0"
                             x:Name="editor" 
-                            Height="700"                             
+                            Height="700"   
+                            Background="#EFECEC"
                             RelativePanel.AlignLeftWithPanel="True" 
-                            RelativePanel.AlignRightWithPanel="True"/>
-                            
+                            RelativePanel.AlignRightWithPanel="True" />
+                            <!--TextChanged="editor_TextChanged"-->
                         </RelativePanel>
-                    </ScrollViewer>
+                    </Grid>
                 </StackPanel>
                 
                 <!--DRAFT META DATA INSERTION SECTION-->
                 <StackPanel 
                             Grid.Column="2" 
-                            Background="#2C2626">
+                            Background="#2C2626"
+                            Orientation="Vertical">
+                    
+                    <StackPanel Margin="10">
+
+                        <TextBlock Foreground="#fff">Title</TextBlock>
+                        <TextBox></TextBox>
+
+                        <TextBlock Foreground="#fff">Author</TextBlock>
+                        <TextBox></TextBox>
+                       
+                        <CalendarDatePicker x:ConnectionId='10' 
+                        x:Name="draftCalendarDatePicker" 
+                        Header="Created date"
+                        Foreground="#FFF" />
+                    </StackPanel>
                 </StackPanel>
             </Grid>
         </Grid>
     </Grid>
+    
 </Page>
 

@@ -156,7 +156,7 @@ namespace DeskPowerApp.DeskPowerApp_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[80];
+            _typeNameTable = new string[81];
             _typeNameTable[0] = "Template10.Common.BootStrapper";
             _typeNameTable[1] = "Windows.UI.Xaml.Application";
             _typeNameTable[2] = "Template10.Common.StateItems";
@@ -214,31 +214,32 @@ namespace DeskPowerApp.DeskPowerApp_XamlTypeInfo
             _typeNameTable[54] = "Template10.Common.IStateItems";
             _typeNameTable[55] = "DeskPowerApp.Views.DetailPage";
             _typeNameTable[56] = "Windows.UI.Xaml.Controls.Page";
-            _typeNameTable[57] = "DeskPowerApp.Views.Editor";
-            _typeNameTable[58] = "DeskPowerApp.ViewModels.MainPageViewModel";
-            _typeNameTable[59] = "System.Collections.ObjectModel.ObservableCollection`1<DeskPowerApp.Model.Draft>";
-            _typeNameTable[60] = "System.Collections.ObjectModel.Collection`1<DeskPowerApp.Model.Draft>";
-            _typeNameTable[61] = "DeskPowerApp.Model.Draft";
-            _typeNameTable[62] = "Int32";
-            _typeNameTable[63] = "DraftCategories";
-            _typeNameTable[64] = "System.DateTime";
-            _typeNameTable[65] = "DeskPowerApp.Views.MainPage";
-            _typeNameTable[66] = "DeskPowerApp.ViewModels.SettingsPageViewModel";
-            _typeNameTable[67] = "DeskPowerApp.ViewModels.SettingsPartViewModel";
-            _typeNameTable[68] = "DeskPowerApp.ViewModels.AboutPartViewModel";
-            _typeNameTable[69] = "Template10.Converters.ValueWhenConverter";
-            _typeNameTable[70] = "DeskPowerApp.Views.SettingsPage";
-            _typeNameTable[71] = "Microsoft.Xaml.Interactivity.Interaction";
-            _typeNameTable[72] = "Microsoft.Xaml.Interactivity.BehaviorCollection";
-            _typeNameTable[73] = "Windows.UI.Xaml.DependencyObjectCollection";
-            _typeNameTable[74] = "Microsoft.Xaml.Interactions.Core.EventTriggerBehavior";
-            _typeNameTable[75] = "Microsoft.Xaml.Interactivity.Behavior";
-            _typeNameTable[76] = "Microsoft.Xaml.Interactivity.ActionCollection";
-            _typeNameTable[77] = "Template10.Behaviors.MessageDialogAction";
-            _typeNameTable[78] = "DeskPowerApp.Views.Shell";
-            _typeNameTable[79] = "DeskPowerApp.Views.Splash";
+            _typeNameTable[57] = "DeskPowerApp.ViewModels.EditorViewModel";
+            _typeNameTable[58] = "System.Collections.ObjectModel.ObservableCollection`1<DeskPowerApp.Model.Draft>";
+            _typeNameTable[59] = "System.Collections.ObjectModel.Collection`1<DeskPowerApp.Model.Draft>";
+            _typeNameTable[60] = "DeskPowerApp.Model.Draft";
+            _typeNameTable[61] = "Int32";
+            _typeNameTable[62] = "DraftCategories";
+            _typeNameTable[63] = "System.DateTime";
+            _typeNameTable[64] = "DeskPowerApp.Views.Editor";
+            _typeNameTable[65] = "DeskPowerApp.ViewModels.MainPageViewModel";
+            _typeNameTable[66] = "DeskPowerApp.Views.MainPage";
+            _typeNameTable[67] = "DeskPowerApp.ViewModels.SettingsPageViewModel";
+            _typeNameTable[68] = "DeskPowerApp.ViewModels.SettingsPartViewModel";
+            _typeNameTable[69] = "DeskPowerApp.ViewModels.AboutPartViewModel";
+            _typeNameTable[70] = "Template10.Converters.ValueWhenConverter";
+            _typeNameTable[71] = "DeskPowerApp.Views.SettingsPage";
+            _typeNameTable[72] = "Microsoft.Xaml.Interactivity.Interaction";
+            _typeNameTable[73] = "Microsoft.Xaml.Interactivity.BehaviorCollection";
+            _typeNameTable[74] = "Windows.UI.Xaml.DependencyObjectCollection";
+            _typeNameTable[75] = "Microsoft.Xaml.Interactions.Core.EventTriggerBehavior";
+            _typeNameTable[76] = "Microsoft.Xaml.Interactivity.Behavior";
+            _typeNameTable[77] = "Microsoft.Xaml.Interactivity.ActionCollection";
+            _typeNameTable[78] = "Template10.Behaviors.MessageDialogAction";
+            _typeNameTable[79] = "DeskPowerApp.Views.Shell";
+            _typeNameTable[80] = "DeskPowerApp.Views.Splash";
 
-            _typeTable = new global::System.Type[80];
+            _typeTable = new global::System.Type[81];
             _typeTable[0] = typeof(global::Template10.Common.BootStrapper);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Application);
             _typeTable[2] = typeof(global::Template10.Common.StateItems);
@@ -296,29 +297,30 @@ namespace DeskPowerApp.DeskPowerApp_XamlTypeInfo
             _typeTable[54] = typeof(global::Template10.Common.IStateItems);
             _typeTable[55] = typeof(global::DeskPowerApp.Views.DetailPage);
             _typeTable[56] = typeof(global::Windows.UI.Xaml.Controls.Page);
-            _typeTable[57] = typeof(global::DeskPowerApp.Views.Editor);
-            _typeTable[58] = typeof(global::DeskPowerApp.ViewModels.MainPageViewModel);
-            _typeTable[59] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::DeskPowerApp.Model.Draft>);
-            _typeTable[60] = typeof(global::System.Collections.ObjectModel.Collection<global::DeskPowerApp.Model.Draft>);
-            _typeTable[61] = typeof(global::DeskPowerApp.Model.Draft);
-            _typeTable[62] = typeof(global::System.Int32);
-            _typeTable[63] = typeof(global::DraftCategories);
-            _typeTable[64] = typeof(global::System.DateTime);
-            _typeTable[65] = typeof(global::DeskPowerApp.Views.MainPage);
-            _typeTable[66] = typeof(global::DeskPowerApp.ViewModels.SettingsPageViewModel);
-            _typeTable[67] = typeof(global::DeskPowerApp.ViewModels.SettingsPartViewModel);
-            _typeTable[68] = typeof(global::DeskPowerApp.ViewModels.AboutPartViewModel);
-            _typeTable[69] = typeof(global::Template10.Converters.ValueWhenConverter);
-            _typeTable[70] = typeof(global::DeskPowerApp.Views.SettingsPage);
-            _typeTable[71] = typeof(global::Microsoft.Xaml.Interactivity.Interaction);
-            _typeTable[72] = typeof(global::Microsoft.Xaml.Interactivity.BehaviorCollection);
-            _typeTable[73] = typeof(global::Windows.UI.Xaml.DependencyObjectCollection);
-            _typeTable[74] = typeof(global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior);
-            _typeTable[75] = typeof(global::Microsoft.Xaml.Interactivity.Behavior);
-            _typeTable[76] = typeof(global::Microsoft.Xaml.Interactivity.ActionCollection);
-            _typeTable[77] = typeof(global::Template10.Behaviors.MessageDialogAction);
-            _typeTable[78] = typeof(global::DeskPowerApp.Views.Shell);
-            _typeTable[79] = typeof(global::DeskPowerApp.Views.Splash);
+            _typeTable[57] = typeof(global::DeskPowerApp.ViewModels.EditorViewModel);
+            _typeTable[58] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::DeskPowerApp.Model.Draft>);
+            _typeTable[59] = typeof(global::System.Collections.ObjectModel.Collection<global::DeskPowerApp.Model.Draft>);
+            _typeTable[60] = typeof(global::DeskPowerApp.Model.Draft);
+            _typeTable[61] = typeof(global::System.Int32);
+            _typeTable[62] = typeof(global::DraftCategories);
+            _typeTable[63] = typeof(global::System.DateTime);
+            _typeTable[64] = typeof(global::DeskPowerApp.Views.Editor);
+            _typeTable[65] = typeof(global::DeskPowerApp.ViewModels.MainPageViewModel);
+            _typeTable[66] = typeof(global::DeskPowerApp.Views.MainPage);
+            _typeTable[67] = typeof(global::DeskPowerApp.ViewModels.SettingsPageViewModel);
+            _typeTable[68] = typeof(global::DeskPowerApp.ViewModels.SettingsPartViewModel);
+            _typeTable[69] = typeof(global::DeskPowerApp.ViewModels.AboutPartViewModel);
+            _typeTable[70] = typeof(global::Template10.Converters.ValueWhenConverter);
+            _typeTable[71] = typeof(global::DeskPowerApp.Views.SettingsPage);
+            _typeTable[72] = typeof(global::Microsoft.Xaml.Interactivity.Interaction);
+            _typeTable[73] = typeof(global::Microsoft.Xaml.Interactivity.BehaviorCollection);
+            _typeTable[74] = typeof(global::Windows.UI.Xaml.DependencyObjectCollection);
+            _typeTable[75] = typeof(global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior);
+            _typeTable[76] = typeof(global::Microsoft.Xaml.Interactivity.Behavior);
+            _typeTable[77] = typeof(global::Microsoft.Xaml.Interactivity.ActionCollection);
+            _typeTable[78] = typeof(global::Template10.Behaviors.MessageDialogAction);
+            _typeTable[79] = typeof(global::DeskPowerApp.Views.Shell);
+            _typeTable[80] = typeof(global::DeskPowerApp.Views.Splash);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -365,22 +367,23 @@ namespace DeskPowerApp.DeskPowerApp_XamlTypeInfo
         private object Activate_49_Busy() { return new global::DeskPowerApp.Views.Busy(); }
         private object Activate_50_DetailPageViewModel() { return new global::DeskPowerApp.ViewModels.DetailPageViewModel(); }
         private object Activate_55_DetailPage() { return new global::DeskPowerApp.Views.DetailPage(); }
-        private object Activate_57_Editor() { return new global::DeskPowerApp.Views.Editor(); }
-        private object Activate_58_MainPageViewModel() { return new global::DeskPowerApp.ViewModels.MainPageViewModel(); }
-        private object Activate_59_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::DeskPowerApp.Model.Draft>(); }
-        private object Activate_60_Collection() { return new global::System.Collections.ObjectModel.Collection<global::DeskPowerApp.Model.Draft>(); }
-        private object Activate_61_Draft() { return new global::DeskPowerApp.Model.Draft(); }
-        private object Activate_65_MainPage() { return new global::DeskPowerApp.Views.MainPage(); }
-        private object Activate_66_SettingsPageViewModel() { return new global::DeskPowerApp.ViewModels.SettingsPageViewModel(); }
-        private object Activate_67_SettingsPartViewModel() { return new global::DeskPowerApp.ViewModels.SettingsPartViewModel(); }
-        private object Activate_68_AboutPartViewModel() { return new global::DeskPowerApp.ViewModels.AboutPartViewModel(); }
-        private object Activate_69_ValueWhenConverter() { return new global::Template10.Converters.ValueWhenConverter(); }
-        private object Activate_70_SettingsPage() { return new global::DeskPowerApp.Views.SettingsPage(); }
-        private object Activate_72_BehaviorCollection() { return new global::Microsoft.Xaml.Interactivity.BehaviorCollection(); }
-        private object Activate_74_EventTriggerBehavior() { return new global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior(); }
-        private object Activate_76_ActionCollection() { return new global::Microsoft.Xaml.Interactivity.ActionCollection(); }
-        private object Activate_77_MessageDialogAction() { return new global::Template10.Behaviors.MessageDialogAction(); }
-        private object Activate_78_Shell() { return new global::DeskPowerApp.Views.Shell(); }
+        private object Activate_57_EditorViewModel() { return new global::DeskPowerApp.ViewModels.EditorViewModel(); }
+        private object Activate_58_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::DeskPowerApp.Model.Draft>(); }
+        private object Activate_59_Collection() { return new global::System.Collections.ObjectModel.Collection<global::DeskPowerApp.Model.Draft>(); }
+        private object Activate_60_Draft() { return new global::DeskPowerApp.Model.Draft(); }
+        private object Activate_64_Editor() { return new global::DeskPowerApp.Views.Editor(); }
+        private object Activate_65_MainPageViewModel() { return new global::DeskPowerApp.ViewModels.MainPageViewModel(); }
+        private object Activate_66_MainPage() { return new global::DeskPowerApp.Views.MainPage(); }
+        private object Activate_67_SettingsPageViewModel() { return new global::DeskPowerApp.ViewModels.SettingsPageViewModel(); }
+        private object Activate_68_SettingsPartViewModel() { return new global::DeskPowerApp.ViewModels.SettingsPartViewModel(); }
+        private object Activate_69_AboutPartViewModel() { return new global::DeskPowerApp.ViewModels.AboutPartViewModel(); }
+        private object Activate_70_ValueWhenConverter() { return new global::Template10.Converters.ValueWhenConverter(); }
+        private object Activate_71_SettingsPage() { return new global::DeskPowerApp.Views.SettingsPage(); }
+        private object Activate_73_BehaviorCollection() { return new global::Microsoft.Xaml.Interactivity.BehaviorCollection(); }
+        private object Activate_75_EventTriggerBehavior() { return new global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior(); }
+        private object Activate_77_ActionCollection() { return new global::Microsoft.Xaml.Interactivity.ActionCollection(); }
+        private object Activate_78_MessageDialogAction() { return new global::Template10.Behaviors.MessageDialogAction(); }
+        private object Activate_79_Shell() { return new global::DeskPowerApp.Views.Shell(); }
         private void MapAdd_2_StateItems(object instance, object key, object item)
         {
             var collection = (global::System.Collections.Generic.IDictionary<global::System.String, global::System.Object>)instance;
@@ -407,25 +410,25 @@ namespace DeskPowerApp.DeskPowerApp_XamlTypeInfo
             var newItem = (global::Template10.Controls.HamburgerButtonInfo)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_59_ObservableCollection(object instance, object item)
+        private void VectorAdd_58_ObservableCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::DeskPowerApp.Model.Draft>)instance;
             var newItem = (global::DeskPowerApp.Model.Draft)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_60_Collection(object instance, object item)
+        private void VectorAdd_59_Collection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::DeskPowerApp.Model.Draft>)instance;
             var newItem = (global::DeskPowerApp.Model.Draft)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_72_BehaviorCollection(object instance, object item)
+        private void VectorAdd_73_BehaviorCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Windows.UI.Xaml.DependencyObject>)instance;
             var newItem = (global::Windows.UI.Xaml.DependencyObject)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_76_ActionCollection(object instance, object item)
+        private void VectorAdd_77_ActionCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Windows.UI.Xaml.DependencyObject>)instance;
             var newItem = (global::Windows.UI.Xaml.DependencyObject)item;
@@ -848,39 +851,31 @@ namespace DeskPowerApp.DeskPowerApp_XamlTypeInfo
                 xamlType = new global::DeskPowerApp.DeskPowerApp_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 57:   //  DeskPowerApp.Views.Editor
-                userType = new global::DeskPowerApp.DeskPowerApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_57_Editor;
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 58:   //  DeskPowerApp.ViewModels.MainPageViewModel
+            case 57:   //  DeskPowerApp.ViewModels.EditorViewModel
                 userType = new global::DeskPowerApp.DeskPowerApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Template10.Mvvm.ViewModelBase"));
-                userType.Activator = Activate_58_MainPageViewModel;
-                userType.AddMemberName("Value");
+                userType.Activator = Activate_57_EditorViewModel;
                 userType.AddMemberName("Drafts");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 59:   //  System.Collections.ObjectModel.ObservableCollection`1<DeskPowerApp.Model.Draft>
+            case 58:   //  System.Collections.ObjectModel.ObservableCollection`1<DeskPowerApp.Model.Draft>
                 userType = new global::DeskPowerApp.DeskPowerApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.Collection`1<DeskPowerApp.Model.Draft>"));
-                userType.CollectionAdd = VectorAdd_59_ObservableCollection;
+                userType.CollectionAdd = VectorAdd_58_ObservableCollection;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 60:   //  System.Collections.ObjectModel.Collection`1<DeskPowerApp.Model.Draft>
+            case 59:   //  System.Collections.ObjectModel.Collection`1<DeskPowerApp.Model.Draft>
                 userType = new global::DeskPowerApp.DeskPowerApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_60_Collection;
-                userType.CollectionAdd = VectorAdd_60_Collection;
+                userType.Activator = Activate_59_Collection;
+                userType.CollectionAdd = VectorAdd_59_Collection;
                 xamlType = userType;
                 break;
 
-            case 61:   //  DeskPowerApp.Model.Draft
+            case 60:   //  DeskPowerApp.Model.Draft
                 userType = new global::DeskPowerApp.DeskPowerApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_61_Draft;
+                userType.Activator = Activate_60_Draft;
                 userType.AddMemberName("DraftID");
                 userType.AddMemberName("DrafTitle");
                 userType.AddMemberName("DraftContent");
@@ -890,11 +885,11 @@ namespace DeskPowerApp.DeskPowerApp_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 62:   //  Int32
+            case 61:   //  Int32
                 xamlType = new global::DeskPowerApp.DeskPowerApp_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 63:   //  DraftCategories
+            case 62:   //  DraftCategories
                 userType = new global::DeskPowerApp.DeskPowerApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Sport", global::DraftCategories.Sport);
                 userType.AddEnumValue("Poletic", global::DraftCategories.Poletic);
@@ -904,45 +899,61 @@ namespace DeskPowerApp.DeskPowerApp_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 64:   //  System.DateTime
+            case 63:   //  System.DateTime
                 userType = new global::DeskPowerApp.DeskPowerApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 65:   //  DeskPowerApp.Views.MainPage
+            case 64:   //  DeskPowerApp.Views.Editor
                 userType = new global::DeskPowerApp.DeskPowerApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_65_MainPage;
+                userType.Activator = Activate_64_Editor;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 66:   //  DeskPowerApp.ViewModels.SettingsPageViewModel
+            case 65:   //  DeskPowerApp.ViewModels.MainPageViewModel
                 userType = new global::DeskPowerApp.DeskPowerApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Template10.Mvvm.ViewModelBase"));
-                userType.Activator = Activate_66_SettingsPageViewModel;
+                userType.Activator = Activate_65_MainPageViewModel;
+                userType.AddMemberName("Value");
+                userType.AddMemberName("Drafts");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 66:   //  DeskPowerApp.Views.MainPage
+                userType = new global::DeskPowerApp.DeskPowerApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_66_MainPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 67:   //  DeskPowerApp.ViewModels.SettingsPageViewModel
+                userType = new global::DeskPowerApp.DeskPowerApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Template10.Mvvm.ViewModelBase"));
+                userType.Activator = Activate_67_SettingsPageViewModel;
                 userType.AddMemberName("SettingsPartViewModel");
                 userType.AddMemberName("AboutPartViewModel");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 67:   //  DeskPowerApp.ViewModels.SettingsPartViewModel
+            case 68:   //  DeskPowerApp.ViewModels.SettingsPartViewModel
                 userType = new global::DeskPowerApp.DeskPowerApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Template10.Mvvm.ViewModelBase"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 68:   //  DeskPowerApp.ViewModels.AboutPartViewModel
+            case 69:   //  DeskPowerApp.ViewModels.AboutPartViewModel
                 userType = new global::DeskPowerApp.DeskPowerApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Template10.Mvvm.ViewModelBase"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 69:   //  Template10.Converters.ValueWhenConverter
+            case 70:   //  Template10.Converters.ValueWhenConverter
                 userType = new global::DeskPowerApp.DeskPowerApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_69_ValueWhenConverter;
+                userType.Activator = Activate_70_ValueWhenConverter;
                 userType.AddMemberName("When");
                 userType.AddMemberName("Value");
                 userType.AddMemberName("Otherwise");
@@ -951,33 +962,33 @@ namespace DeskPowerApp.DeskPowerApp_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 70:   //  DeskPowerApp.Views.SettingsPage
+            case 71:   //  DeskPowerApp.Views.SettingsPage
                 userType = new global::DeskPowerApp.DeskPowerApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_70_SettingsPage;
+                userType.Activator = Activate_71_SettingsPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 71:   //  Microsoft.Xaml.Interactivity.Interaction
+            case 72:   //  Microsoft.Xaml.Interactivity.Interaction
                 userType = new global::DeskPowerApp.DeskPowerApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.AddMemberName("Behaviors");
                 xamlType = userType;
                 break;
 
-            case 72:   //  Microsoft.Xaml.Interactivity.BehaviorCollection
+            case 73:   //  Microsoft.Xaml.Interactivity.BehaviorCollection
                 userType = new global::DeskPowerApp.DeskPowerApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObjectCollection"));
-                userType.CollectionAdd = VectorAdd_72_BehaviorCollection;
+                userType.CollectionAdd = VectorAdd_73_BehaviorCollection;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 73:   //  Windows.UI.Xaml.DependencyObjectCollection
+            case 74:   //  Windows.UI.Xaml.DependencyObjectCollection
                 xamlType = new global::DeskPowerApp.DeskPowerApp_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 74:   //  Microsoft.Xaml.Interactions.Core.EventTriggerBehavior
+            case 75:   //  Microsoft.Xaml.Interactions.Core.EventTriggerBehavior
                 userType = new global::DeskPowerApp.DeskPowerApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.Xaml.Interactivity.Behavior"));
-                userType.Activator = Activate_74_EventTriggerBehavior;
+                userType.Activator = Activate_75_EventTriggerBehavior;
                 userType.SetContentPropertyName("Microsoft.Xaml.Interactions.Core.EventTriggerBehavior.Actions");
                 userType.AddMemberName("Actions");
                 userType.AddMemberName("EventName");
@@ -985,36 +996,36 @@ namespace DeskPowerApp.DeskPowerApp_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 75:   //  Microsoft.Xaml.Interactivity.Behavior
+            case 76:   //  Microsoft.Xaml.Interactivity.Behavior
                 userType = new global::DeskPowerApp.DeskPowerApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
                 userType.AddMemberName("AssociatedObject");
                 xamlType = userType;
                 break;
 
-            case 76:   //  Microsoft.Xaml.Interactivity.ActionCollection
+            case 77:   //  Microsoft.Xaml.Interactivity.ActionCollection
                 userType = new global::DeskPowerApp.DeskPowerApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObjectCollection"));
-                userType.CollectionAdd = VectorAdd_76_ActionCollection;
+                userType.CollectionAdd = VectorAdd_77_ActionCollection;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 77:   //  Template10.Behaviors.MessageDialogAction
+            case 78:   //  Template10.Behaviors.MessageDialogAction
                 userType = new global::DeskPowerApp.DeskPowerApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
-                userType.Activator = Activate_77_MessageDialogAction;
+                userType.Activator = Activate_78_MessageDialogAction;
                 userType.AddMemberName("Title");
                 userType.AddMemberName("Content");
                 userType.AddMemberName("OkText");
                 xamlType = userType;
                 break;
 
-            case 78:   //  DeskPowerApp.Views.Shell
+            case 79:   //  DeskPowerApp.Views.Shell
                 userType = new global::DeskPowerApp.DeskPowerApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_78_Shell;
+                userType.Activator = Activate_79_Shell;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 79:   //  DeskPowerApp.Views.Splash
+            case 80:   //  DeskPowerApp.Views.Splash
                 userType = new global::DeskPowerApp.DeskPowerApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
                 userType.SetIsLocalType();
                 xamlType = userType;
@@ -1938,210 +1949,220 @@ namespace DeskPowerApp.DeskPowerApp_XamlTypeInfo
             var that = (global::Template10.Mvvm.ViewModelBase)instance;
             that.SessionState = (global::Template10.Common.IStateItems)Value;
         }
-        private object get_89_MainPageViewModel_Value(object instance)
+        private object get_89_EditorViewModel_Drafts(object instance)
         {
-            var that = (global::DeskPowerApp.ViewModels.MainPageViewModel)instance;
-            return that.Value;
-        }
-        private void set_89_MainPageViewModel_Value(object instance, object Value)
-        {
-            var that = (global::DeskPowerApp.ViewModels.MainPageViewModel)instance;
-            that.Value = (global::System.String)Value;
-        }
-        private object get_90_MainPageViewModel_Drafts(object instance)
-        {
-            var that = (global::DeskPowerApp.ViewModels.MainPageViewModel)instance;
+            var that = (global::DeskPowerApp.ViewModels.EditorViewModel)instance;
             return that.Drafts;
         }
-        private void set_90_MainPageViewModel_Drafts(object instance, object Value)
+        private void set_89_EditorViewModel_Drafts(object instance, object Value)
         {
-            var that = (global::DeskPowerApp.ViewModels.MainPageViewModel)instance;
+            var that = (global::DeskPowerApp.ViewModels.EditorViewModel)instance;
             that.Drafts = (global::System.Collections.ObjectModel.ObservableCollection<global::DeskPowerApp.Model.Draft>)Value;
         }
-        private object get_91_Draft_DraftID(object instance)
+        private object get_90_Draft_DraftID(object instance)
         {
             var that = (global::DeskPowerApp.Model.Draft)instance;
             return that.DraftID;
         }
-        private void set_91_Draft_DraftID(object instance, object Value)
+        private void set_90_Draft_DraftID(object instance, object Value)
         {
             var that = (global::DeskPowerApp.Model.Draft)instance;
             that.DraftID = (global::System.Int32)Value;
         }
-        private object get_92_Draft_DrafTitle(object instance)
+        private object get_91_Draft_DrafTitle(object instance)
         {
             var that = (global::DeskPowerApp.Model.Draft)instance;
             return that.DrafTitle;
         }
-        private void set_92_Draft_DrafTitle(object instance, object Value)
+        private void set_91_Draft_DrafTitle(object instance, object Value)
         {
             var that = (global::DeskPowerApp.Model.Draft)instance;
             that.DrafTitle = (global::System.String)Value;
         }
-        private object get_93_Draft_DraftContent(object instance)
+        private object get_92_Draft_DraftContent(object instance)
         {
             var that = (global::DeskPowerApp.Model.Draft)instance;
             return that.DraftContent;
         }
-        private void set_93_Draft_DraftContent(object instance, object Value)
+        private void set_92_Draft_DraftContent(object instance, object Value)
         {
             var that = (global::DeskPowerApp.Model.Draft)instance;
             that.DraftContent = (global::System.String)Value;
         }
-        private object get_94_Draft_DraftCategory(object instance)
+        private object get_93_Draft_DraftCategory(object instance)
         {
             var that = (global::DeskPowerApp.Model.Draft)instance;
             return that.DraftCategory;
         }
-        private void set_94_Draft_DraftCategory(object instance, object Value)
+        private void set_93_Draft_DraftCategory(object instance, object Value)
         {
             var that = (global::DeskPowerApp.Model.Draft)instance;
             that.DraftCategory = (global::DraftCategories)Value;
         }
-        private object get_95_Draft_DraftImage(object instance)
+        private object get_94_Draft_DraftImage(object instance)
         {
             var that = (global::DeskPowerApp.Model.Draft)instance;
             return that.DraftImage;
         }
-        private void set_95_Draft_DraftImage(object instance, object Value)
+        private void set_94_Draft_DraftImage(object instance, object Value)
         {
             var that = (global::DeskPowerApp.Model.Draft)instance;
             that.DraftImage = (global::System.String)Value;
         }
-        private object get_96_Draft_DraftCreatedDate(object instance)
+        private object get_95_Draft_DraftCreatedDate(object instance)
         {
             var that = (global::DeskPowerApp.Model.Draft)instance;
             return that.DraftCreatedDate;
         }
-        private void set_96_Draft_DraftCreatedDate(object instance, object Value)
+        private void set_95_Draft_DraftCreatedDate(object instance, object Value)
         {
             var that = (global::DeskPowerApp.Model.Draft)instance;
             that.DraftCreatedDate = (global::System.DateTime)Value;
         }
-        private object get_97_SettingsPageViewModel_SettingsPartViewModel(object instance)
+        private object get_96_MainPageViewModel_Value(object instance)
+        {
+            var that = (global::DeskPowerApp.ViewModels.MainPageViewModel)instance;
+            return that.Value;
+        }
+        private void set_96_MainPageViewModel_Value(object instance, object Value)
+        {
+            var that = (global::DeskPowerApp.ViewModels.MainPageViewModel)instance;
+            that.Value = (global::System.String)Value;
+        }
+        private object get_97_MainPageViewModel_Drafts(object instance)
+        {
+            var that = (global::DeskPowerApp.ViewModels.MainPageViewModel)instance;
+            return that.Drafts;
+        }
+        private void set_97_MainPageViewModel_Drafts(object instance, object Value)
+        {
+            var that = (global::DeskPowerApp.ViewModels.MainPageViewModel)instance;
+            that.Drafts = (global::System.Collections.ObjectModel.ObservableCollection<global::DeskPowerApp.Model.Draft>)Value;
+        }
+        private object get_98_SettingsPageViewModel_SettingsPartViewModel(object instance)
         {
             var that = (global::DeskPowerApp.ViewModels.SettingsPageViewModel)instance;
             return that.SettingsPartViewModel;
         }
-        private object get_98_SettingsPageViewModel_AboutPartViewModel(object instance)
+        private object get_99_SettingsPageViewModel_AboutPartViewModel(object instance)
         {
             var that = (global::DeskPowerApp.ViewModels.SettingsPageViewModel)instance;
             return that.AboutPartViewModel;
         }
-        private object get_99_ValueWhenConverter_When(object instance)
+        private object get_100_ValueWhenConverter_When(object instance)
         {
             var that = (global::Template10.Converters.ValueWhenConverter)instance;
             return that.When;
         }
-        private void set_99_ValueWhenConverter_When(object instance, object Value)
+        private void set_100_ValueWhenConverter_When(object instance, object Value)
         {
             var that = (global::Template10.Converters.ValueWhenConverter)instance;
             that.When = (global::System.Object)Value;
         }
-        private object get_100_ValueWhenConverter_Value(object instance)
+        private object get_101_ValueWhenConverter_Value(object instance)
         {
             var that = (global::Template10.Converters.ValueWhenConverter)instance;
             return that.Value;
         }
-        private void set_100_ValueWhenConverter_Value(object instance, object Value)
+        private void set_101_ValueWhenConverter_Value(object instance, object Value)
         {
             var that = (global::Template10.Converters.ValueWhenConverter)instance;
             that.Value = (global::System.Object)Value;
         }
-        private object get_101_ValueWhenConverter_Otherwise(object instance)
+        private object get_102_ValueWhenConverter_Otherwise(object instance)
         {
             var that = (global::Template10.Converters.ValueWhenConverter)instance;
             return that.Otherwise;
         }
-        private void set_101_ValueWhenConverter_Otherwise(object instance, object Value)
+        private void set_102_ValueWhenConverter_Otherwise(object instance, object Value)
         {
             var that = (global::Template10.Converters.ValueWhenConverter)instance;
             that.Otherwise = (global::System.Object)Value;
         }
-        private object get_102_ValueWhenConverter_OtherwiseValueBack(object instance)
+        private object get_103_ValueWhenConverter_OtherwiseValueBack(object instance)
         {
             var that = (global::Template10.Converters.ValueWhenConverter)instance;
             return that.OtherwiseValueBack;
         }
-        private void set_102_ValueWhenConverter_OtherwiseValueBack(object instance, object Value)
+        private void set_103_ValueWhenConverter_OtherwiseValueBack(object instance, object Value)
         {
             var that = (global::Template10.Converters.ValueWhenConverter)instance;
             that.OtherwiseValueBack = (global::System.Object)Value;
         }
-        private object get_103_ValueWhenConverter_Debug(object instance)
+        private object get_104_ValueWhenConverter_Debug(object instance)
         {
             var that = (global::Template10.Converters.ValueWhenConverter)instance;
             return that.Debug;
         }
-        private void set_103_ValueWhenConverter_Debug(object instance, object Value)
+        private void set_104_ValueWhenConverter_Debug(object instance, object Value)
         {
             var that = (global::Template10.Converters.ValueWhenConverter)instance;
             that.Debug = (global::System.Boolean)Value;
         }
-        private object get_104_Interaction_Behaviors(object instance)
+        private object get_105_Interaction_Behaviors(object instance)
         {
             return global::Microsoft.Xaml.Interactivity.Interaction.GetBehaviors((global::Windows.UI.Xaml.DependencyObject)instance);
         }
-        private void set_104_Interaction_Behaviors(object instance, object Value)
+        private void set_105_Interaction_Behaviors(object instance, object Value)
         {
             global::Microsoft.Xaml.Interactivity.Interaction.SetBehaviors((global::Windows.UI.Xaml.DependencyObject)instance, (global::Microsoft.Xaml.Interactivity.BehaviorCollection)Value);
         }
-        private object get_105_EventTriggerBehavior_Actions(object instance)
+        private object get_106_EventTriggerBehavior_Actions(object instance)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior)instance;
             return that.Actions;
         }
-        private object get_106_EventTriggerBehavior_EventName(object instance)
+        private object get_107_EventTriggerBehavior_EventName(object instance)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior)instance;
             return that.EventName;
         }
-        private void set_106_EventTriggerBehavior_EventName(object instance, object Value)
+        private void set_107_EventTriggerBehavior_EventName(object instance, object Value)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior)instance;
             that.EventName = (global::System.String)Value;
         }
-        private object get_107_EventTriggerBehavior_SourceObject(object instance)
+        private object get_108_EventTriggerBehavior_SourceObject(object instance)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior)instance;
             return that.SourceObject;
         }
-        private void set_107_EventTriggerBehavior_SourceObject(object instance, object Value)
+        private void set_108_EventTriggerBehavior_SourceObject(object instance, object Value)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior)instance;
             that.SourceObject = (global::System.Object)Value;
         }
-        private object get_108_Behavior_AssociatedObject(object instance)
+        private object get_109_Behavior_AssociatedObject(object instance)
         {
             var that = (global::Microsoft.Xaml.Interactivity.Behavior)instance;
             return that.AssociatedObject;
         }
-        private object get_109_MessageDialogAction_Title(object instance)
+        private object get_110_MessageDialogAction_Title(object instance)
         {
             var that = (global::Template10.Behaviors.MessageDialogAction)instance;
             return that.Title;
         }
-        private void set_109_MessageDialogAction_Title(object instance, object Value)
+        private void set_110_MessageDialogAction_Title(object instance, object Value)
         {
             var that = (global::Template10.Behaviors.MessageDialogAction)instance;
             that.Title = (global::System.String)Value;
         }
-        private object get_110_MessageDialogAction_Content(object instance)
+        private object get_111_MessageDialogAction_Content(object instance)
         {
             var that = (global::Template10.Behaviors.MessageDialogAction)instance;
             return that.Content;
         }
-        private void set_110_MessageDialogAction_Content(object instance, object Value)
+        private void set_111_MessageDialogAction_Content(object instance, object Value)
         {
             var that = (global::Template10.Behaviors.MessageDialogAction)instance;
             that.Content = (global::System.String)Value;
         }
-        private object get_111_MessageDialogAction_OkText(object instance)
+        private object get_112_MessageDialogAction_OkText(object instance)
         {
             var that = (global::Template10.Behaviors.MessageDialogAction)instance;
             return that.OkText;
         }
-        private void set_111_MessageDialogAction_OkText(object instance, object Value)
+        private void set_112_MessageDialogAction_OkText(object instance, object Value)
         {
             var that = (global::Template10.Behaviors.MessageDialogAction)instance;
             that.OkText = (global::System.String)Value;
@@ -2753,151 +2774,157 @@ namespace DeskPowerApp.DeskPowerApp_XamlTypeInfo
                 xamlMember.Getter = get_88_ViewModelBase_SessionState;
                 xamlMember.Setter = set_88_ViewModelBase_SessionState;
                 break;
-            case "DeskPowerApp.ViewModels.MainPageViewModel.Value":
-                userType = (global::DeskPowerApp.DeskPowerApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DeskPowerApp.ViewModels.MainPageViewModel");
-                xamlMember = new global::DeskPowerApp.DeskPowerApp_XamlTypeInfo.XamlMember(this, "Value", "String");
-                xamlMember.Getter = get_89_MainPageViewModel_Value;
-                xamlMember.Setter = set_89_MainPageViewModel_Value;
-                break;
-            case "DeskPowerApp.ViewModels.MainPageViewModel.Drafts":
-                userType = (global::DeskPowerApp.DeskPowerApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DeskPowerApp.ViewModels.MainPageViewModel");
+            case "DeskPowerApp.ViewModels.EditorViewModel.Drafts":
+                userType = (global::DeskPowerApp.DeskPowerApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DeskPowerApp.ViewModels.EditorViewModel");
                 xamlMember = new global::DeskPowerApp.DeskPowerApp_XamlTypeInfo.XamlMember(this, "Drafts", "System.Collections.ObjectModel.ObservableCollection`1<DeskPowerApp.Model.Draft>");
-                xamlMember.Getter = get_90_MainPageViewModel_Drafts;
-                xamlMember.Setter = set_90_MainPageViewModel_Drafts;
+                xamlMember.Getter = get_89_EditorViewModel_Drafts;
+                xamlMember.Setter = set_89_EditorViewModel_Drafts;
                 break;
             case "DeskPowerApp.Model.Draft.DraftID":
                 userType = (global::DeskPowerApp.DeskPowerApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DeskPowerApp.Model.Draft");
                 xamlMember = new global::DeskPowerApp.DeskPowerApp_XamlTypeInfo.XamlMember(this, "DraftID", "Int32");
-                xamlMember.Getter = get_91_Draft_DraftID;
-                xamlMember.Setter = set_91_Draft_DraftID;
+                xamlMember.Getter = get_90_Draft_DraftID;
+                xamlMember.Setter = set_90_Draft_DraftID;
                 break;
             case "DeskPowerApp.Model.Draft.DrafTitle":
                 userType = (global::DeskPowerApp.DeskPowerApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DeskPowerApp.Model.Draft");
                 xamlMember = new global::DeskPowerApp.DeskPowerApp_XamlTypeInfo.XamlMember(this, "DrafTitle", "String");
-                xamlMember.Getter = get_92_Draft_DrafTitle;
-                xamlMember.Setter = set_92_Draft_DrafTitle;
+                xamlMember.Getter = get_91_Draft_DrafTitle;
+                xamlMember.Setter = set_91_Draft_DrafTitle;
                 break;
             case "DeskPowerApp.Model.Draft.DraftContent":
                 userType = (global::DeskPowerApp.DeskPowerApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DeskPowerApp.Model.Draft");
                 xamlMember = new global::DeskPowerApp.DeskPowerApp_XamlTypeInfo.XamlMember(this, "DraftContent", "String");
-                xamlMember.Getter = get_93_Draft_DraftContent;
-                xamlMember.Setter = set_93_Draft_DraftContent;
+                xamlMember.Getter = get_92_Draft_DraftContent;
+                xamlMember.Setter = set_92_Draft_DraftContent;
                 break;
             case "DeskPowerApp.Model.Draft.DraftCategory":
                 userType = (global::DeskPowerApp.DeskPowerApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DeskPowerApp.Model.Draft");
                 xamlMember = new global::DeskPowerApp.DeskPowerApp_XamlTypeInfo.XamlMember(this, "DraftCategory", "DraftCategories");
-                xamlMember.Getter = get_94_Draft_DraftCategory;
-                xamlMember.Setter = set_94_Draft_DraftCategory;
+                xamlMember.Getter = get_93_Draft_DraftCategory;
+                xamlMember.Setter = set_93_Draft_DraftCategory;
                 break;
             case "DeskPowerApp.Model.Draft.DraftImage":
                 userType = (global::DeskPowerApp.DeskPowerApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DeskPowerApp.Model.Draft");
                 xamlMember = new global::DeskPowerApp.DeskPowerApp_XamlTypeInfo.XamlMember(this, "DraftImage", "String");
-                xamlMember.Getter = get_95_Draft_DraftImage;
-                xamlMember.Setter = set_95_Draft_DraftImage;
+                xamlMember.Getter = get_94_Draft_DraftImage;
+                xamlMember.Setter = set_94_Draft_DraftImage;
                 break;
             case "DeskPowerApp.Model.Draft.DraftCreatedDate":
                 userType = (global::DeskPowerApp.DeskPowerApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DeskPowerApp.Model.Draft");
                 xamlMember = new global::DeskPowerApp.DeskPowerApp_XamlTypeInfo.XamlMember(this, "DraftCreatedDate", "System.DateTime");
-                xamlMember.Getter = get_96_Draft_DraftCreatedDate;
-                xamlMember.Setter = set_96_Draft_DraftCreatedDate;
+                xamlMember.Getter = get_95_Draft_DraftCreatedDate;
+                xamlMember.Setter = set_95_Draft_DraftCreatedDate;
+                break;
+            case "DeskPowerApp.ViewModels.MainPageViewModel.Value":
+                userType = (global::DeskPowerApp.DeskPowerApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DeskPowerApp.ViewModels.MainPageViewModel");
+                xamlMember = new global::DeskPowerApp.DeskPowerApp_XamlTypeInfo.XamlMember(this, "Value", "String");
+                xamlMember.Getter = get_96_MainPageViewModel_Value;
+                xamlMember.Setter = set_96_MainPageViewModel_Value;
+                break;
+            case "DeskPowerApp.ViewModels.MainPageViewModel.Drafts":
+                userType = (global::DeskPowerApp.DeskPowerApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DeskPowerApp.ViewModels.MainPageViewModel");
+                xamlMember = new global::DeskPowerApp.DeskPowerApp_XamlTypeInfo.XamlMember(this, "Drafts", "System.Collections.ObjectModel.ObservableCollection`1<DeskPowerApp.Model.Draft>");
+                xamlMember.Getter = get_97_MainPageViewModel_Drafts;
+                xamlMember.Setter = set_97_MainPageViewModel_Drafts;
                 break;
             case "DeskPowerApp.ViewModels.SettingsPageViewModel.SettingsPartViewModel":
                 userType = (global::DeskPowerApp.DeskPowerApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DeskPowerApp.ViewModels.SettingsPageViewModel");
                 xamlMember = new global::DeskPowerApp.DeskPowerApp_XamlTypeInfo.XamlMember(this, "SettingsPartViewModel", "DeskPowerApp.ViewModels.SettingsPartViewModel");
-                xamlMember.Getter = get_97_SettingsPageViewModel_SettingsPartViewModel;
+                xamlMember.Getter = get_98_SettingsPageViewModel_SettingsPartViewModel;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DeskPowerApp.ViewModels.SettingsPageViewModel.AboutPartViewModel":
                 userType = (global::DeskPowerApp.DeskPowerApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DeskPowerApp.ViewModels.SettingsPageViewModel");
                 xamlMember = new global::DeskPowerApp.DeskPowerApp_XamlTypeInfo.XamlMember(this, "AboutPartViewModel", "DeskPowerApp.ViewModels.AboutPartViewModel");
-                xamlMember.Getter = get_98_SettingsPageViewModel_AboutPartViewModel;
+                xamlMember.Getter = get_99_SettingsPageViewModel_AboutPartViewModel;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Template10.Converters.ValueWhenConverter.When":
                 userType = (global::DeskPowerApp.DeskPowerApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Converters.ValueWhenConverter");
                 xamlMember = new global::DeskPowerApp.DeskPowerApp_XamlTypeInfo.XamlMember(this, "When", "Object");
-                xamlMember.Getter = get_99_ValueWhenConverter_When;
-                xamlMember.Setter = set_99_ValueWhenConverter_When;
+                xamlMember.Getter = get_100_ValueWhenConverter_When;
+                xamlMember.Setter = set_100_ValueWhenConverter_When;
                 break;
             case "Template10.Converters.ValueWhenConverter.Value":
                 userType = (global::DeskPowerApp.DeskPowerApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Converters.ValueWhenConverter");
                 xamlMember = new global::DeskPowerApp.DeskPowerApp_XamlTypeInfo.XamlMember(this, "Value", "Object");
-                xamlMember.Getter = get_100_ValueWhenConverter_Value;
-                xamlMember.Setter = set_100_ValueWhenConverter_Value;
+                xamlMember.Getter = get_101_ValueWhenConverter_Value;
+                xamlMember.Setter = set_101_ValueWhenConverter_Value;
                 break;
             case "Template10.Converters.ValueWhenConverter.Otherwise":
                 userType = (global::DeskPowerApp.DeskPowerApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Converters.ValueWhenConverter");
                 xamlMember = new global::DeskPowerApp.DeskPowerApp_XamlTypeInfo.XamlMember(this, "Otherwise", "Object");
-                xamlMember.Getter = get_101_ValueWhenConverter_Otherwise;
-                xamlMember.Setter = set_101_ValueWhenConverter_Otherwise;
+                xamlMember.Getter = get_102_ValueWhenConverter_Otherwise;
+                xamlMember.Setter = set_102_ValueWhenConverter_Otherwise;
                 break;
             case "Template10.Converters.ValueWhenConverter.OtherwiseValueBack":
                 userType = (global::DeskPowerApp.DeskPowerApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Converters.ValueWhenConverter");
                 xamlMember = new global::DeskPowerApp.DeskPowerApp_XamlTypeInfo.XamlMember(this, "OtherwiseValueBack", "Object");
-                xamlMember.Getter = get_102_ValueWhenConverter_OtherwiseValueBack;
-                xamlMember.Setter = set_102_ValueWhenConverter_OtherwiseValueBack;
+                xamlMember.Getter = get_103_ValueWhenConverter_OtherwiseValueBack;
+                xamlMember.Setter = set_103_ValueWhenConverter_OtherwiseValueBack;
                 break;
             case "Template10.Converters.ValueWhenConverter.Debug":
                 userType = (global::DeskPowerApp.DeskPowerApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Converters.ValueWhenConverter");
                 xamlMember = new global::DeskPowerApp.DeskPowerApp_XamlTypeInfo.XamlMember(this, "Debug", "Boolean");
-                xamlMember.Getter = get_103_ValueWhenConverter_Debug;
-                xamlMember.Setter = set_103_ValueWhenConverter_Debug;
+                xamlMember.Getter = get_104_ValueWhenConverter_Debug;
+                xamlMember.Setter = set_104_ValueWhenConverter_Debug;
                 break;
             case "Microsoft.Xaml.Interactivity.Interaction.Behaviors":
                 userType = (global::DeskPowerApp.DeskPowerApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactivity.Interaction");
                 xamlMember = new global::DeskPowerApp.DeskPowerApp_XamlTypeInfo.XamlMember(this, "Behaviors", "Microsoft.Xaml.Interactivity.BehaviorCollection");
                 xamlMember.SetTargetTypeName("Windows.UI.Xaml.DependencyObject");
                 xamlMember.SetIsAttachable();
-                xamlMember.Getter = get_104_Interaction_Behaviors;
-                xamlMember.Setter = set_104_Interaction_Behaviors;
+                xamlMember.Getter = get_105_Interaction_Behaviors;
+                xamlMember.Setter = set_105_Interaction_Behaviors;
                 break;
             case "Microsoft.Xaml.Interactions.Core.EventTriggerBehavior.Actions":
                 userType = (global::DeskPowerApp.DeskPowerApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.EventTriggerBehavior");
                 xamlMember = new global::DeskPowerApp.DeskPowerApp_XamlTypeInfo.XamlMember(this, "Actions", "Microsoft.Xaml.Interactivity.ActionCollection");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_105_EventTriggerBehavior_Actions;
+                xamlMember.Getter = get_106_EventTriggerBehavior_Actions;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.Xaml.Interactions.Core.EventTriggerBehavior.EventName":
                 userType = (global::DeskPowerApp.DeskPowerApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.EventTriggerBehavior");
                 xamlMember = new global::DeskPowerApp.DeskPowerApp_XamlTypeInfo.XamlMember(this, "EventName", "String");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_106_EventTriggerBehavior_EventName;
-                xamlMember.Setter = set_106_EventTriggerBehavior_EventName;
+                xamlMember.Getter = get_107_EventTriggerBehavior_EventName;
+                xamlMember.Setter = set_107_EventTriggerBehavior_EventName;
                 break;
             case "Microsoft.Xaml.Interactions.Core.EventTriggerBehavior.SourceObject":
                 userType = (global::DeskPowerApp.DeskPowerApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.EventTriggerBehavior");
                 xamlMember = new global::DeskPowerApp.DeskPowerApp_XamlTypeInfo.XamlMember(this, "SourceObject", "Object");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_107_EventTriggerBehavior_SourceObject;
-                xamlMember.Setter = set_107_EventTriggerBehavior_SourceObject;
+                xamlMember.Getter = get_108_EventTriggerBehavior_SourceObject;
+                xamlMember.Setter = set_108_EventTriggerBehavior_SourceObject;
                 break;
             case "Microsoft.Xaml.Interactivity.Behavior.AssociatedObject":
                 userType = (global::DeskPowerApp.DeskPowerApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactivity.Behavior");
                 xamlMember = new global::DeskPowerApp.DeskPowerApp_XamlTypeInfo.XamlMember(this, "AssociatedObject", "Windows.UI.Xaml.DependencyObject");
-                xamlMember.Getter = get_108_Behavior_AssociatedObject;
+                xamlMember.Getter = get_109_Behavior_AssociatedObject;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Template10.Behaviors.MessageDialogAction.Title":
                 userType = (global::DeskPowerApp.DeskPowerApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Behaviors.MessageDialogAction");
                 xamlMember = new global::DeskPowerApp.DeskPowerApp_XamlTypeInfo.XamlMember(this, "Title", "String");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_109_MessageDialogAction_Title;
-                xamlMember.Setter = set_109_MessageDialogAction_Title;
+                xamlMember.Getter = get_110_MessageDialogAction_Title;
+                xamlMember.Setter = set_110_MessageDialogAction_Title;
                 break;
             case "Template10.Behaviors.MessageDialogAction.Content":
                 userType = (global::DeskPowerApp.DeskPowerApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Behaviors.MessageDialogAction");
                 xamlMember = new global::DeskPowerApp.DeskPowerApp_XamlTypeInfo.XamlMember(this, "Content", "String");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_110_MessageDialogAction_Content;
-                xamlMember.Setter = set_110_MessageDialogAction_Content;
+                xamlMember.Getter = get_111_MessageDialogAction_Content;
+                xamlMember.Setter = set_111_MessageDialogAction_Content;
                 break;
             case "Template10.Behaviors.MessageDialogAction.OkText":
                 userType = (global::DeskPowerApp.DeskPowerApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Behaviors.MessageDialogAction");
                 xamlMember = new global::DeskPowerApp.DeskPowerApp_XamlTypeInfo.XamlMember(this, "OkText", "String");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_111_MessageDialogAction_OkText;
-                xamlMember.Setter = set_111_MessageDialogAction_OkText;
+                xamlMember.Getter = get_112_MessageDialogAction_OkText;
+                xamlMember.Setter = set_112_MessageDialogAction_OkText;
                 break;
             }
             return xamlMember;

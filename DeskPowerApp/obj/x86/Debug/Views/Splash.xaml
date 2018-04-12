@@ -18,8 +18,9 @@
                 <ImageBrush ImageSource="ms-appx:///Assets/SplashScreen.png" Stretch="Uniform" />
             </Canvas.Background>
             <Viewbox x:ConnectionId='4' x:Name="splashImage">
-                <Image x:ConnectionId='5' Source="ms-appx:///Assets/SplashScreen.png"                            />
+                <!--   <Image Source="ms-appx:///Assets/SplashScreen.png" ImageOpened="Image_Loaded" />-->
             </Viewbox>
+            <TextBlock FontSize="100" Foreground="#FF3B3535" FontWeight="Bold" Canvas.Left="492" Canvas.Top="109">DeskPower</TextBlock>
         </Canvas>
 
         <ProgressRing x:ConnectionId='2' x:Name="progressRing"

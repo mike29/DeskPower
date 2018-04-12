@@ -49,5 +49,7 @@ namespace DeskPowerApp.Views
                 // Use args.QueryText to determine what to do.
             }
         }
+
+      
     }
 }

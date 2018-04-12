@@ -1,0 +1,9 @@
+C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp.DataAcess\bin\Debug\DeskPowerApp.DataAcess.dll
+C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp.DataAcess\bin\Debug\DeskPowerApp.DataAcess.pdb
+C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp.DataAcess\bin\Debug\DeskPowerApp.Model.dll
+C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp.DataAcess\bin\Debug\DeskPowerApp.Model.pdb
+C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp.DataAcess\obj\Debug\DeskPowerApp.DataAcess.csprojResolveAssemblyReference.cache
+C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp.DataAcess\obj\Debug\DeskPowerApp.DataAcess.csproj.CoreCompileInputs.cache
+C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp.DataAcess\obj\Debug\DeskPowerApp.DataAcess.csproj.CopyComplete
+C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp.DataAcess\obj\Debug\DeskPowerApp.DataAcess.dll
+C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp.DataAcess\obj\Debug\DeskPowerApp.DataAcess.pdb

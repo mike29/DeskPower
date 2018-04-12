@@ -26,5 +26,7 @@ namespace DeskPowerApp.Views
         {
             this.InitializeComponent();
         }
+
+       
     }
 }

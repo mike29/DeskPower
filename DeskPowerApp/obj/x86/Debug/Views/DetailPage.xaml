@@ -8,11 +8,11 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:local="using:DeskPowerApp.Views"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-      xmlns:vm="using:DeskPowerApp.ViewModels" x:Name="ThisPage"
+      xmlns:vm="using:DeskPowerApp.ViewModels" 
       mc:Ignorable="d">
 
     <Page.DataContext>
-        <vm:DetailPageViewModel x:ConnectionId='2' x:Name="ViewModel" />
+        <vm:DetailPageViewModel x:ConnectionId='2' x:Name="ViewModel"/>
     </Page.DataContext>
 
     <RelativePanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
