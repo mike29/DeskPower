@@ -255,3 +255,8 @@ C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\obj\x86\Debug\M
 C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\obj\x86\Debug\Microsoft.Xaml.Interactivity.pri.xml
 C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\obj\x86\Debug\Template10Library.pri.xml
 C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\obj\x86\Debug\ProjectArchitectures.txt
+C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\obj\x86\Debug\Views\SettingCustom.g.i.cs
+C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\obj\x86\Debug\Views\SettingCustom.g.cs
+C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\obj\x86\Debug\Views\SettingCustom.xaml
+C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\obj\x86\Debug\Views\SettingCustom.xbf
+C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\bin\x86\Debug\Views\SettingCustom.xbf

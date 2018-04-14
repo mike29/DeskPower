@@ -115,28 +115,34 @@
                       Margin="0,0,0,0"  
                       Grid.RowSpan="2"
                       Name="SoundGridView"
-                      IsItemClickEnabled="True"
+                      IsItemClickEnabled="True"                     
                       RelativePanel.Below="BigImage"                      
-                      ItemsSource="{Binding Drafts}">
+                      ItemsSource="{Binding Drafts}" SelectionChanged="SoundGridView_SelectionChanged">
                 
+
                 <GridView.ItemTemplate>
                     <DataTemplate x:DataType="model:Draft">
+                        
                         <StackPanel 
                             Orientation="Vertical"                                            
                             Background="#000"                                              
                             Margin="20,0,20,20"                              
-                            HorizontalAlignment="Center"                                            
+                            HorizontalAlignment="Center"                             
                             CornerRadius="5">
-
-                            <StackPanel Padding="0">
-                                <Image 
+                            <HyperlinkButton         
+                                
+                                Click="GotoDetailsPage"
+                                HorizontalAlignment="Center">
+                                <StackPanel Padding="0">
+                                    <Image 
                                            Stretch="UniformToFill" 
                                            Width="320"
                                            Height="240"                                            
                                            Margin="0,0,0,0"
                                            Source="{Binding DraftImage }">
-                                </Image>
-                            </StackPanel>
+                                    </Image>
+                                </StackPanel>
+                            </HyperlinkButton>
                             <!-- Date and category-->
                             <StackPanel       
                                             Orientation="Horizontal"    
@@ -179,11 +185,13 @@
                                         Background="#f9f9f9" 
                                         Padding="10">
                                 <TextBlock  
+                                            Name="content"
                                             Width="300" 
                                             Height="60" 
                                             VerticalAlignment="Center"
-                                            TextWrapping="Wrap"                                            
+                                            TextWrapping="Wrap"                                              
                                             Text="{Binding DraftContent }">
+
                                 </TextBlock>
                             </StackPanel>
                         </StackPanel>

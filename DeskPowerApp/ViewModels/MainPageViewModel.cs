@@ -75,7 +75,7 @@ namespace DeskPowerApp.ViewModels
             NavigationService.Navigate(typeof(Views.DetailPage), Value);
 
         public void GotoSettings() =>
-            NavigationService.Navigate(typeof(Views.SettingsPage), 0);
+            NavigationService.Navigate(typeof(Views.SettingCustom), 0);
 
         public void GotoPrivacy() =>
             NavigationService.Navigate(typeof(Views.SettingsPage), 1);

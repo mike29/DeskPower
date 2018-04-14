@@ -68,7 +68,7 @@
                 
             </controls:PageHeader.PrimaryCommands>
              <controls:PageHeader.Content>
-                <AutoSuggestBox x:ConnectionId='10' PlaceholderText="Search" QueryIcon="Find" Width="250"
+                <AutoSuggestBox x:ConnectionId='11' PlaceholderText="Search" QueryIcon="Find" Width="250"
                                 BorderThickness="0"
                                 BorderBrush="red"
                                                         
@@ -78,9 +78,9 @@
             
             <!--  secondary commands  -->
             <controls:PageHeader.SecondaryCommands>
-                <AppBarButton x:ConnectionId='11'                                         Label="Settings" />
-                <AppBarButton x:ConnectionId='12'                                        Label="Privacy" />
-                <AppBarButton x:ConnectionId='13'                                      Label="About" />
+                <AppBarButton x:ConnectionId='12'                                         Label="Settings" />
+                <AppBarButton x:ConnectionId='13'                                        Label="Privacy" />
+                <AppBarButton x:ConnectionId='14'                                      Label="About" />
                 <!-- Search Button-->
             </controls:PageHeader.SecondaryCommands>
         </controls:PageHeader>
@@ -102,7 +102,7 @@
                       Margin="0,48,0,0"                      
                       Height="260">
                
-                <Image x:ConnectionId='9' 
+                <Image x:ConnectionId='10' 
                     Name="BigImage"
                     Stretch="UniformToFill" 
                     Source="ms-appx:///Assets/img/BGJournalist.png" 
@@ -115,28 +115,34 @@
                       Margin="0,0,0,0"  
                       Grid.RowSpan="2"
                       Name="SoundGridView"
-                      IsItemClickEnabled="True"
+                      IsItemClickEnabled="True"                     
                       RelativePanel.Below="BigImage"                      
-                      ItemsSource="{Binding Drafts}">
+                      ItemsSource="{Binding Drafts}"                                                  >
                 
+
                 <GridView.ItemTemplate>
                     <DataTemplate                         >
+                        
                         <StackPanel 
                             Orientation="Vertical"                                            
                             Background="#000"                                              
                             Margin="20,0,20,20"                              
-                            HorizontalAlignment="Center"                                            
+                            HorizontalAlignment="Center"                             
                             CornerRadius="5">
-
-                            <StackPanel Padding="0">
-                                <Image 
+                            <HyperlinkButton x:ConnectionId='9'         
+                                
+                                                       
+                                HorizontalAlignment="Center">
+                                <StackPanel Padding="0">
+                                    <Image 
                                            Stretch="UniformToFill" 
                                            Width="320"
                                            Height="240"                                            
                                            Margin="0,0,0,0"
                                            Source="{Binding DraftImage }">
-                                </Image>
-                            </StackPanel>
+                                    </Image>
+                                </StackPanel>
+                            </HyperlinkButton>
                             <!-- Date and category-->
                             <StackPanel       
                                             Orientation="Horizontal"    
@@ -179,11 +185,13 @@
                                         Background="#f9f9f9" 
                                         Padding="10">
                                 <TextBlock  
+                                            Name="content"
                                             Width="300" 
                                             Height="60" 
                                             VerticalAlignment="Center"
-                                            TextWrapping="Wrap"                                            
+                                            TextWrapping="Wrap"                                              
                                             Text="{Binding DraftContent }">
+
                                 </TextBlock>
                             </StackPanel>
                         </StackPanel>

@@ -4,6 +4,7 @@ Views\Busy.xbf
 Views\DetailPage.xbf
 Views\Editor.xbf
 Views\MainPage.xbf
+Views\SettingCustom.xbf
 Views\SettingsPage.xbf
 Views\Shell.xbf
 Views\Splash.xbf

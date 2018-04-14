@@ -4,6 +4,8 @@ using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
 using System.Collections.ObjectModel;
+using Template10.Services.NavigationService;
+using DeskPowerApp.Model;
 
 namespace DeskPowerApp.Views
 {
@@ -50,6 +52,15 @@ namespace DeskPowerApp.Views
             }
         }
 
-      
+        private void SoundGridView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+        
+        public void GotoDetailsPage(object sender, RoutedEventArgs e)
+        {
+            
+            this.Frame.Navigate(typeof(DetailPage));
+        }
     }
 }
