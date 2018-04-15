@@ -6,7 +6,7 @@
     xmlns:controls="using:Template10.Controls"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:vm="using:DeskPowerApp.ViewModels" 
+    xmlns:vm="using:DeskPowerApp.ViewModels"
     xmlns:model="using:DeskPowerApp.Model"
     xmlns:x1="using:System"
     mc:Ignorable="d">
@@ -15,6 +15,7 @@
         <vm:EditorViewModel x:Name="ViewModel"/>
     </Page.DataContext>
     
+
     <Grid  Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">      
             <VisualStateManager.VisualStateGroups>
                 <VisualStateGroup x:Name="AdaptiveVisualStateGroup">
@@ -67,10 +68,8 @@
                     Height="{Binding ActualHeight, RelativeSource ={RelativeSource Mode=TemplatedParent}}" >
                 
                 <Grid.RowDefinitions>
-                    <RowDefinition 
-                            />
+                    <RowDefinition/>
                 </Grid.RowDefinitions>
-
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="1*" />
                     <ColumnDefinition Width="3*" />
@@ -139,7 +138,7 @@
                                 RelativePanel.AlignBottomWithPanel="True"
                                 RelativePanel.AlignLeftWithPanel="True"
                                 RelativePanel.AlignRightWithPanel="True"
-                                RelativePanel.Below="FullScreenEditor"
+                                RelativePanel.Below="FullScreenEditor"                        
                                 Height="759">
                         
                          <!--TEXT AREA AND FORMAT BUTTONS-->
@@ -148,25 +147,30 @@
                                        HorizontalAlignment="Stretch" 
                                        Background="#FFF">
                             <RelativePanel.Resources>
-                                    <Style TargetType="AppBarButton">
-                                    <Setter Property="IsCompact" Value="True"/>
+                                    <Style 
+                                        TargetType="AppBarButton">
+                                    <Setter 
+                                        Property="IsCompact" 
+                                        Value="True"/>
                                 </Style>
                             </RelativePanel.Resources>
                             
                             <!--FORMAT BUTTONS-->
                             <StackPanel Orientation="Horizontal" 
                                         RelativePanel.AlignLeftWithPanel="True" 
-                                        RelativePanel.AlignRightWithPanel="True" 
+                                        RelativePanel.AlignRightWithPanel="True"        
+                                      
                                         Background="#5F5C5C">
 
                                 <AppBarButton 
-                                    x:Name="openFileButton"    
-                                    Click="OpenButton_Click" 
+                                    x:Name="openFileButton"   
+                                   
+                                    Click="OpenButton_Click"
                                     Icon="OpenFile"
                                     ToolTipService.ToolTip="Open file" 
                                     Margin="8,0,10,0"
                                     Foreground="#FFF"/>
-
+                                <!--    Command="{x:Bind ViewModel.OpenCommand}"   -->
                                 <AppBarButton 
                                     Icon="Save" 
                                     ToolTipService.ToolTip="Save file"
@@ -203,11 +207,12 @@
                             </StackPanel>
 
                             <!--RICH TEXT EDITOR-->
-                        <RichEditBox  
-                            
+                        <RichEditBox   
+                            PlaceholderText = "{x:Bind ViewModel.Saved, Mode=TwoWay}"  
+                           
                             IsSpellCheckEnabled="True"
                             Margin="0,65,0,0"
-                            x:Name="draftEditor" 
+                            Name="draftEditor" 
                             Height="700"   
                             Background="#EFECEC"
                             RelativePanel.AlignLeftWithPanel="True" 

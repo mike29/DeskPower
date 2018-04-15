@@ -4,6 +4,7 @@ C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\bin\x86\Debug\V
 C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\bin\x86\Debug\Views\DetailPage.xbf
 C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\bin\x86\Debug\Views\Editor.xbf
 C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\bin\x86\Debug\Views\MainPage.xbf
+C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\bin\x86\Debug\Views\SettingCustom.xbf
 C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\bin\x86\Debug\Views\SettingsPage.xbf
 C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\bin\x86\Debug\Views\Shell.xbf
 C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\bin\x86\Debug\Views\Splash.xbf
@@ -146,6 +147,8 @@ C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\obj\x86\Debug\V
 C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\obj\x86\Debug\Views\Editor.g.cs
 C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\obj\x86\Debug\Views\MainPage.g.i.cs
 C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\obj\x86\Debug\Views\MainPage.g.cs
+C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\obj\x86\Debug\Views\SettingCustom.g.i.cs
+C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\obj\x86\Debug\Views\SettingCustom.g.cs
 C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\obj\x86\Debug\Views\SettingsPage.g.i.cs
 C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\obj\x86\Debug\Views\SettingsPage.g.cs
 C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\obj\x86\Debug\Views\Shell.g.i.cs
@@ -159,6 +162,7 @@ C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\obj\x86\Debug\V
 C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\obj\x86\Debug\Views\DetailPage.xaml
 C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\obj\x86\Debug\Views\Editor.xaml
 C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\obj\x86\Debug\Views\MainPage.xaml
+C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\obj\x86\Debug\Views\SettingCustom.xaml
 C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\obj\x86\Debug\Views\SettingsPage.xaml
 C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\obj\x86\Debug\Views\Shell.xaml
 C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\obj\x86\Debug\Views\Splash.xaml
@@ -168,6 +172,7 @@ C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\obj\x86\Debug\V
 C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\obj\x86\Debug\Views\DetailPage.xbf
 C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\obj\x86\Debug\Views\Editor.xbf
 C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\obj\x86\Debug\Views\MainPage.xbf
+C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\obj\x86\Debug\Views\SettingCustom.xbf
 C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\obj\x86\Debug\Views\SettingsPage.xbf
 C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\obj\x86\Debug\Views\Shell.xbf
 C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\obj\x86\Debug\Views\Splash.xbf
@@ -255,8 +260,3 @@ C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\obj\x86\Debug\M
 C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\obj\x86\Debug\Microsoft.Xaml.Interactivity.pri.xml
 C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\obj\x86\Debug\Template10Library.pri.xml
 C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\obj\x86\Debug\ProjectArchitectures.txt
-C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\obj\x86\Debug\Views\SettingCustom.g.i.cs
-C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\obj\x86\Debug\Views\SettingCustom.g.cs
-C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\obj\x86\Debug\Views\SettingCustom.xaml
-C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\obj\x86\Debug\Views\SettingCustom.xbf
-C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\bin\x86\Debug\Views\SettingCustom.xbf

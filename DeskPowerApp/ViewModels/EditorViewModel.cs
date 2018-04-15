@@ -10,6 +10,7 @@ using System.Collections.ObjectModel;
 using DeskPowerApp.Model;
 using DeskPowerApp.Views;
 using Windows.UI.Xaml.Controls;
+using Windows.UI.Text;
 
 namespace DeskPowerApp.ViewModels
 {
@@ -20,6 +21,8 @@ namespace DeskPowerApp.ViewModels
         {
             sampleClass = new SampleData.SampleData();
             Drafts = sampleClass.DraftSamplpeData;
+            Saved = "Some Value";
+            
         }
 
         ObservableCollection<Draft> _drafts;
@@ -37,24 +40,46 @@ namespace DeskPowerApp.ViewModels
             set { Set(ref _drafts, value); }
         }
 
+        public string Saved { get { return _saved; } set { Set(ref _saved, value); } }
+        string _saved; 
 
         public override async Task OnNavigatedToAsync(object parameter, NavigationMode mode, IDictionary<string, object> suspensionState)
         {
+           // Saved = "NEW VALUE";
             if (Drafts == null)
             {
                 sampleClass = new SampleData.SampleData();
                 Drafts = sampleClass.DraftSamplpeData;
+            
             }
-
+            
             if (suspensionState.Any())
             {
                
             }
             await Task.CompletedTask;
         }
+        
+    /*    private AwaitableDelegateCommand _OpenCommand;
+        public AwaitableDelegateCommand OpenCommand =>
+            _OpenCommand ?? (_OpenCommand = new AwaitableDelegateCommand(
+                new Func<AwaitableDelegateCommandParameter, Task>(async (param) =>
+                {
+                   
+                
+                    OpenCommand.RaiseCanExecuteChanged();
+                    
+                   // RichEditBox d = e.Assigner();
+                    await OpenFileBtnClickedAsync();
+                   
+                  
+                  //  OpenCommand.RaiseCanExecuteChanged();
+                })
+            ));*/
 
-        RichEditBox draftREBS;
-        public async Task OpenFileBtnClickedAsync()
+        RichEditBox draftREBS = new RichEditBox();
+        
+     /* public async Task OpenFileBtnClickedAsync()
         {
             // Open a text file.
             Windows.Storage.Pickers.FileOpenPicker open =
@@ -65,18 +90,28 @@ namespace DeskPowerApp.ViewModels
 
             Windows.Storage.StorageFile file = await open.PickSingleFileAsync();
 
+           
             if (file != null)
             {
                 try
                 {
                     Windows.Storage.Streams.IRandomAccessStream randAccStream =
                 await file.OpenAsync(Windows.Storage.FileAccessMode.Read);
-                
+
                     // Load the file into the Document property of the RichEditBox.
                     draftREBS.Document.LoadFromStream(Windows.UI.Text.TextSetOptions.FormatRtf, randAccStream);
+                  
+                    //        draftREBS.Document.GetText(Windows.UI.Text.TextGetOptions.AdjustCrlf,out d);
+    
+                      Saved =   draftREBS.Document.GetRange(0,10).Text;
+                  
+                    System.Diagnostics.Debug.WriteLine("XOXOXOXOXOX" + Saved);
+
+
                 }
                 catch (Exception)
                 {
+                    
                     Windows.UI.Xaml.Controls.ContentDialog errorDialog = new Windows.UI.Xaml.Controls.ContentDialog()
                     {
                         Title = "File open error",
@@ -87,7 +122,7 @@ namespace DeskPowerApp.ViewModels
                     await errorDialog.ShowAsync();
                 }
             }
-        }
+        }*/
 
         private RichEditBox GetEditorBox()
         {
