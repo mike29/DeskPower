@@ -20,93 +20,94 @@ namespace DeskPowerApp.SampleData
             {
                 new Draft()
                 {
-                    DraftID= 001,
-                    DrafTitle = "Donald Trump utro",
+                    DraftID= 100,
+                    DraftTitle = "Donald Trump utro",
                     DraftContent="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined",
                     DraftCategory = DraftCategories.Poletic,
-                    DraftImage = "ms-appx:///Assets/img/gun.jpg"
+                    DraftImageUrl = "ms-appx:///Assets/img/gun.jpg"
 
                 },
                   new Draft()
                 {
-                    DraftID= 002,
-                    DrafTitle = "Me my Self and I",
+                    DraftID= 200,
+                    DraftTitle = "Me my Self and I",
                     DraftContent="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined",
                     DraftCategory = DraftCategories.Blog,
-                    DraftImage = "ms-appx:///Assets/img/equipment.jpg"
+                    DraftImageUrl = "ms-appx:///Assets/img/equipment.jpg"
 
                 },
                     new Draft()
                 {
-                    DraftID= 003,
-                    DrafTitle = "Hiof university college forsker jukset",
+                    DraftID= 300,
+                    DraftTitle = "Hiof university college forsker jukset",
                     DraftContent="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined ",
                     DraftCategory = DraftCategories.Blog,
-                    DraftImage = "ms-appx:///Assets/img/photo-1504.jpg"
+                    DraftImageUrl = "ms-appx:///Assets/img/photo-1504.jpg"
 
                 },
                       new Draft()
                 {
-                    DraftID= 004,
-                    DrafTitle = "Donald Trump utro",
+                    DraftID= 400,
+                    DraftTitle = "Donald Trump utro",
                     DraftContent="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined",
                     DraftCategory = DraftCategories.Blog,
-                    DraftImage = "ms-appx:///Assets/img/music.jpg"
+                    DraftImageUrl = "ms-appx:///Assets/img/music.jpg"
 
                 },
                        new Draft()
                 {
-                    DraftID= 004,
-                    DrafTitle = "Donald Trump utro",
+                    DraftID= 500,
+                    DraftTitle = "Donald Trump utro",
                     DraftContent="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined",
                     DraftCategory = DraftCategories.Poletic,
-                    DraftImage = "ms-appx:///Assets/img/ptree.jpg"
+                    DraftImageUrl = "ms-appx:///Assets/img/ptree.jpg"
 
                 },
                         new Draft()
                 {
                     DraftID= 004,
-                    DrafTitle = "Donald Trump utro",
+                    DraftTitle = "Donald Trump utro",
                     DraftContent="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined",
                     DraftCategory = DraftCategories.Poletic,
-                    DraftImage = "ms-appx:///Assets/img/BGJournalist.png"
+                    DraftImageUrl = "ms-appx:///Assets/img/BGJournalist.png"
 
                 },
                           new Draft()
                 {
-                    DraftID= 004,
-                    DrafTitle = "Donald Trump utro",
+                    DraftID= 600,
+                    DraftTitle = "Donald Trump utro",
                     DraftContent="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined",
                     DraftCategory = DraftCategories.Poletic,
-                    DraftImage = "ms-appx:///Assets/img/police.jpg"
+                    DraftImageUrl = "ms-appx:///Assets/img/police.jpg"
 
                 },
                           new Draft()
                 {
-                    DraftID= 004,
-                    DrafTitle = "Donald Trump utro",
+                    DraftID= 700,
+                    DraftTitle = "Donald Trump utro",
                     DraftContent="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined",
                     DraftCategory = DraftCategories.Poletic,
-                    DraftImage = "ms-appx:///Assets/img/gun.jpg"
+                    DraftImageUrl = "ms-appx:///Assets/img/gun.jpg"
 
                 },
                      new Draft()
                 {
-                    DraftID= 004,
-                    DrafTitle = "Donald Trump utro",
+                    DraftID= 800,
+                    DraftTitle = "Donald Trump utro",
                     DraftContent="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined",
                     DraftCategory = DraftCategories.Poletic,
-                    DraftImage = "ms-appx:///Assets/img/music.jpg"
+                    DraftImageUrl = "ms-appx:///Assets/img/music.jpg"
 
-                }
+                },
 
-            };
-            Draft dr = new Draft{
-                DraftID = 001,
-                DrafTitle = "Donald Trump utro",
+            
+           new Draft{
+                DraftID = 900,
+                DraftTitle = "...........",
                 DraftContent = "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined",
                 DraftCategory = DraftCategories.Poletic,
-                DraftImage = "ms-appx:///Assets/img/ptree.jpg"
+                DraftImageUrl = "ms-appx:///Assets/img/ptree.jpg"
+           }
             };
            
             PersonSampleData = new ObservableCollection<Person>()

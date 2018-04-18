@@ -99,10 +99,10 @@
                                 <StackPanel  
                                     Height="auto" 
                                     Padding="10" 
-                                    AutomationProperties.Name="{x:Bind DrafTitle}">
+                                    AutomationProperties.Name="{x:Bind DraftTitle}">
                                     
                                     <TextBlock 
-                                        Text="{x:Bind DrafTitle}"  
+                                        Text="{x:Bind DraftTitle}"  
                                         TextWrapping="Wrap" 
                                         Style="{ThemeResource BaseTextBlockStyle}"    
                                         Foreground="#FFF"                                               

@@ -4,14 +4,14 @@
     <RootInterface FullName="Windows.UI.Xaml.Data.IValueConverter" />
   </Roots.Interfaces>
   <Roots.PropertyPathNames>
+    <RootPropertyPathName Name="DraftTitle" />
     <RootPropertyPathName Name="ActualWidth" />
     <RootPropertyPathName Name="ActualHeight" />
-    <RootPropertyPathName Name="Drafts" />
+    <RootPropertyPathName Name="DraftObject" />
     <RootPropertyPathName Name="DraftContent" />
-    <RootPropertyPathName Name="DrafTitle" />
     <RootPropertyPathName Name="DraftCreatedDate" />
     <RootPropertyPathName Name="DraftCategory" />
-    <RootPropertyPathName Name="DraftImage" />
+    <RootPropertyPathName Name="DraftImageUrl" />
     <RootPropertyPathName Name="AboutPartViewModel" />
     <RootPropertyPathName Name="Version" />
     <RootPropertyPathName Name="Publisher" />
@@ -76,6 +76,7 @@
     <RootType FullName="Windows.UI.Xaml.Setter">
       <RootProperty Name="Property" />
       <RootProperty Name="Value" />
+      <RootProperty Name="Target" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.ThemeResourceExtension" />
     <RootType FullName="Template10.Controls.Resizer">
@@ -103,6 +104,7 @@
       <RootProperty Name="Height" />
       <RootProperty Name="RowDefinitions" />
       <RootProperty Name="Padding" />
+      <RootProperty Name="Name" />
       <RootMethod Name="GetColumn" />
       <RootMethod Name="SetColumn" />
       <RootMethod Name="GetRow" />
@@ -128,18 +130,17 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Foreground" />
       <RootProperty Name="Text" />
-      <RootProperty Name="Style" />
-      <RootProperty Name="Inlines" />
-      <RootProperty Name="TextWrapping" />
-      <RootProperty Name="Opacity" />
       <RootProperty Name="Name" />
-      <RootProperty Name="Width" />
-      <RootProperty Name="Height" />
-      <RootProperty Name="FontWeight" />
-      <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="FontSize" />
+      <RootProperty Name="TextWrapping" />
+      <RootProperty Name="Style" />
+      <RootProperty Name="Padding" />
+      <RootProperty Name="Inlines" />
+      <RootProperty Name="Opacity" />
+      <RootProperty Name="Height" />
       <RootProperty Name="LineHeight" />
       <RootProperty Name="MaxWidth" />
+      <RootProperty Name="FontWeight" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.BindExtension">
       <RootProperty Name="Mode" />
@@ -201,20 +202,42 @@
       <RootProperty Name="HorizontalContentAlignment" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
-      <RootProperty Name="Children" />
-      <RootProperty Name="Background" />
       <RootProperty Name="Orientation" />
+      <RootProperty Name="Children" />
+      <RootProperty Name="Name" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Margin" />
+      <RootProperty Name="CornerRadius" />
+      <RootProperty Name="Background" />
       <RootProperty Name="Padding" />
       <RootProperty Name="Height" />
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="CornerRadius" />
-      <RootProperty Name="Name" />
       <RootProperty Name="BorderThickness" />
       <RootProperty Name="BorderBrush" />
     </RootType>
-    <RootType FullName="DeskPowerApp.Views.DetailPage" />
-    <RootType FullName="DeskPowerApp.ViewModels.EditorViewModel" />
+    <RootType FullName="Windows.UI.Xaml.Controls.Image">
+      <RootProperty Name="Source" />
+      <RootProperty Name="Stretch" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Name" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.GridView">
+      <RootProperty Name="ItemsSource" />
+      <RootProperty Name="IsItemClickEnabled" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="ItemTemplate" />
+      <RootProperty Name="SelectedItem" />
+      <RootProperty Name="ItemsPanel" />
+      <RootEvent Name="PointerEntered" />
+      <RootEvent Name="PointerExited" />
+      <RootEvent Name="ItemClick" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.DataTemplate">
+      <RootProperty Name="Template" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Data.Binding">
       <RootProperty Name="RelativeSource" />
       <RootProperty Name="Mode" />
@@ -222,6 +245,8 @@
       <RootProperty Name="ElementName" />
       <RootProperty Name="Converter" />
     </RootType>
+    <RootType FullName="DeskPowerApp.Views.DetailPage" />
+    <RootType FullName="DeskPowerApp.ViewModels.EditorViewModel" />
     <RootType FullName="Windows.UI.Xaml.Data.RelativeSource">
       <RootProperty Name="Mode" />
     </RootType>
@@ -264,35 +289,18 @@
       <RootProperty Name="Height" />
       <RootProperty Name="ItemTemplate" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.DataTemplate">
-      <RootProperty Name="Template" />
-    </RootType>
     <RootType FullName="Windows.UI.Xaml.Automation.AutomationProperties">
       <RootMethod Name="GetName" />
       <RootMethod Name="SetName" />
     </RootType>
     <RootType FullName="DeskPowerApp.Views.Editor" />
     <RootType FullName="DeskPowerApp.ViewModels.MainPageViewModel" />
-    <RootType FullName="Windows.UI.Xaml.Controls.GridView">
-      <RootProperty Name="Name" />
-      <RootProperty Name="Margin" />
-      <RootProperty Name="IsItemClickEnabled" />
-      <RootProperty Name="ItemsSource" />
-      <RootProperty Name="ItemTemplate" />
-      <RootEvent Name="SelectionChanged" />
+    <RootType FullName="Windows.UI.Xaml.Controls.ItemsPanelTemplate">
+      <RootProperty Name="Template" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.HyperlinkButton">
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="Content" />
-      <RootEvent Name="Click" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.Image">
-      <RootProperty Name="Stretch" />
-      <RootProperty Name="Width" />
-      <RootProperty Name="Height" />
-      <RootProperty Name="Margin" />
-      <RootProperty Name="Source" />
-      <RootProperty Name="Name" />
+    <RootType FullName="Windows.UI.Xaml.Controls.ItemsWrapGrid">
+      <RootProperty Name="MaximumRowsOrColumns" />
+      <RootProperty Name="Orientation" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.AutoSuggestBox">
       <RootProperty Name="PlaceholderText" />

@@ -7,25 +7,24 @@ using Template10.Services.NavigationService;
 using Windows.UI.Xaml.Navigation;
 using System.Collections.ObjectModel;
 using DeskPowerApp.Model;
-
+using System.Diagnostics;
 namespace DeskPowerApp.ViewModels
 {
     public class MainPageViewModel : ViewModelBase
     {
+       
         private SampleData.SampleData sampleClass;
         public MainPageViewModel()
         {
             if (Windows.ApplicationModel.DesignMode.DesignModeEnabled)
             {
-                Value = "Designtime value";
-                sampleClass = new SampleData.SampleData();
-                Drafts = sampleClass.DraftSamplpeData;
+                
             }
         }
 
-        string _Value = "Gas";
-        public string Value { get { return _Value; } set { Set(ref _Value, value); } }
-
+        //public Draft t;
+        public Draft DraftObject { get; set;}
+        
         ObservableCollection<Draft> _drafts;
         public ObservableCollection<Draft> Drafts
         {
@@ -47,11 +46,15 @@ namespace DeskPowerApp.ViewModels
             {
                 sampleClass = new SampleData.SampleData();
                 Drafts = sampleClass.DraftSamplpeData;
+
+                DraftObject = new Draft();
+            
             }
 
             if (suspensionState.Any())
             {
-                Value = suspensionState[nameof(Value)]?.ToString();
+                
+                // DraftObject.DraftID = suspensionState[nameof(DraftObject.DraftID)]?.ToString();
             }
             await Task.CompletedTask;
         }
@@ -60,7 +63,8 @@ namespace DeskPowerApp.ViewModels
         {
             if (suspending)
             {
-                suspensionState[nameof(Value)] = Value;
+                suspensionState[nameof(DraftObject.DraftID)] = DraftObject.DraftID;
+             
             }
             await Task.CompletedTask;
         }
@@ -72,7 +76,7 @@ namespace DeskPowerApp.ViewModels
         }
 
         public void GotoDetailsPage() =>
-            NavigationService.Navigate(typeof(Views.DetailPage), Value);
+            NavigationService.Navigate(typeof(Views.DetailPage), DraftObject.DraftID.ToString());
 
         public void GotoSettings() =>
             NavigationService.Navigate(typeof(Views.SettingCustom), 0);
@@ -82,6 +86,6 @@ namespace DeskPowerApp.ViewModels
 
         public void GotoAbout() =>
             NavigationService.Navigate(typeof(Views.SettingsPage), 2);
-
+       
     }
 }

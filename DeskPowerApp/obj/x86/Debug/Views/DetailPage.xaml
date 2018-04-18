@@ -8,7 +8,8 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:local="using:DeskPowerApp.Views"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-      xmlns:vm="using:DeskPowerApp.ViewModels" 
+      xmlns:vm="using:DeskPowerApp.ViewModels"
+      xmlns:model="using:DeskPowerApp.Model"
       mc:Ignorable="d">
 
     <Page.DataContext>
@@ -25,6 +26,8 @@
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
                         <!--  TODO: change properties for narrow view  -->
+                        <Setter Target="container.Width" Value="400" ></Setter>
+                        <Setter Target="contentTitle.FontSize" Value="36" ></Setter>
                     </VisualState.Setters>
                 </VisualState>
                 <VisualState x:ConnectionId='5' x:Name="VisualStateNormal">
@@ -33,6 +36,8 @@
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
                         <!--  TODO: change properties for normal view  -->
+                        
+                        <Setter Target="container.Width" Value="700" ></Setter>
                     </VisualState.Setters>
                 </VisualState>
                 <VisualState x:ConnectionId='6' x:Name="VisualStateWide">
@@ -41,6 +46,7 @@
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
                         <!--  TODO: change properties for wide view  -->
+                        <Setter Target="container.Width" Value="1000" ></Setter>
                     </VisualState.Setters>
                 </VisualState>
             </VisualStateGroup>
@@ -58,12 +64,52 @@
                       RelativePanel.AlignRightWithPanel="True"
                       RelativePanel.Below="pageHeader"
                       VerticalScrollBarVisibility="Auto">
-            <StackPanel>
-                <TextBlock Style="{StaticResource TitleTextBlockStyle}" Text="You passed:" />
-                <TextBlock x:ConnectionId='8' Style="{StaticResource SubtitleTextBlockStyle}"                                                                             />
+            <StackPanel Orientation="Vertical">
+                <StackPanel x:ConnectionId='8' Name="container" Width="700" HorizontalAlignment="Center" Margin="20,30">
+                  
+                        <!--  <TextBlock Style="{StaticResource TitleTextBlockStyle}" Text="You passed:" />-->
+                    <TextBlock x:ConnectionId='9' Name="contentTitle" FontSize="50"                                                         TextWrapping="Wrap"></TextBlock>
+                    <TextBlock x:ConnectionId='10'                                                              ></TextBlock>
+                    <Image x:ConnectionId='11'
+                                                                                >
+
+                    </Image>
+                    <TextBlock x:ConnectionId='12'                                                           TextWrapping="Wrap" Margin="0,15,0,0"></TextBlock>
+
+                    <TextBlock x:ConnectionId='13' Style="{StaticResource SubtitleTextBlockStyle}"                                                                                    />
+              
+                <StackPanel>
+                        <StackPanel CornerRadius="5" Margin="15,40,10,0" Background="#F1F1F1" Padding="5">
+                            <TextBlock FontSize="25" Foreground="#000">
+                            Similar Drafts
+                            </TextBlock>
+                        </StackPanel>
+                        <GridView x:ConnectionId='14'                                                                
+                          IsItemClickEnabled="true"     
+                          Margin="10,20,10,10" 
+                          Height="300" >
+
+                            <GridView.ItemTemplate>
+                                <DataTemplate x:Name="ImageTextDataTemplate"                         >
+
+                                    <StackPanel  
+                                Width="200"
+                                Height="80"
+                                Margin="10" 
+                                Background="#f13" 
+                                CornerRadius="5" >
+
+                                        <TextBlock Padding="5" Foreground="#FFF" TextWrapping="Wrap" Text="{Binding DraftTitle}" ></TextBlock>
+
+                                    </StackPanel>
+
+                                </DataTemplate>
+                            </GridView.ItemTemplate>
+                        </GridView>
+                    </StackPanel>
+                </StackPanel>
             </StackPanel>
         </ScrollViewer>
-
     </RelativePanel>
 </Page>
 

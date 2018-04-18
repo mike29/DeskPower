@@ -1,0 +1,203 @@
+﻿<Page x:ConnectionId='1' x:Class="DeskPowerApp.Views.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:Behaviors="using:Template10.Behaviors"
+      xmlns:Core="using:Microsoft.Xaml.Interactions.Core"
+      xmlns:Interactivity="using:Microsoft.Xaml.Interactivity"
+      xmlns:controls="using:Template10.Controls"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="using:DeskPowerApp.Views"     
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:mv="using:DeskPowerApp.ViewModels"
+      xmlns:model="using:DeskPowerApp.Model"     
+      mc:Ignorable="d">
+
+  
+      
+    <Page.DataContext>
+        <mv:MainPageViewModel x:ConnectionId='2' x:Name="ViewModel"/>
+    </Page.DataContext>
+ 
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">   
+      
+        <!-- Page responsive setting-->
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:ConnectionId='3' x:Name="AdaptiveVisualStateGroup">
+                <VisualState x:ConnectionId='4' x:Name="VisualStateNarrow">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="{StaticResource NarrowMinWidth}" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <!--  TODO: change properties for narrow view  -->
+                        <!--   <Setter Target="stateTextBox.Text" Value="Narrow Visual State" />-->
+                        
+                        <Setter Target="BigBanner.Visibility" Value="Collapsed" />
+                        <Setter Target="GridToBanner.Height" Value="0" />
+                        <Setter Target="PageHolderGrid.Padding" Value="50,0,10,0" />
+                        
+                        
+                        
+                       
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:ConnectionId='5' x:Name="VisualStateNormal">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="{StaticResource NormalMinWidth}" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <!--  TODO: change properties for normal view  -->
+                        <!--    <Setter Target="stateTextBox.Text" Value="Normal Visual State" />-->
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:ConnectionId='6' x:Name="VisualStateWide">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="{StaticResource WideMinWidth}" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <!--  TODO: change properties for wide view  -->
+                        <!--  <Setter Target="stateTextBox.Text" Value="Wide Visual State" /> -->
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+
+        <!-- Page Header-->
+        <controls:PageHeader x:ConnectionId='7' x:Name="pageHeader" 
+                             RelativePanel.AlignLeftWithPanel="True"
+                             RelativePanel.AlignRightWithPanel="True"
+                             RelativePanel.AlignTopWithPanel="True" 
+                             Text="Desk Power"
+                             FontSize="20"                 
+                             Background="#FF6BB61C"
+                                                          
+                             >
+            <controls:PageHeader.PrimaryCommands>
+                <AppBarButton Icon="Find" Label="Save" Foreground="#fff"/>
+                
+            </controls:PageHeader.PrimaryCommands>
+             <controls:PageHeader.Content>
+                <AutoSuggestBox x:ConnectionId='13' PlaceholderText="Search" QueryIcon="Find" Width="250"
+                                BorderThickness="0"
+                                BorderBrush="red"
+                                                        
+                                                                                            
+                                                                   FocusVisualPrimaryThickness="0"/>
+            </controls:PageHeader.Content>
+            
+            <!--  secondary commands  -->
+            <controls:PageHeader.SecondaryCommands>
+                <AppBarButton x:ConnectionId='14'                                         Label="Settings" />
+                <AppBarButton x:ConnectionId='15'                                        Label="Privacy" />
+                <AppBarButton x:ConnectionId='16'                                      Label="About" />
+                <!-- Search Button-->
+            </controls:PageHeader.SecondaryCommands>
+        </controls:PageHeader>
+
+        <!-- PAGE START -->
+            <!--Grid view start-->
+        <Grid x:ConnectionId='8' Name="PageHolderGrid" RelativePanel.AlignLeftWithPanel="True"
+            RelativePanel.AlignRightWithPanel="True" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+          
+                <!--Backgroud Head Image-->
+                <Grid x:ConnectionId='9' 
+                    Name="GridToBanner"
+                      Grid.Row="0" 
+                      Grid.RowSpan="1"
+                      Margin="0,48,0,0"                      
+                      Height="260"
+                    >
+               
+                <Image x:ConnectionId='12' 
+                    Name="BigBanner"
+                    Stretch="UniformToFill" 
+                    Source="ms-appx:///Assets/img/BGJournalist.png" 
+                    Height="260"
+                    RelativePanel.AlignLeftWithPanel="True"
+                    RelativePanel.AlignRightWithPanel="True" Margin="0,0,0,20" />
+
+               
+                </Grid>
+
+            <Grid x:ConnectionId='10' Grid.Row="1"    
+                      Margin="5,5,5,5"  
+                      Grid.RowSpan="2"
+                      Name="DraftsGridView"
+                      RelativePanel.Below="BigBanner">
+
+                <!--SelectionChanged="SoundGridView_SelectionChanged"-->
+
+                <GridView x:ConnectionId='11'                                        
+                                                                 
+                                                              
+                          IsItemClickEnabled="true"
+                                                                        
+                          SelectedItem="{Binding DraftObject ,Mode=TwoWay}"                          
+                           Margin="0,0,0,0"  
+                          Grid.RowSpan="2">
+                   
+                    <GridView.ItemTemplate>
+                        <DataTemplate x:Name="ImageTextDataTemplate"                         >
+                            <!--The draft container stackpanel-->
+                            <StackPanel  
+                                
+                                Orientation="Vertical"  
+                                Width="350"    
+                               
+                                Margin="10" 
+                                HorizontalAlignment="Center"     
+                                Background="#Fff" 
+                                CornerRadius="5" >
+
+                                <StackPanel 
+                                                Orientation="Vertical"    
+                                                HorizontalAlignment="Center"     
+                                                Background="#FFF" 
+                                                CornerRadius="5" >
+                                    <StackPanel  Padding="10" Background="#000" Margin="0,0,0,0">
+                                        <TextBlock   
+                                               Foreground="#FFF" Text="{Binding DraftTitle}"/>
+                                    </StackPanel>
+                                    <StackPanel>
+                                    <Image 
+                                        
+                                           Stretch="UniformToFill" 
+                                           Width="350"
+                                           Height="240"                                            
+                                           Margin="0,0,0,0"
+                                           Source="{Binding DraftImageUrl }">
+                                    </Image>
+                                    </StackPanel>
+                                    <StackPanel  Padding="10" Background="#000" Margin="0,0,0,0">
+                                        <TextBlock   
+                                               Foreground="#FFF" Text="{Binding DraftCategory}"/>
+                                        <TextBlock   
+                                               Foreground="#FFF" Text="{Binding DraftCreatedDate}"   />
+                                    </StackPanel>
+                                    <StackPanel Padding="0,10,0,0"  >
+                                        <TextBlock   
+                                             VerticalAlignment="Center" Text="{Binding DraftContent}" Height="69" TextWrapping="Wrap" Style="{ThemeResource CaptionTextBlockStyle}" Foreground="{ThemeResource SystemControlPageTextBaseMediumBrush}"/>
+
+                                    </StackPanel>
+                                  
+                                </StackPanel>
+                            </StackPanel>
+                        </DataTemplate>
+                    </GridView.ItemTemplate>
+                    <GridView.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <ItemsWrapGrid MaximumRowsOrColumns="10" Orientation="Horizontal"/>
+                        </ItemsPanelTemplate>
+                    </GridView.ItemsPanel>
+                </GridView>
+
+            </Grid>
+
+        </Grid>          
+    </Grid>
+</Page>
+

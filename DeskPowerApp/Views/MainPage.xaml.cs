@@ -6,11 +6,14 @@ using Windows.UI.Xaml.Navigation;
 using System.Collections.ObjectModel;
 using Template10.Services.NavigationService;
 using DeskPowerApp.Model;
+using Windows.UI.Xaml.Input;
 
 namespace DeskPowerApp.Views
 {
     public sealed partial class MainPage : Page
     {
+        
+
         public MainPage()
         {
             InitializeComponent();
@@ -56,11 +59,19 @@ namespace DeskPowerApp.Views
         {
 
         }
-        
-        public void GotoDetailsPage(object sender, RoutedEventArgs e)
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            
-            this.Frame.Navigate(typeof(DetailPage));
+          
+        }
+
+        private void button_PointerEntered(object sender, PointerRoutedEventArgs e)
+        {
+            Windows.UI.Xaml.Window.Current.CoreWindow.PointerCursor = new Windows.UI.Core.CoreCursor(Windows.UI.Core.CoreCursorType.Hand, 1);
+        }
+        private void button_PointerExited(object sender, PointerRoutedEventArgs e)
+        {
+            Windows.UI.Xaml.Window.Current.CoreWindow.PointerCursor = new Windows.UI.Core.CoreCursor(Windows.UI.Core.CoreCursorType.Arrow, 1);
         }
     }
 }

@@ -1,6 +1,5 @@
 C:\Users\Michael M. Simon\source\repos\DeskPowerApp\Draft.Model\bin\Debug\DeskPowerApp.Model.dll
 C:\Users\Michael M. Simon\source\repos\DeskPowerApp\Draft.Model\bin\Debug\DeskPowerApp.Model.pdb
-C:\Users\Michael M. Simon\source\repos\DeskPowerApp\Draft.Model\obj\Debug\DeskPowerApp.Model.csprojResolveAssemblyReference.cache
 C:\Users\Michael M. Simon\source\repos\DeskPowerApp\Draft.Model\obj\Debug\DeskPowerApp.Model.csproj.CoreCompileInputs.cache
 C:\Users\Michael M. Simon\source\repos\DeskPowerApp\Draft.Model\obj\Debug\DeskPowerApp.Model.dll
 C:\Users\Michael M. Simon\source\repos\DeskPowerApp\Draft.Model\obj\Debug\DeskPowerApp.Model.pdb

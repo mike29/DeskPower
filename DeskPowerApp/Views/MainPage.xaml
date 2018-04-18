@@ -8,15 +8,16 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:local="using:DeskPowerApp.Views"     
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-      xmlns:vm="using:DeskPowerApp.ViewModels"
-      xmlns:model="using:DeskPowerApp.Model"
-     
+      xmlns:mv="using:DeskPowerApp.ViewModels"
+      xmlns:model="using:DeskPowerApp.Model"     
       mc:Ignorable="d">
-    
-     <!-- Give the view model context-->
+
+  
+      
     <Page.DataContext>
-        <vm:MainPageViewModel x:Name="ViewModel" />
+        <mv:MainPageViewModel x:Name="ViewModel"/>
     </Page.DataContext>
+ 
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">   
       
@@ -30,6 +31,14 @@
                     <VisualState.Setters>
                         <!--  TODO: change properties for narrow view  -->
                         <!--   <Setter Target="stateTextBox.Text" Value="Narrow Visual State" />-->
+                        
+                        <Setter Target="BigBanner.Visibility" Value="Collapsed" />
+                        <Setter Target="GridToBanner.Height" Value="0" />
+                        <Setter Target="PageHolderGrid.Padding" Value="50,0,10,0" />
+                        
+                        
+                        
+                       
                     </VisualState.Setters>
                 </VisualState>
                 <VisualState x:Name="VisualStateNormal">
@@ -86,118 +95,108 @@
         </controls:PageHeader>
 
         <!-- PAGE START -->
-       
             <!--Grid view start-->
-        <Grid  RelativePanel.AlignLeftWithPanel="True"
+        <Grid Name="PageHolderGrid" RelativePanel.AlignLeftWithPanel="True"
             RelativePanel.AlignRightWithPanel="True" >
-            
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
           
                 <!--Backgroud Head Image-->
-                <Grid Grid.Row="0" 
+                <Grid 
+                    Name="GridToBanner"
+                      Grid.Row="0" 
                       Grid.RowSpan="1"
                       Margin="0,48,0,0"                      
-                      Height="260">
+                      Height="260"
+                    >
                
                 <Image 
-                    Name="BigImage"
+                    Name="BigBanner"
                     Stretch="UniformToFill" 
                     Source="ms-appx:///Assets/img/BGJournalist.png" 
                     Height="260"
                     RelativePanel.AlignLeftWithPanel="True"
                     RelativePanel.AlignRightWithPanel="True" Margin="0,0,0,20" />
-                </Grid>
-      
-            <GridView Grid.Row="1"                       
-                      Margin="0,0,0,0"  
-                      Grid.RowSpan="2"
-                      Name="SoundGridView"
-                      IsItemClickEnabled="True"                     
-                      RelativePanel.Below="BigImage"                      
-                      ItemsSource="{Binding Drafts}" SelectionChanged="SoundGridView_SelectionChanged">
-                
 
-                <GridView.ItemTemplate>
-                    <DataTemplate x:DataType="model:Draft">
-                        
-                        <StackPanel 
-                            Orientation="Vertical"                                            
-                            Background="#000"                                              
-                            Margin="20,0,20,20"                              
-                            HorizontalAlignment="Center"                             
-                            CornerRadius="5">
-                            <HyperlinkButton         
+               
+                </Grid>
+
+            <Grid Grid.Row="1"    
+                      Margin="5,5,5,5"  
+                      Grid.RowSpan="2"
+                      Name="DraftsGridView"
+                      RelativePanel.Below="BigBanner">
+
+                <!--SelectionChanged="SoundGridView_SelectionChanged"-->
+
+                <GridView ItemsSource="{x:Bind ViewModel.Drafts}"
+                          PointerEntered="button_PointerEntered" 
+                          PointerExited="button_PointerExited"
+                          IsItemClickEnabled="true"
+                          ItemClick="{x:Bind ViewModel.GotoDetailsPage}"
+                          SelectedItem="{Binding DraftObject ,Mode=TwoWay}"                          
+                           Margin="0,0,0,0"  
+                          Grid.RowSpan="2">
+                   
+                    <GridView.ItemTemplate>
+                        <DataTemplate x:Name="ImageTextDataTemplate" x:DataType="model:Draft">
+                            <!--The draft container stackpanel-->
+                            <StackPanel  
                                 
-                                Click="GotoDetailsPage"
-                                HorizontalAlignment="Center">
-                                <StackPanel Padding="0">
+                                Orientation="Vertical"  
+                                Width="350"    
+                               
+                                Margin="10" 
+                                HorizontalAlignment="Center"     
+                                Background="#Fff" 
+                                CornerRadius="5" >
+
+                                <StackPanel 
+                                                Orientation="Vertical"    
+                                                HorizontalAlignment="Center"     
+                                                Background="#FFF" 
+                                                CornerRadius="5" >
+                                    <StackPanel  Padding="10" Background="#000" Margin="0,0,0,0">
+                                        <TextBlock   
+                                               Foreground="#FFF" Text="{Binding DraftTitle}"/>
+                                    </StackPanel>
+                                    <StackPanel>
                                     <Image 
+                                        
                                            Stretch="UniformToFill" 
-                                           Width="320"
+                                           Width="350"
                                            Height="240"                                            
                                            Margin="0,0,0,0"
-                                           Source="{Binding DraftImage }">
+                                           Source="{Binding DraftImageUrl }">
                                     </Image>
+                                    </StackPanel>
+                                    <StackPanel  Padding="10" Background="#000" Margin="0,0,0,0">
+                                        <TextBlock   
+                                               Foreground="#FFF" Text="{Binding DraftCategory}"/>
+                                        <TextBlock   
+                                               Foreground="#FFF" Text="{Binding DraftCreatedDate}"   />
+                                    </StackPanel>
+                                    <StackPanel Padding="0,10,0,0"  >
+                                        <TextBlock   
+                                             VerticalAlignment="Center" Text="{Binding DraftContent}" Height="69" TextWrapping="Wrap" Style="{ThemeResource CaptionTextBlockStyle}" Foreground="{ThemeResource SystemControlPageTextBaseMediumBrush}"/>
+
+                                    </StackPanel>
+                                  
                                 </StackPanel>
-                            </HyperlinkButton>
-                            <!-- Date and category-->
-                            <StackPanel       
-                                            Orientation="Horizontal"    
-                                            Name="categoryBox"                                 
-                                            Padding="5" >
-                                <TextBlock 
-                                            Width="150" 
-                                            Foreground="white"     
-                                            HorizontalAlignment="Left"
-                                            Height="Auto" 
-                                            FontSize="10"
-                                            Text="{Binding DraftCategory }">
-                                </TextBlock>
-                                                        
-                                          
-                                <TextBlock 
-                                            Width="150" 
-                                            HorizontalAlignment="Right"
-                                            Foreground="white"                                    
-                                            Height="Auto" 
-                                            FontSize="10"
-                                            Text="{Binding DraftCreatedDate }">
-                                </TextBlock>
                             </StackPanel>
+                        </DataTemplate>
+                    </GridView.ItemTemplate>
+                    <GridView.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <ItemsWrapGrid MaximumRowsOrColumns="10" Orientation="Horizontal"/>
+                        </ItemsPanelTemplate>
+                    </GridView.ItemsPanel>
+                </GridView>
 
-                            <StackPanel 
-                                        Background="Orange" 
-                                        Padding="10">
-                                <TextBlock  
-                                            Width="300" 
-                                            Height="30" 
-                                            VerticalAlignment="Center"
-                                            FontWeight="Bold"
-                                            Foreground="#FFF"
-                                            Text="{Binding DrafTitle }">
-                                </TextBlock>
-                            </StackPanel>
+            </Grid>
 
-                            <StackPanel 
-                                        Background="#f9f9f9" 
-                                        Padding="10">
-                                <TextBlock  
-                                            Name="content"
-                                            Width="300" 
-                                            Height="60" 
-                                            VerticalAlignment="Center"
-                                            TextWrapping="Wrap"                                              
-                                            Text="{Binding DraftContent }">
-
-                                </TextBlock>
-                            </StackPanel>
-                        </StackPanel>
-                    </DataTemplate>
-                </GridView.ItemTemplate>
-            </GridView>
         </Grid>          
     </Grid>
 </Page>
