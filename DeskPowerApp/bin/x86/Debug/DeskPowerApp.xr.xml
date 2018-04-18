@@ -138,6 +138,7 @@
       <RootProperty Name="Inlines" />
       <RootProperty Name="Opacity" />
       <RootProperty Name="Height" />
+      <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="LineHeight" />
       <RootProperty Name="MaxWidth" />
       <RootProperty Name="FontWeight" />

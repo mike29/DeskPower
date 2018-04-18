@@ -160,7 +160,7 @@
                                                 CornerRadius="5" >
                                     <StackPanel  Padding="10" Background="#000" Margin="0,0,0,0">
                                         <TextBlock   
-                                               Foreground="#FFF" Text="{Binding DraftTitle}"/>
+                                               Foreground="#FFF" Text="{Binding DraftTitle}" FontSize="17"/>
                                     </StackPanel>
                                     <StackPanel>
                                     <Image 
@@ -172,11 +172,11 @@
                                            Source="{Binding DraftImageUrl }">
                                     </Image>
                                     </StackPanel>
-                                    <StackPanel  Padding="10" Background="#000" Margin="0,0,0,0">
+                                    <StackPanel Orientation="Horizontal" Padding="10" Background="#000" Margin="0,0,0,0">
                                         <TextBlock   
-                                               Foreground="#FFF" Text="{Binding DraftCategory}"/>
+                                               Foreground="#FFF" Text="{Binding DraftCategory}" HorizontalAlignment="Left" FontSize="13"/>
                                         <TextBlock   
-                                               Foreground="#FFF" Text="{Binding DraftCreatedDate}"   />
+                                               Foreground="#FFF" Text="{Binding DraftCreatedDate}" FontSize="13" HorizontalAlignment="Right" />
                                     </StackPanel>
                                     <StackPanel Padding="0,10,0,0"  >
                                         <TextBlock   
