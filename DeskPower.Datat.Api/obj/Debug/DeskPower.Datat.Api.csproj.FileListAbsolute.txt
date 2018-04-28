@@ -20,6 +20,7 @@ C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPower.Datat.Api\bin\rosl
 C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPower.Datat.Api\bin\roslyn\Microsoft.VisualBasic.Core.targets
 C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPower.Datat.Api\bin\roslyn\Microsoft.Win32.Primitives.dll
 C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPower.Datat.Api\bin\roslyn\System.AppContext.dll
+C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPower.Datat.Api\bin\roslyn\System.Collections.Immutable.dll
 C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPower.Datat.Api\bin\roslyn\System.Console.dll
 C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPower.Datat.Api\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
 C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPower.Datat.Api\bin\roslyn\System.Diagnostics.Process.dll
@@ -50,6 +51,10 @@ C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPower.Datat.Api\bin\rosl
 C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPower.Datat.Api\bin\roslyn\VBCSCompiler.exe
 C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPower.Datat.Api\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPower.Datat.Api\bin\Antlr3.Runtime.dll
+C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPower.Datat.Api\bin\DeskPowerApp.DataAcess.dll
+C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPower.Datat.Api\bin\DeskPowerApp.Model.dll
+C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPower.Datat.Api\bin\EntityFramework.dll
+C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPower.Datat.Api\bin\EntityFramework.SqlServer.dll
 C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPower.Datat.Api\bin\Microsoft.AI.Agent.Intercept.dll
 C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPower.Datat.Api\bin\Microsoft.AI.DependencyCollector.dll
 C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPower.Datat.Api\bin\Microsoft.AI.PerfCounterCollector.dll
@@ -71,6 +76,11 @@ C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPower.Datat.Api\bin\Syst
 C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPower.Datat.Api\bin\System.Web.WebPages.dll
 C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPower.Datat.Api\bin\System.Web.WebPages.Razor.dll
 C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPower.Datat.Api\bin\WebGrease.dll
+C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPower.Datat.Api\bin\DeskPowerApp.DataAcess.pdb
+C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPower.Datat.Api\bin\DeskPowerApp.DataAcess.dll.config
+C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPower.Datat.Api\bin\DeskPowerApp.Model.pdb
+C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPower.Datat.Api\bin\EntityFramework.xml
+C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPower.Datat.Api\bin\EntityFramework.SqlServer.xml
 C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPower.Datat.Api\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPower.Datat.Api\bin\Newtonsoft.Json.xml
 C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPower.Datat.Api\bin\System.Net.Http.Formatting.xml
@@ -94,13 +104,3 @@ C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPower.Datat.Api\obj\Debu
 C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPower.Datat.Api\obj\Debug\DeskPower.Datat.Api.csproj.CopyComplete
 C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPower.Datat.Api\obj\Debug\DeskPower.Datat.Api.dll
 C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPower.Datat.Api\obj\Debug\DeskPower.Datat.Api.pdb
-C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPower.Datat.Api\bin\DeskPowerApp.DataAcess.dll
-C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPower.Datat.Api\bin\DeskPowerApp.Model.dll
-C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPower.Datat.Api\bin\EntityFramework.dll
-C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPower.Datat.Api\bin\EntityFramework.SqlServer.dll
-C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPower.Datat.Api\bin\DeskPowerApp.DataAcess.pdb
-C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPower.Datat.Api\bin\DeskPowerApp.DataAcess.dll.config
-C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPower.Datat.Api\bin\DeskPowerApp.Model.pdb
-C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPower.Datat.Api\bin\EntityFramework.xml
-C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPower.Datat.Api\bin\EntityFramework.SqlServer.xml
-C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPower.Datat.Api\bin\roslyn\System.Collections.Immutable.dll

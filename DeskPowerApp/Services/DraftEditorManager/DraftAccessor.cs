@@ -99,6 +99,19 @@ namespace DeskPowerApp.Services.DraftEditorManager
             }
         }
 
-       
+        internal async static Task SaveToDb(string title, string content, string category, DateTime createdDate, string DraftImageUrl)
+        {
+            category = "blog";
+            await DataSource.DraftData.Instance.AddDraft(new Model.Draft()
+            {
+                DraftTitle = title,
+                DraftContent = content,
+                DraftCategory = DraftCategories.Blog,
+                DraftCreatedDate = createdDate,
+                DraftImageUrl = DraftImageUrl,
+
+            }); 
+                
+        }
     }
 }

@@ -11,6 +11,7 @@ using System.Web.Http;
 using System.Web.Http.Description;
 using DeskPowerApp.DataAcess;
 using DeskPowerApp.Model;
+using System.Data.SqlClient;
 
 namespace DeskPower.Datat.Api.Controllers
 {
@@ -102,6 +103,41 @@ namespace DeskPower.Datat.Api.Controllers
 
             return Ok(draft);
         }
+
+        [HttpPost()]
+        [Route("api/Persons/{personId}/Drafts/{draftId}")]
+        [ResponseType(typeof(void))]
+        public async Task<IHttpActionResult> AddDraft(int authorId, int bookId)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(db.Database.Connection.ToString()))
+                {
+                    
+                    SqlCommand cmd = new SqlCommand("INSERT INTO DraftPerson VALUES (FraftId=@BookId, PersonId=@PersonId", conn);
+                    cmd.Parameters.AddWithValue("@DraftId", bookId);
+                    cmd.Parameters.AddWithValue("@PersonId", authorId);
+                    conn.Open();
+
+                    await cmd.ExecuteNonQueryAsync();
+                }
+            }
+            catch (Exception ex)
+            {
+                // Log the specific problem, and mask the issue with a general 500 status code
+                // Log(ex);
+                return InternalServerError();
+            }
+
+            return StatusCode(HttpStatusCode.NoContent);
+        }
+
+
+
+
+
+
+
 
         protected override void Dispose(bool disposing)
         {

@@ -41,16 +41,18 @@ namespace DeskPowerApp.ViewModels
         }
 
         public string Saved { get { return _saved; } set { Set(ref _saved, value); } }
-        string _saved; 
+        string _saved;
+
+        
+        
 
         public override async Task OnNavigatedToAsync(object parameter, NavigationMode mode, IDictionary<string, object> suspensionState)
         {
            // Saved = "NEW VALUE";
-            if (Drafts == null)
+            if (Drafts != null)
             {
-                sampleClass = new SampleData.SampleData();
-                Drafts = sampleClass.DraftSamplpeData;
-            
+                Drafts = new ObservableCollection<Draft>(await DataSource.DraftData.Instance.GetDrafts());
+
             }
             
             if (suspensionState.Any())
@@ -59,24 +61,34 @@ namespace DeskPowerApp.ViewModels
             }
             await Task.CompletedTask;
         }
-        
-    /*    private AwaitableDelegateCommand _OpenCommand;
-        public AwaitableDelegateCommand OpenCommand =>
-            _OpenCommand ?? (_OpenCommand = new AwaitableDelegateCommand(
-                new Func<AwaitableDelegateCommandParameter, Task>(async (param) =>
-                {
-                   
-                
-                    OpenCommand.RaiseCanExecuteChanged();
-                    
-                   // RichEditBox d = e.Assigner();
-                    await OpenFileBtnClickedAsync();
-                   
-                  
-                  //  OpenCommand.RaiseCanExecuteChanged();
-                })
-            ));*/
 
+            private AwaitableDelegateCommand _SaveCommand;
+         /*   public AwaitableDelegateCommand SaveCommand =>
+                _SaveCommand ?? (_SaveCommand = new AwaitableDelegateCommand(
+                    new Func<AwaitableDelegateCommandParameter, Task>(async (param) =>
+                    {
+
+
+                        SaveCommand.RaiseCanExecuteChanged();
+                        System.Diagnostics.Debug.WriteLine(Saved);
+                       // RichEditBox d = e.Assigner();
+                        await SaveFileBtnClickedAsync();
+                      
+
+
+                        //  SaveCommand.RaiseCanExecuteChanged();
+                    })
+                ));
+        */
+
+    /*    private Task SaveFileBtnClickedAsync()
+        {
+            System.Diagnostics.Debug.WriteLine("---- SAVE BUTTON CLICKED ---");
+            // saved.Document.GetText(Windows.UI.Text.TextGetOptions.AdjustCrlf, out value);
+            return Task.FromResult(0); 
+
+        }
+*/
         RichEditBox draftREBS = new RichEditBox();
         
      /* public async Task OpenFileBtnClickedAsync()

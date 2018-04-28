@@ -40,12 +40,20 @@ namespace DeskPowerApp.ViewModels
             set { Set(ref _drafts, value); }
         }
 
+        /// <summary>
+        /// Called when [navigated to asynchronous].
+        /// </summary>
+        /// <param name="parameter">The parameter.</param>
+        /// <param name="mode">The mode.</param>
+        /// <param name="suspensionState">State of the suspension.</param>
+        /// <returns></returns>
         public override async Task OnNavigatedToAsync(object parameter, NavigationMode mode, IDictionary<string, object> suspensionState)
         {
             if (Drafts == null)
             {
-                sampleClass = new SampleData.SampleData();
-                Drafts = sampleClass.DraftSamplpeData;
+                Drafts = new ObservableCollection<Draft>(await DataSource.DraftData.Instance.GetDrafts());
+                // sampleClass = new SampleData.SampleData();
+                // Drafts = sampleClass.DraftSamplpeData;
 
                 DraftObject = new Draft();
             

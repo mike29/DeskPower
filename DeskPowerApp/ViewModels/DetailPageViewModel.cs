@@ -63,10 +63,11 @@ namespace DeskPowerApp.ViewModels
 
             
                 sampleClass = new SampleData.SampleData();
-                Drafts = sampleClass.DraftSamplpeData;
+            //  Drafts = sampleClass.DraftSamplpeData;
+                Drafts = new ObservableCollection<Draft>(await DataSource.DraftData.Instance.GetDrafts());
 
 
-             foreach (Draft _draft in Drafts)
+            foreach (Draft _draft in Drafts)
              {
                  if (_draft.DraftId == tempIntId)
                  {

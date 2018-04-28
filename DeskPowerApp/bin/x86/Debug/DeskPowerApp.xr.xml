@@ -255,6 +255,7 @@
       <RootProperty Name="Height" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
+      <RootProperty Name="Name" />
       <RootProperty Name="Width" />
       <RootProperty Name="Margin" />
       <RootProperty Name="HorizontalAlignment" />
@@ -264,6 +265,14 @@
     <RootType FullName="Windows.UI.Xaml.Controls.CalendarDatePicker">
       <RootProperty Name="Header" />
       <RootProperty Name="Foreground" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.Button">
+      <RootProperty Name="Content" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Foreground" />
+      <RootProperty Name="Command" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.AppBarButton">
       <RootProperty Name="IsCompact" />
@@ -354,11 +363,6 @@
       <RootProperty Name="OffContent" />
       <RootProperty Name="OnContent" />
       <RootProperty Name="IsEnabled" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.Button">
-      <RootProperty Name="Margin" />
-      <RootProperty Name="Command" />
-      <RootProperty Name="Content" />
     </RootType>
     <RootType FullName="DeskPowerApp.Views.SettingsPage" />
     <RootType FullName="Template10.Controls.HamburgerButtonInfo">

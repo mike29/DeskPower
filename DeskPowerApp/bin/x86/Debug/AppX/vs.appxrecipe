@@ -31,13 +31,13 @@
     <AppXManifest Include="C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-04-28T17:03:21.690</Modified>
+      <Modified>2018-04-28T22:08:03.246</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\bin\x86\Debug\DeskPowerApp.exe">
       <PackagePath>entrypoint\DeskPowerApp.exe</PackagePath>
-      <Modified>2018-04-28T17:03:20.125</Modified>
+      <Modified>2018-04-28T21:31:08.153</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Michael M. Simon\.nuget\packages\microsoft.csharp\4.0.1\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -513,7 +513,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Michael M. Simon\source\repos\DeskPowerApp\Draft.Model\bin\Debug\DeskPowerApp.Model.dll">
       <PackagePath>DeskPowerApp.Model.dll</PackagePath>
-      <Modified>2018-04-28T17:03:00.272</Modified>
+      <Modified>2018-04-28T21:03:11.506</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\Assets\img\BGJournalist.png">
       <PackagePath>Assets\img\BGJournalist.png</PackagePath>
@@ -587,7 +587,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\bin\x86\Debug\DeskPowerApp.xr.xml">
       <PackagePath>DeskPowerApp.xr.xml</PackagePath>
-      <Modified>2018-04-18T09:44:12.782</Modified>
+      <Modified>2018-04-28T20:26:57.520</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -628,11 +628,11 @@
     <AppxPackagedFile Include="C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-04-28T17:03:21.137</Modified>
+      <Modified>2018-04-28T22:08:02.614</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\bin\x86\Debug\Core\DeskPowerApp.exe">
       <PackagePath>DeskPowerApp.exe</PackagePath>
-      <Modified>2018-04-28T17:03:21.679</Modified>
+      <Modified>2018-04-28T22:08:03.236</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

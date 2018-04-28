@@ -170,7 +170,7 @@
                                     ToolTipService.ToolTip="Open file" 
                                     Margin="8,0,10,0"
                                     Foreground="#FFF"/>
-                                <!--    Command="{x:Bind ViewModel.OpenCommand}"   -->
+                                
                                 <AppBarButton 
                                     Icon="Save" 
                                     ToolTipService.ToolTip="Save file"
@@ -188,15 +188,16 @@
                                     Foreground="#FFF"/>
 
                                 <AppBarButton 
-                                    x:Name="italicButton" 
+                                    x:Name="italicButton"                                     
                                     Icon="Italic" 
-                                    Click="ItalicButton_Click" 
+                                    Click="ItalicButton_Click"     
                                     ToolTipService.ToolTip="Italic" 
                                     RelativePanel.LeftOf="underlineButton" 
                                     Margin="0,0,10,0"
                                     Foreground="#FFF"/>
+                                
 
-                                <AppBarButton 
+                                    <AppBarButton 
                                     x:Name="underlineButton" 
                                     Icon="Underline" 
                                     Click="UnderlineButton_Click"
@@ -205,11 +206,10 @@
                                     Margin="0,0,10,0"
                                     Foreground="#FFF"/>
                             </StackPanel>
-
+                    
                             <!--RICH TEXT EDITOR-->
                         <RichEditBox   
-                            PlaceholderText = "{x:Bind ViewModel.Saved, Mode=TwoWay}"  
-                           
+                            PlaceholderText = "{x:Bind ViewModel.Saved, Mode=TwoWay}"                              
                             IsSpellCheckEnabled="True"
                             Margin="0,65,0,0"
                             Name="draftEditor" 
@@ -218,6 +218,7 @@
                             RelativePanel.AlignLeftWithPanel="True" 
                             RelativePanel.AlignRightWithPanel="True" />
                             <!--TextChanged="editor_TextChanged"-->
+
                         </RelativePanel>
                     </Grid>
                 </StackPanel>
@@ -231,15 +232,26 @@
                     <StackPanel Margin="10">
 
                         <TextBlock Foreground="#fff">Title</TextBlock>
-                        <TextBox></TextBox>
+                        <TextBox Name="title"></TextBox>
 
                         <TextBlock Foreground="#fff">Author</TextBlock>
-                        <TextBox></TextBox>
+                        <TextBox Name="author"></TextBox>
                        
                         <CalendarDatePicker 
                         x:Name="draftCalendarDatePicker" 
                         Header="Created date"
                         Foreground="#FFF" />
+
+                        <Button
+                            x:Name = "button1"  
+                            Content = "SAVE" 
+                            Margin = "10"  
+                            Width = "150" 
+                            HorizontalAlignment = "Center" 
+                            Foreground = "Gray"
+                            />
+                        <!--  Command="{x:Bind ViewModel.SaveCommand}"-->
+   
                     </StackPanel>
                 </StackPanel>
             </Grid>
