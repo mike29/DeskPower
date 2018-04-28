@@ -68,9 +68,9 @@ namespace DeskPowerApp.ViewModels
 
              foreach (Draft _draft in Drafts)
              {
-                 if (_draft.DraftID == tempIntId)
+                 if (_draft.DraftId == tempIntId)
                  {
-                     System.Diagnostics.Debug.WriteLine(_draft.DraftID + " " + tempIntId);
+                     System.Diagnostics.Debug.WriteLine(_draft.DraftId + " " + tempIntId);
                  if (Drafts != null)
                  {
                         ///
@@ -93,7 +93,7 @@ namespace DeskPowerApp.ViewModels
         {
             if (suspending)
             {
-                suspensionState[nameof(DraftIdValue)] = DraftIdValue;
+                //suspensionState[nameof(DraftIdValue)] = DraftIdValue;
             }
             await Task.CompletedTask;
         }

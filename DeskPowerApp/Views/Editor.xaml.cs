@@ -52,7 +52,11 @@ namespace DeskPowerApp.Views
         /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
         private async void SaveButton_Click(object sender, RoutedEventArgs e)
         {
-            await DraftAccessor.SaveDraft(sender, e, draftEditor);
+            // await DraftAccessor.SaveDraft(sender, e, draftEditor);
+            //draftEditor.Document.SetText(Windows.UI.Text.TextSetOptions.None, "randAccStream");
+            string value = string.Empty;
+            draftEditor.Document.GetText(Windows.UI.Text.TextGetOptions.AdjustCrlf, out value);
+            System.Diagnostics.Debug.WriteLine(value); 
         }
 
         private void BoldButton_Click(object sender, RoutedEventArgs e)

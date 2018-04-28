@@ -68,7 +68,7 @@
                 <StackPanel Name="container" Width="700" HorizontalAlignment="Center" Margin="20,30">
                   
                         <!--  <TextBlock Style="{StaticResource TitleTextBlockStyle}" Text="You passed:" />-->
-                    <TextBlock Name="contentTitle" FontSize="50" Text="{x:Bind ViewModel.DetailClickedDraft.DraftTitle}" TextWrapping="Wrap"></TextBlock>
+                    <TextBlock Name="contentTitle" FontSize="50" Text="{x:Bind ViewModel.DetailClickedDraft.DraftTitle}" ></TextBlock>
                     <TextBlock Text="{x:Bind ViewModel.DetailClickedDraft.DraftCreatedDate}"></TextBlock>
                     <Image
                     Source="{x:Bind ViewModel.DetailClickedDraft.DraftImageUrl}">

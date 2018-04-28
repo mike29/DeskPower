@@ -12,7 +12,7 @@ namespace DeskPowerApp.Model
 {
     public class Person: INotifyPropertyChanged
     {
-        public int PersonID { get; set; }
+        public int PersonId { get; set; }
         public string FirstName { get; set; }
         public string LastName {get; set;}    
         public string Position { get; set; }

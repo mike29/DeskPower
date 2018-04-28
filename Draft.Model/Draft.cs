@@ -55,7 +55,7 @@ namespace DeskPowerApp.Model
         /// <value>
         /// The draft identifier.
         /// </value>
-        public int DraftID { get; set; }
+        public int DraftId { get; set; }
 
         /// <summary>
         /// Gets or sets the draf title.
@@ -129,7 +129,7 @@ namespace DeskPowerApp.Model
         /// </returns>
         public override string ToString()
         {
-            return DraftID + "";
+            return DraftId + "";
         }
 
     }

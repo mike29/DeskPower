@@ -68,7 +68,7 @@
                 <StackPanel x:ConnectionId='8' Name="container" Width="700" HorizontalAlignment="Center" Margin="20,30">
                   
                         <!--  <TextBlock Style="{StaticResource TitleTextBlockStyle}" Text="You passed:" />-->
-                    <TextBlock x:ConnectionId='9' Name="contentTitle" FontSize="50"                                                         TextWrapping="Wrap"></TextBlock>
+                    <TextBlock x:ConnectionId='9' Name="contentTitle" FontSize="50"                                                         ></TextBlock>
                     <TextBlock x:ConnectionId='10'                                                              ></TextBlock>
                     <Image x:ConnectionId='11'
                                                                                 >

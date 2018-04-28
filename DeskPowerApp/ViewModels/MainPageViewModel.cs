@@ -54,7 +54,7 @@ namespace DeskPowerApp.ViewModels
             if (suspensionState.Any())
             {
                 
-                // DraftObject.DraftID = suspensionState[nameof(DraftObject.DraftID)]?.ToString();
+                // DraftObject.DraftId = suspensionState[nameof(DraftObject.DraftId)]?.ToString();
             }
             await Task.CompletedTask;
         }
@@ -63,7 +63,7 @@ namespace DeskPowerApp.ViewModels
         {
             if (suspending)
             {
-                suspensionState[nameof(DraftObject.DraftID)] = DraftObject.DraftID;
+                suspensionState[nameof(DraftObject.DraftId)] = DraftObject.DraftId;
              
             }
             await Task.CompletedTask;
@@ -76,7 +76,7 @@ namespace DeskPowerApp.ViewModels
         }
 
         public void GotoDetailsPage() =>
-            NavigationService.Navigate(typeof(Views.DetailPage), DraftObject.DraftID.ToString());
+            NavigationService.Navigate(typeof(Views.DetailPage), DraftObject.DraftId.ToString());
 
         public void GotoSettings() =>
             NavigationService.Navigate(typeof(Views.SettingCustom), 0);
@@ -87,5 +87,12 @@ namespace DeskPowerApp.ViewModels
         public void GotoAbout() =>
             NavigationService.Navigate(typeof(Views.SettingsPage), 2);
        
+       /* public void Test()
+        {
+            //Slett funksjon og sett OnClick i MainPage.xaml til "GotoDetailsPage()"
+            Debug.WriteLine("TEST: " + DraftObject);
+            GotoDetailsPage();
+        }*/
+
     }
 }
