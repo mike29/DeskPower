@@ -10,22 +10,22 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>92211ab1-5481-4a1a-9111-a3dd87b81b72</PackageIdentityName>
     <PackageIdentityPublisher>CN=daren</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\Michael M. Simon\Documents\HIØF\newDesk\DeskPower\DeskPowerApp\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType></RemoteDeploymentType>
     <PackageRegistrationPath></PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\bin\x86\Debug\AppX</LayoutDir>
+    <LayoutDir>C:\Users\Michael M. Simon\Documents\HIØF\newDesk\DeskPower\DeskPowerApp\bin\x86\Debug\AppX</LayoutDir>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\Michael M. Simon\Documents\HIØF\newDesk\DeskPower\DeskPowerApp\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\bin\x86\Debug\DeskPowerApp.exe">
+    <AppxPackagedFile Include="C:\Users\Michael M. Simon\Documents\HIØF\newDesk\DeskPower\DeskPowerApp\bin\x86\Debug\DeskPowerApp.exe">
       <PackagePath>entrypoint\DeskPowerApp.exe</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Michael M. Simon\.nuget\packages\microsoft.csharp\4.0.1\lib\netcore50\Microsoft.CSharp.dll">
@@ -382,64 +382,64 @@
     <AppxPackagedFile Include="C:\Users\Michael M. Simon\.nuget\packages\template10\1.1.12\lib\uap10.0\Template10Library.dll">
       <PackagePath>Template10Library.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Michael M. Simon\source\repos\DeskPowerApp\Draft.Model\bin\Debug\DeskPowerApp.Model.dll">
+    <AppxPackagedFile Include="C:\Users\Michael M. Simon\Documents\HIØF\newDesk\DeskPower\Draft.Model\bin\Debug\DeskPowerApp.Model.dll">
       <PackagePath>DeskPowerApp.Model.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\Assets\img\BGJournalist.png">
+    <AppxPackagedFile Include="C:\Users\Michael M. Simon\Documents\HIØF\newDesk\DeskPower\DeskPowerApp\Assets\img\BGJournalist.png">
       <PackagePath>Assets\img\BGJournalist.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Michael M. Simon\Documents\HIØF\newDesk\DeskPower\DeskPowerApp\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Michael M. Simon\Documents\HIØF\newDesk\DeskPower\DeskPowerApp\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Michael M. Simon\Documents\HIØF\newDesk\DeskPower\DeskPowerApp\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Michael M. Simon\Documents\HIØF\newDesk\DeskPower\DeskPowerApp\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\Michael M. Simon\Documents\HIØF\newDesk\DeskPower\DeskPowerApp\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\Michael M. Simon\Documents\HIØF\newDesk\DeskPower\DeskPowerApp\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Michael M. Simon\Documents\HIØF\newDesk\DeskPower\DeskPowerApp\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\Assets\img\equipment.jpg">
+    <AppxPackagedFile Include="C:\Users\Michael M. Simon\Documents\HIØF\newDesk\DeskPower\DeskPowerApp\Assets\img\equipment.jpg">
       <PackagePath>Assets\img\equipment.jpg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\Assets\img\g-crescoli-365895-unsplash.jpg">
+    <AppxPackagedFile Include="C:\Users\Michael M. Simon\Documents\HIØF\newDesk\DeskPower\DeskPowerApp\Assets\img\g-crescoli-365895-unsplash.jpg">
       <PackagePath>Assets\img\g-crescoli-365895-unsplash.jpg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\Assets\img\gun.jpg">
+    <AppxPackagedFile Include="C:\Users\Michael M. Simon\Documents\HIØF\newDesk\DeskPower\DeskPowerApp\Assets\img\gun.jpg">
       <PackagePath>Assets\img\gun.jpg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\Assets\img\music.jpg">
+    <AppxPackagedFile Include="C:\Users\Michael M. Simon\Documents\HIØF\newDesk\DeskPower\DeskPowerApp\Assets\img\music.jpg">
       <PackagePath>Assets\img\music.jpg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\Assets\img\photo-1504.jpg">
+    <AppxPackagedFile Include="C:\Users\Michael M. Simon\Documents\HIØF\newDesk\DeskPower\DeskPowerApp\Assets\img\photo-1504.jpg">
       <PackagePath>Assets\img\photo-1504.jpg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\Assets\img\police.jpg">
+    <AppxPackagedFile Include="C:\Users\Michael M. Simon\Documents\HIØF\newDesk\DeskPower\DeskPowerApp\Assets\img\police.jpg">
       <PackagePath>Assets\img\police.jpg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\Assets\img\ptree.jpg">
+    <AppxPackagedFile Include="C:\Users\Michael M. Simon\Documents\HIØF\newDesk\DeskPower\DeskPowerApp\Assets\img\ptree.jpg">
       <PackagePath>Assets\img\ptree.jpg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\Michael M. Simon\Documents\HIØF\newDesk\DeskPower\DeskPowerApp\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\bin\x86\Debug\DeskPowerApp.xr.xml">
+    <AppxPackagedFile Include="C:\Users\Michael M. Simon\Documents\HIØF\newDesk\DeskPower\DeskPowerApp\bin\x86\Debug\DeskPowerApp.xr.xml">
       <PackagePath>DeskPowerApp.xr.xml</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
@@ -469,11 +469,11 @@
     <AppxPackagedFile Include="C:\Users\Michael M. Simon\.nuget\packages\template10\1.1.12\lib\uap10.0\Template10Library\Themes\Resizer.xaml">
       <PackagePath>Template10Library\Themes\Resizer.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\Michael M. Simon\Documents\HIØF\newDesk\DeskPower\DeskPowerApp\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\bin\x86\Debug\Core\DeskPowerApp.exe">
+    <AppxPackagedFile Include="C:\Users\Michael M. Simon\Documents\HIØF\newDesk\DeskPower\DeskPowerApp\bin\x86\Debug\Core\DeskPowerApp.exe">
       <PackagePath>DeskPowerApp.exe</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>

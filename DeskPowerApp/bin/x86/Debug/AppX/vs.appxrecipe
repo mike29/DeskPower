@@ -10,7 +10,7 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>92211ab1-5481-4a1a-9111-a3dd87b81b72</PackageIdentityName>
     <PackageIdentityPublisher>CN=daren</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\Michael M. Simon\Documents\HIØF\newDesk\DeskPower\DeskPowerApp\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
     <PackageRegistrationPath>
@@ -18,7 +18,7 @@
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\bin\x86\Debug\AppX</LayoutDir>
+    <LayoutDir>C:\Users\Michael M. Simon\Documents\HIØF\newDesk\DeskPower\DeskPowerApp\bin\x86\Debug\AppX</LayoutDir>
     <RegisteredManifestChecksum>0782708D3CF66886669D672EF647D6A4B7AB4CCED14868BF6EEC667CFDF9AAFC</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>92211ab1-5481-4a1a-9111-a3dd87b81b72_1.0.0.0_x86__8zmgqd0netmce</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>92211ab1-5481-4a1a-9111-a3dd87b81b72_8zmgqd0netmce!App</RegisteredUserModeAppID>
@@ -28,16 +28,16 @@
     <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\Michael M. Simon\Documents\HIØF\newDesk\DeskPower\DeskPowerApp\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-04-28T22:08:03.246</Modified>
+      <Modified>2018-05-20T21:43:00.201</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\bin\x86\Debug\DeskPowerApp.exe">
+    <AppxPackagedFile Include="C:\Users\Michael M. Simon\Documents\HIØF\newDesk\DeskPower\DeskPowerApp\bin\x86\Debug\DeskPowerApp.exe">
       <PackagePath>entrypoint\DeskPowerApp.exe</PackagePath>
-      <Modified>2018-04-28T21:31:08.153</Modified>
+      <Modified>2018-05-20T21:42:59.185</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Michael M. Simon\.nuget\packages\microsoft.csharp\4.0.1\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -511,83 +511,83 @@
       <PackagePath>Template10Library.dll</PackagePath>
       <Modified>2016-10-17T09:42:00.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Michael M. Simon\source\repos\DeskPowerApp\Draft.Model\bin\Debug\DeskPowerApp.Model.dll">
+    <AppxPackagedFile Include="C:\Users\Michael M. Simon\Documents\HIØF\newDesk\DeskPower\Draft.Model\bin\Debug\DeskPowerApp.Model.dll">
       <PackagePath>DeskPowerApp.Model.dll</PackagePath>
-      <Modified>2018-04-28T21:03:11.506</Modified>
+      <Modified>2018-05-20T21:42:44.557</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\Assets\img\BGJournalist.png">
+    <AppxPackagedFile Include="C:\Users\Michael M. Simon\Documents\HIØF\newDesk\DeskPower\DeskPowerApp\Assets\img\BGJournalist.png">
       <PackagePath>Assets\img\BGJournalist.png</PackagePath>
-      <Modified>2018-01-22T18:39:06.033</Modified>
+      <Modified>2018-05-20T21:35:18.584</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Michael M. Simon\Documents\HIØF\newDesk\DeskPower\DeskPowerApp\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
-      <Modified>2018-04-09T20:57:54.611</Modified>
+      <Modified>2018-05-20T21:35:18.563</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Michael M. Simon\Documents\HIØF\newDesk\DeskPower\DeskPowerApp\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-04-09T20:57:54.620</Modified>
+      <Modified>2018-05-20T21:35:18.565</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Michael M. Simon\Documents\HIØF\newDesk\DeskPower\DeskPowerApp\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-04-09T20:57:54.634</Modified>
+      <Modified>2018-05-20T21:35:18.566</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Michael M. Simon\Documents\HIØF\newDesk\DeskPower\DeskPowerApp\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-04-09T20:57:54.638</Modified>
+      <Modified>2018-05-20T21:35:18.567</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\Michael M. Simon\Documents\HIØF\newDesk\DeskPower\DeskPowerApp\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-04-09T20:57:54.644</Modified>
+      <Modified>2018-05-20T21:35:18.568</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\Michael M. Simon\Documents\HIØF\newDesk\DeskPower\DeskPowerApp\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-04-09T20:57:54.647</Modified>
+      <Modified>2018-05-20T21:35:18.569</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Michael M. Simon\Documents\HIØF\newDesk\DeskPower\DeskPowerApp\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-04-09T20:57:54.652</Modified>
+      <Modified>2018-05-20T21:35:18.570</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\Assets\img\equipment.jpg">
+    <AppxPackagedFile Include="C:\Users\Michael M. Simon\Documents\HIØF\newDesk\DeskPower\DeskPowerApp\Assets\img\equipment.jpg">
       <PackagePath>Assets\img\equipment.jpg</PackagePath>
       <Modified>2018-04-12T14:37:28.775</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\Assets\img\g-crescoli-365895-unsplash.jpg">
+    <AppxPackagedFile Include="C:\Users\Michael M. Simon\Documents\HIØF\newDesk\DeskPower\DeskPowerApp\Assets\img\g-crescoli-365895-unsplash.jpg">
       <PackagePath>Assets\img\g-crescoli-365895-unsplash.jpg</PackagePath>
       <Modified>2018-04-12T14:42:27.854</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\Assets\img\gun.jpg">
+    <AppxPackagedFile Include="C:\Users\Michael M. Simon\Documents\HIØF\newDesk\DeskPower\DeskPowerApp\Assets\img\gun.jpg">
       <PackagePath>Assets\img\gun.jpg</PackagePath>
       <Modified>2018-04-12T15:16:39.115</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\Assets\img\music.jpg">
+    <AppxPackagedFile Include="C:\Users\Michael M. Simon\Documents\HIØF\newDesk\DeskPower\DeskPowerApp\Assets\img\music.jpg">
       <PackagePath>Assets\img\music.jpg</PackagePath>
       <Modified>2018-04-12T15:15:20.463</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\Assets\img\photo-1504.jpg">
+    <AppxPackagedFile Include="C:\Users\Michael M. Simon\Documents\HIØF\newDesk\DeskPower\DeskPowerApp\Assets\img\photo-1504.jpg">
       <PackagePath>Assets\img\photo-1504.jpg</PackagePath>
       <Modified>2018-04-12T14:42:18.635</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\Assets\img\police.jpg">
+    <AppxPackagedFile Include="C:\Users\Michael M. Simon\Documents\HIØF\newDesk\DeskPower\DeskPowerApp\Assets\img\police.jpg">
       <PackagePath>Assets\img\police.jpg</PackagePath>
       <Modified>2018-04-12T15:17:32.651</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\Assets\img\ptree.jpg">
+    <AppxPackagedFile Include="C:\Users\Michael M. Simon\Documents\HIØF\newDesk\DeskPower\DeskPowerApp\Assets\img\ptree.jpg">
       <PackagePath>Assets\img\ptree.jpg</PackagePath>
       <Modified>2018-04-12T15:14:35.191</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\Michael M. Simon\Documents\HIØF\newDesk\DeskPower\DeskPowerApp\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2018-04-09T20:57:54.662</Modified>
+      <Modified>2018-05-20T21:35:18.592</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\bin\x86\Debug\DeskPowerApp.xr.xml">
+    <AppxPackagedFile Include="C:\Users\Michael M. Simon\Documents\HIØF\newDesk\DeskPower\DeskPowerApp\bin\x86\Debug\DeskPowerApp.xr.xml">
       <PackagePath>DeskPowerApp.xr.xml</PackagePath>
-      <Modified>2018-04-28T20:26:57.520</Modified>
+      <Modified>2018-05-20T21:35:19.843</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -625,14 +625,14 @@
       <PackagePath>Template10Library\Themes\Resizer.xaml</PackagePath>
       <Modified>2016-10-17T09:42:00.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\Michael M. Simon\Documents\HIØF\newDesk\DeskPower\DeskPowerApp\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-04-28T22:08:02.614</Modified>
+      <Modified>2018-05-20T21:42:59.865</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Michael M. Simon\source\repos\DeskPowerApp\DeskPowerApp\bin\x86\Debug\Core\DeskPowerApp.exe">
+    <AppxPackagedFile Include="C:\Users\Michael M. Simon\Documents\HIØF\newDesk\DeskPower\DeskPowerApp\bin\x86\Debug\Core\DeskPowerApp.exe">
       <PackagePath>DeskPowerApp.exe</PackagePath>
-      <Modified>2018-04-28T22:08:03.236</Modified>
+      <Modified>2018-05-20T21:43:00.198</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
