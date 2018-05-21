@@ -104,19 +104,21 @@ namespace DeskPower.Datat.Api.Controllers
             return Ok(draft);
         }
 
+        // TODO
+        // Not sure if needed 
         [HttpPost()]
         [Route("api/Persons/{personId}/Drafts/{draftId}")]
         [ResponseType(typeof(void))]
-        public async Task<IHttpActionResult> AddDraft(int authorId, int bookId)
+        public async Task<IHttpActionResult> AddDraft(int personId, int draftId)
         {
             try
             {
                 using (SqlConnection conn = new SqlConnection(db.Database.Connection.ToString()))
                 {
                     
-                    SqlCommand cmd = new SqlCommand("INSERT INTO DraftPerson VALUES (FraftId=@BookId, PersonId=@PersonId", conn);
-                    cmd.Parameters.AddWithValue("@DraftId", bookId);
-                    cmd.Parameters.AddWithValue("@PersonId", authorId);
+                    SqlCommand cmd = new SqlCommand("INSERT INTO DraftPerson VALUES (FraftId=@DraftId, PersonId=@PersonId", conn);
+                    cmd.Parameters.AddWithValue("@DraftId", draftId);
+                    cmd.Parameters.AddWithValue("@PersonId", personId);
                     conn.Open();
 
                     await cmd.ExecuteNonQueryAsync();

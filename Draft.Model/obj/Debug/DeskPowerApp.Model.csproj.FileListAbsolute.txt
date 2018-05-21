@@ -8,3 +8,4 @@ C:\Users\Michael M. Simon\Documents\HIØF\newDesk\DeskPower\Draft.Model\bin\Debu
 C:\Users\Michael M. Simon\Documents\HIØF\newDesk\DeskPower\Draft.Model\obj\Debug\DeskPowerApp.Model.csproj.CoreCompileInputs.cache
 C:\Users\Michael M. Simon\Documents\HIØF\newDesk\DeskPower\Draft.Model\obj\Debug\DeskPowerApp.Model.dll
 C:\Users\Michael M. Simon\Documents\HIØF\newDesk\DeskPower\Draft.Model\obj\Debug\DeskPowerApp.Model.pdb
+C:\Users\Michael M. Simon\Documents\HIØF\newDesk\DeskPower\Draft.Model\obj\Debug\DeskPowerApp.Model.csprojResolveAssemblyReference.cache
