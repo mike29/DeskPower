@@ -7,6 +7,7 @@ using DeskPowerApp.Model;
 using System.Net.Http;
 using Newtonsoft.Json;
 using System.Diagnostics;
+using System.Collections.ObjectModel;
 
 namespace DeskPowerApp.DataSource
 {
@@ -43,10 +44,10 @@ namespace DeskPowerApp.DataSource
         /// Gets the drafts.
         /// </summary>
         /// <returns></returns>
-        public async Task<Draft[]> GetDrafts()
+        public async Task<ObservableCollection<Draft>> GetDrafts()
         {
             var json = await _client.GetStringAsync("drafts").ConfigureAwait(false);
-            Draft[] drafts = JsonConvert.DeserializeObject<Draft[]>(json);
+            ObservableCollection<Draft> drafts = JsonConvert.DeserializeObject<ObservableCollection<Draft>>(json);
             return drafts; 
         }
 

@@ -154,7 +154,7 @@
       <RootProperty Name="Resources" />
       <RootProperty Name="Background" />
     </RootType>
-    <RootType FullName="DeskPowerApp.ViewModels.DetailPageViewModel" />
+    <RootType FullName="DeskPowerApp.ViewModels.DetailDraftViewModel" />
     <RootType FullName="Windows.UI.Xaml.Controls.RelativePanel">
       <RootProperty Name="Background" />
       <RootProperty Name="Children" />
@@ -230,6 +230,7 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="Height" />
       <RootProperty Name="ItemTemplate" />
+      <RootProperty Name="Name" />
       <RootProperty Name="SelectedItem" />
       <RootProperty Name="ItemsPanel" />
       <RootEvent Name="PointerEntered" />
@@ -246,6 +247,8 @@
       <RootProperty Name="ElementName" />
       <RootProperty Name="Converter" />
     </RootType>
+    <RootType FullName="DeskPowerApp.Views.DetailDraftView" />
+    <RootType FullName="DeskPowerApp.ViewModels.DetailPageViewModel" />
     <RootType FullName="DeskPowerApp.Views.DetailPage" />
     <RootType FullName="DeskPowerApp.ViewModels.EditorViewModel" />
     <RootType FullName="Windows.UI.Xaml.Data.RelativeSource">
@@ -316,13 +319,14 @@
       <RootProperty Name="Orientation" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.AutoSuggestBox">
+      <RootProperty Name="Name" />
       <RootProperty Name="PlaceholderText" />
       <RootProperty Name="QueryIcon" />
       <RootProperty Name="Width" />
       <RootProperty Name="BorderThickness" />
       <RootProperty Name="BorderBrush" />
       <RootProperty Name="FocusVisualPrimaryThickness" />
-      <RootEvent Name="TextChanged" />
+      <RootEvent Name="KeyDown" />
       <RootEvent Name="QuerySubmitted" />
       <RootEvent Name="SuggestionChosen" />
     </RootType>

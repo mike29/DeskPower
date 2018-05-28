@@ -31,13 +31,13 @@
     <AppXManifest Include="C:\Users\Michael M. Simon\Documents\HIØF\endaDesk\DeskPower\DeskPowerApp\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-05-28T17:55:54.276</Modified>
+      <Modified>2018-05-28T21:51:23.500</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Michael M. Simon\Documents\HIØF\endaDesk\DeskPower\DeskPowerApp\bin\x86\Debug\DeskPowerApp.exe">
       <PackagePath>entrypoint\DeskPowerApp.exe</PackagePath>
-      <Modified>2018-05-28T17:51:27.057</Modified>
+      <Modified>2018-05-28T21:50:26.578</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Michael M. Simon\.nuget\packages\microsoft.csharp\4.0.1\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -513,7 +513,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Michael M. Simon\Documents\HIØF\endaDesk\DeskPower\Draft.Model\bin\Debug\DeskPowerApp.Model.dll">
       <PackagePath>DeskPowerApp.Model.dll</PackagePath>
-      <Modified>2018-05-28T14:34:55.557</Modified>
+      <Modified>2018-05-28T21:31:02.260</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Michael M. Simon\Documents\HIØF\endaDesk\DeskPower\DeskPowerApp\Assets\img\BGJournalist.png">
       <PackagePath>Assets\img\BGJournalist.png</PackagePath>
@@ -587,7 +587,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Michael M. Simon\Documents\HIØF\endaDesk\DeskPower\DeskPowerApp\bin\x86\Debug\DeskPowerApp.xr.xml">
       <PackagePath>DeskPowerApp.xr.xml</PackagePath>
-      <Modified>2018-05-28T15:10:16.283</Modified>
+      <Modified>2018-05-28T21:29:38.678</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -628,11 +628,11 @@
     <AppxPackagedFile Include="C:\Users\Michael M. Simon\Documents\HIØF\endaDesk\DeskPower\DeskPowerApp\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-05-28T17:55:53.893</Modified>
+      <Modified>2018-05-28T21:51:23.144</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Michael M. Simon\Documents\HIØF\endaDesk\DeskPower\DeskPowerApp\bin\x86\Debug\Core\DeskPowerApp.exe">
       <PackagePath>DeskPowerApp.exe</PackagePath>
-      <Modified>2018-05-28T17:55:54.272</Modified>
+      <Modified>2018-05-28T21:51:23.497</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

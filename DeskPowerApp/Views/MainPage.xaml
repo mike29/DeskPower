@@ -77,12 +77,16 @@
                 
             </controls:PageHeader.PrimaryCommands>
              <controls:PageHeader.Content>
-                <AutoSuggestBox PlaceholderText="Search" QueryIcon="Find" Width="250"
-                                BorderThickness="0"
-                                BorderBrush="red"
-                TextChanged="AutoSuggestBox_TextChanged"
-                QuerySubmitted="AutoSuggestBox_QuerySubmitted"                              
-                SuggestionChosen="AutoSuggestBox_SuggestionChosen" FocusVisualPrimaryThickness="0"/>
+                <AutoSuggestBox 
+                    PlaceholderText="Search" 
+                    Name="AutoSuggestBox"
+                    QueryIcon="Find" Width="250"
+                    BorderThickness="0"
+                    BorderBrush="red"
+                    KeyDown="AutoSuggestBox_KeyDown"
+                    QuerySubmitted="AutoSuggestBox_QuerySubmitted"                              
+                    SuggestionChosen="AutoSuggestBox_SuggestionChosen" 
+                    FocusVisualPrimaryThickness="0"/>
             </controls:PageHeader.Content>
             
             <!--  secondary commands  -->
@@ -137,7 +141,8 @@
                           IsItemClickEnabled="true"
                           ItemClick="{x:Bind ViewModel.GotoDetailsPage}"
                           SelectedItem="{Binding DraftObject ,Mode=TwoWay}"                          
-                           Margin="0,0,0,0"  
+                          Margin="0,0,0,0"
+                          Name="DraftsGrid"
                           Grid.RowSpan="2">
                    
                     <GridView.ItemTemplate>
@@ -146,8 +151,7 @@
                             <StackPanel  
                                 
                                 Orientation="Vertical"  
-                                Width="350"    
-                               
+                                Width="350"                                   
                                 Margin="10" 
                                 HorizontalAlignment="Center"     
                                 Background="#Fff" 
