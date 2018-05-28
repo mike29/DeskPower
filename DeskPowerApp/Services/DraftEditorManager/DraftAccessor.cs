@@ -1,5 +1,7 @@
-﻿using System;
+﻿using DeskPowerApp.Model;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,14 +17,21 @@ namespace DeskPowerApp.Services.DraftEditorManager
 
         }
 
-        /// <summary>
-        /// Opens the draft.
-        /// </summary>
-        /// <param name="sender">The sender.</param>
-        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
-        /// <param name="draftEditor">The draft editor.</param>
-        /// <returns></returns>
-        internal async static Task OpenDraft(object sender, RoutedEventArgs e, RichEditBox draftEditor)
+        internal static void OpenDraftFromDb(RichEditBox draftEditor , Draft selectedDraft)
+        {
+            draftEditor.Document.SetText(options: Windows.UI.Text.TextSetOptions.FormatRtf, value: selectedDraft.DraftContent);
+            Debug.Write(selectedDraft.DraftContent);
+        }
+
+            // OPEN DRAFT FROM LOCAL
+            /// <summary>
+            /// Opens the draft.
+            /// </summary>
+            /// <param name="sender">The sender.</param>
+            /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
+            /// <param name="draftEditor">The draft editor.</param>
+            /// <returns></returns>
+            internal async static Task OpenDraft(object sender, RoutedEventArgs e, RichEditBox draftEditor)
         {
             // Open a text file.
             Windows.Storage.Pickers.FileOpenPicker open =

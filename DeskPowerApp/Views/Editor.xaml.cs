@@ -1,6 +1,8 @@
-﻿using DeskPowerApp.Services.DraftEditorManager;
+﻿using DeskPowerApp.Model;
+using DeskPowerApp.Services.DraftEditorManager;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -34,6 +36,18 @@ namespace DeskPowerApp.Views
             
         }
 
+        private  void DraftSelectionChanged (object sender, SelectionChangedEventArgs e)
+        {
+            Draft selectedDraft = ((Draft)draftsList.SelectedItem);
+            //Debug.WriteLine("Selected: {0}", selectedDraft.DraftId);
+            if (selectedDraft != null)
+            {
+                 DraftAccessor.OpenDraftFromDb(draftEditor, selectedDraft);
+            }
+            
+        }
+        
+
         /// <summary>
         /// Handles the Click event of the OpenButton control.
         /// </summary>
@@ -60,12 +74,24 @@ namespace DeskPowerApp.Views
 
            
             string Dtitle = title.Text;
-            DateTimeOffset sourceTime = (DateTimeOffset)draftCalendarDatePicker.Date;
-            DateTime DDate = sourceTime.DateTime;
-            if (sourceTime != null)
+            try
             {
-
-                await DraftAccessor.SaveToDb(Dtitle, value, "", DDate, "ms-appx:///Assets/img/gun.jpg");
+                DateTimeOffset sourceTime = ((DateTimeOffset)draftCalendarDatePicker.Date != null) ? (DateTimeOffset)draftCalendarDatePicker.Date : DateTimeOffset.Now;
+                if (sourceTime != null)
+                {
+                    DateTime DDate = sourceTime.DateTime;
+                    await DraftAccessor.SaveToDb(Dtitle, value, "", DDate, "ms-appx:///Assets/img/gun.jpg");
+                }
+                else
+                {
+                    //TODO
+                    // return meaningfull error to user
+                    Debug.Write("no date & data not stored");
+                }
+            }
+            catch
+            {
+                    Debug.Write("error occured accessing data");
             }
            
 

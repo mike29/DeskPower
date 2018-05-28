@@ -88,6 +88,9 @@
                             Height="{Binding ActualHeight, RelativeSource ={RelativeSource Mode=TemplatedParent}}">
         
                         <ListView x:ConnectionId='20' 
+                         Name="draftsList"
+                         IsItemClickEnabled="True"
+                                                                  
                                                                   
                          Height="834">
                          

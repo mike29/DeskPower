@@ -12,7 +12,7 @@ namespace DeskPowerApp.DataAcess
 {
     public class DeskPowerAppContext : DbContext
     {
-        public DeskPowerAppContext()
+        public DeskPowerAppContext() : base("Data Source = donau.hiof.no; Initial Catalog = michaems; Persist Security Info=True;User ID = michaems; Password=M1qTc5")
         {
             this.Configuration.ProxyCreationEnabled = false;
             Database.SetInitializer(new DeskPowerAppIntializer());

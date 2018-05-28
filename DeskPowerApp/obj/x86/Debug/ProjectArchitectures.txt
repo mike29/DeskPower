@@ -1,2 +1,2 @@
-C:\Users\Michael M. Simon\Documents\HIØF\newDesk\DeskPower\DeskPowerApp\DeskPowerApp.csproj;x86
-C:\Users\Michael M. Simon\Documents\HIØF\newDesk\DeskPower\Draft.Model\DeskPowerApp.Model.csproj;neutral
+C:\Users\Michael M. Simon\Documents\HIØF\endaDesk\DeskPower\DeskPowerApp\DeskPowerApp.csproj;x86
+C:\Users\Michael M. Simon\Documents\HIØF\endaDesk\DeskPower\Draft.Model\DeskPowerApp.Model.csproj;neutral

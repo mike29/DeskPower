@@ -88,6 +88,9 @@
                             Height="{Binding ActualHeight, RelativeSource ={RelativeSource Mode=TemplatedParent}}">
         
                         <ListView 
+                         Name="draftsList"
+                         IsItemClickEnabled="True"
+                         SelectionChanged="DraftSelectionChanged" 
                          ItemsSource="{x:Bind ViewModel.Drafts}"  
                          Height="834">
                          
