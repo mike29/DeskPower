@@ -24,7 +24,16 @@ namespace DeskPowerApp.ViewModels
             Saved = "Some Value";
             
         }
+        /// <summary>
+        /// The category list
+        /// Set category enum to the list and is binded to UI combo
+        /// </summary>
+        public List<DraftCategories> CategoryList = Enum.GetValues(typeof(DraftCategories))
+                                    .Cast<DraftCategories>()
+                                    .ToList();
 
+
+   
         ObservableCollection<Draft> _drafts;
         public ObservableCollection<Draft> Drafts
         {

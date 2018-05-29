@@ -23,8 +23,11 @@ namespace DeskPowerApp.ViewModels
                 DraftIdValue = "Designtime value";
             }
         }
-       public Draft DetailClickedDraft;
-        
+        public Draft DetailClickedDraft;
+
+        //Hold clicked from detail page grid view
+        public Draft DraftObject { get; set; } = new Draft();
+
 
         ObservableCollection<Draft> _drafts;
         public ObservableCollection<Draft> Drafts
@@ -48,7 +51,19 @@ namespace DeskPowerApp.ViewModels
         /// The draft identifier value.
         /// </value>
         public string DraftIdValue { get { return _IdValue; } set { Set(ref _IdValue, value); } }
-        
+
+        //TODO
+        /// <summary>
+        /// Drafts the selected.
+        /// When user select one of the grid view items from the detail page, they will be displayed 
+        /// </summary>
+        public void DraftSelected ()
+        {
+            DetailClickedDraft = DraftObject;
+            System.Diagnostics.Debug.WriteLine(".....Display selected item", DraftObject.DraftTitle);
+        }
+
+
         /// <summary>
         /// Called when [navigated to asynchronous].
         /// </summary>
@@ -64,20 +79,18 @@ namespace DeskPowerApp.ViewModels
             
                 sampleClass = new SampleData.SampleData();
             //  Drafts = sampleClass.DraftSamplpeData;
-                Drafts = new ObservableCollection<Draft>(await DataSource.DraftData.Instance.GetDrafts());
+                Drafts = await DataSource.DraftData.Instance.GetDrafts();
 
 
             foreach (Draft _draft in Drafts)
              {
                  if (_draft.DraftId == tempIntId)
                  {
+                    // Log the two same values
                      System.Diagnostics.Debug.WriteLine(_draft.DraftId + " " + tempIntId);
                  if (Drafts != null)
                  {
-                        ///
-                        /// clear the observable collection
-                        ///
-                        // Drafts.Clear();
+                   
                         DetailClickedDraft = _draft;
                  }
 

@@ -87,7 +87,7 @@
                             Background="#2C2626"
                             Height="{Binding ActualHeight, RelativeSource ={RelativeSource Mode=TemplatedParent}}">
         
-                        <ListView x:ConnectionId='20' 
+                        <ListView x:ConnectionId='23' 
                          Name="draftsList"
                          IsItemClickEnabled="True"
                                                                   
@@ -99,26 +99,26 @@
                                 x:Name="TripleLineDataTemplate" 
                                                          >
                                 
-                                <StackPanel x:ConnectionId='21'  
+                                <StackPanel x:ConnectionId='24'  
                                     Height="auto" 
                                     Padding="10" 
                                                                                    >
                                     
-                                    <TextBlock x:ConnectionId='22' 
+                                    <TextBlock x:ConnectionId='25' 
                                                                     
                                         TextWrapping="Wrap" 
                                         Style="{ThemeResource BaseTextBlockStyle}"    
                                         Foreground="#FFF"                                               
                                         Margin="0,0,0,0"/>
                                     
-                                    <TextBlock x:ConnectionId='23' 
+                                    <TextBlock x:ConnectionId='26' 
                                                                       
                                         Style="{ThemeResource CaptionTextBlockStyle}" 
                                         Foreground="#FFF" 
                                         Opacity=".8" 
                                         Margin="0,0,0,0"/>
                                     
-                                    <TextBlock x:ConnectionId='24' 
+                                    <TextBlock x:ConnectionId='27' 
                                                                          
                                         Style="{ThemeResource CaptionTextBlockStyle}" 
                                         Foreground="#FFF" 
@@ -165,7 +165,7 @@
                                       
                                         Background="#5F5C5C">
 
-                                <AppBarButton x:ConnectionId='15' 
+                                <AppBarButton x:ConnectionId='18' 
                                     x:Name="openFileButton"   
                                    
                                                             
@@ -174,7 +174,7 @@
                                     Margin="8,0,10,0"
                                     Foreground="#FFF"/>
                                 
-                                <AppBarButton x:ConnectionId='16' 
+                                <AppBarButton x:ConnectionId='19' 
                                     Icon="Save" 
                                     ToolTipService.ToolTip="Save file"
                                                              
@@ -182,7 +182,7 @@
                                     Margin="8,0,10,0"
                                     Foreground="#FFF"/>
 
-                                <AppBarButton x:ConnectionId='17' 
+                                <AppBarButton x:ConnectionId='20' 
                                     Icon="Bold"  
                                     ToolTipService.ToolTip="Bold"
                                                              
@@ -190,7 +190,7 @@
                                     Margin="0,0,10,0"
                                     Foreground="#FFF"/>
 
-                                <AppBarButton x:ConnectionId='18' 
+                                <AppBarButton x:ConnectionId='21' 
                                     x:Name="italicButton"                                     
                                     Icon="Italic" 
                                                                    
@@ -200,7 +200,7 @@
                                     Foreground="#FFF"/>
                                 
 
-                                    <AppBarButton x:ConnectionId='19' 
+                                    <AppBarButton x:ConnectionId='22' 
                                     x:Name="underlineButton" 
                                     Icon="Underline" 
                                                                  
@@ -211,7 +211,7 @@
                             </StackPanel>
                     
                             <!--RICH TEXT EDITOR-->
-                        <RichEditBox x:ConnectionId='14'   
+                        <RichEditBox x:ConnectionId='17'   
                                                                                                                    
                             IsSpellCheckEnabled="True"
                             Margin="0,65,0,0"
@@ -246,13 +246,35 @@
                         Foreground="#FFF" />
 
                         <Button x:ConnectionId='13'
-                            x:Name = "button1"  
-                            Content = "SAVE" 
+                            x:Name = "save_data"  
+                                                    
+                            Content = "Save New" 
                             Margin = "10"  
                             Width = "150" 
                             HorizontalAlignment = "Center" 
                             Foreground = "Gray"
                             />
+
+                        <Button x:ConnectionId='14'
+                            x:Name = "update_data"  
+                                              
+                            Content = "Update" 
+                            Margin = "10"  
+                            Width = "150" 
+                            HorizontalAlignment = "Center" 
+                            Foreground = "Gray"
+                            />
+                        <Button x:ConnectionId='15'
+                            x:Name = "delete_data"  
+                                              
+                            Content = "Delete" 
+                            Margin = "10"  
+                            Width = "150" 
+                            HorizontalAlignment = "Center" 
+                            Foreground = "Gray"
+                            />
+                        <ComboBox x:ConnectionId='16' x:Name="CategoryCombo" Header="Draft Category" Height="54" Width="240" Foreground="White"                                 
+                                                                                    />
                         <!--  Command="{x:Bind ViewModel.SaveCommand}"-->
    
                     </StackPanel>

@@ -26,19 +26,22 @@ namespace DeskPowerApp.Views
     public sealed partial class Editor : Page
     {
 
+        Draft selectedDraft = null;
+        Draft newUpdatedDraft;
+
         /// <summary>
         /// Initializes a new instance of the <see cref="Editor"/> class.
         /// </summary>
         public Editor()
         {
             this.InitializeComponent();
-            NavigationCacheMode = Windows.UI.Xaml.Navigation.NavigationCacheMode.Enabled;          
-            
+            NavigationCacheMode = Windows.UI.Xaml.Navigation.NavigationCacheMode.Enabled;
+          
         }
 
         private  void DraftSelectionChanged (object sender, SelectionChangedEventArgs e)
         {
-            Draft selectedDraft = ((Draft)draftsList.SelectedItem);
+            selectedDraft = ((Draft)draftsList.SelectedItem);
             //Debug.WriteLine("Selected: {0}", selectedDraft.DraftId);
             if (selectedDraft != null)
             {
@@ -58,29 +61,49 @@ namespace DeskPowerApp.Views
             await DraftAccessor.OpenDraft(sender, e, draftEditor); 
           
         }
+        private String ExtractText()
+        {
+            string value = string.Empty;
+            draftEditor.Document.GetText(Windows.UI.Text.TextGetOptions.AdjustCrlf, out value);
+            return value;
+        }
 
         /// <summary>
+        /// 
         /// Handles the Click event of the SaveButton control.
+        /// After it calls saveDraft from Draft Accessor (stores in harddisk locally),
+        /// It calls SaveDataToDb method which is responsibile for storing to database
         /// </summary>
         /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
+        /// <param name="e">The <see cref="RoutedEventArgs" /> instance containing the event data.</param>
         private async void SaveButton_Click(object sender, RoutedEventArgs e)
         {
+            // Store to local
              await DraftAccessor.SaveDraft(sender, e, draftEditor);
-           // draftEditor.Document.SetText(Windows.UI.Text.TextSetOptions.None, "randAccStream");
-            string value = string.Empty;
+            // draftEditor.Document.SetText(Windows.UI.Text.TextSetOptions.None, "randAccStream");
+            string textValue = ExtractText();
 
-            draftEditor.Document.GetText(Windows.UI.Text.TextGetOptions.AdjustCrlf, out value);
+            // Store to database
+            SaveDataToDb(textValue);
+        }
 
-           
+        private DateTime CurrentDate()
+        {           
+            DateTimeOffset sourceTime = draftCalendarDatePicker.Date ?? DateTimeOffset.Now;
+            Debug.Write((DateTimeOffset)draftCalendarDatePicker.Date);
+            return sourceTime.DateTime;
+        }
+
+        private async void SaveDataToDb(string value)
+        {
             string Dtitle = title.Text;
             try
             {
-                DateTimeOffset sourceTime = ((DateTimeOffset)draftCalendarDatePicker.Date != null) ? (DateTimeOffset)draftCalendarDatePicker.Date : DateTimeOffset.Now;
-                if (sourceTime != null)
+              
+                if (CurrentDate() != null)
                 {
-                    DateTime DDate = sourceTime.DateTime;
-                    await DraftAccessor.SaveToDb(Dtitle, value, "", DDate, "ms-appx:///Assets/img/gun.jpg");
+                    DateTime DraftCreatedDate = CurrentDate();
+                    await DraftAccessor.SaveToDb(Dtitle, value, CategoryCombo.SelectionBoxItem.ToString(), DraftCreatedDate, "ms-appx:///Assets/img/music.jpg");
                 }
                 else
                 {
@@ -91,11 +114,34 @@ namespace DeskPowerApp.Views
             }
             catch
             {
-                    Debug.Write("error occured accessing data");
+                Debug.Write("error occured accessing data");
             }
-           
+        }
+        
+        private async void UpdateData(object sender, RoutedEventArgs e)
+        {
+            string textValue = ExtractText();
+            DateTime DraftCreatedDate = CurrentDate();
 
-          //  System.Diagnostics.Debug.WriteLine(value); 
+            newUpdatedDraft = new Model.Draft()
+            {
+                DraftTitle = (title.Text == "") ? selectedDraft.DraftTitle : title.Text ,
+                DraftContent = textValue,
+                DraftCategory = (DraftCategories) CategoryCombo.SelectionBoxItem,
+                DraftCreatedDate = (DraftCreatedDate == null) ? selectedDraft.DraftCreatedDate : DraftCreatedDate,
+                DraftImageUrl = "ms-appx:///Assets/img/photo-1504.jpg",
+
+            };
+        
+            selectedDraft = ((Draft)draftsList.SelectedItem);
+            await DraftAccessor.UpdateDataInDb(selectedDraft, newUpdatedDraft);            
+        }
+
+        private async void DeleteData(object sender, RoutedEventArgs e)
+        {
+            selectedDraft = ((Draft)draftsList.SelectedItem);
+            await DraftAccessor.DeleteDataInDb(selectedDraft);
+ 
         }
 
         private void BoldButton_Click(object sender, RoutedEventArgs e)

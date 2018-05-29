@@ -246,13 +246,35 @@
                         Foreground="#FFF" />
 
                         <Button
-                            x:Name = "button1"  
-                            Content = "SAVE" 
+                            x:Name = "save_data"  
+                            Click="SaveButton_Click"
+                            Content = "Save New" 
                             Margin = "10"  
                             Width = "150" 
                             HorizontalAlignment = "Center" 
                             Foreground = "Gray"
                             />
+
+                        <Button
+                            x:Name = "update_data"  
+                            Click="UpdateData"
+                            Content = "Update" 
+                            Margin = "10"  
+                            Width = "150" 
+                            HorizontalAlignment = "Center" 
+                            Foreground = "Gray"
+                            />
+                        <Button
+                            x:Name = "delete_data"  
+                            Click="DeleteData"
+                            Content = "Delete" 
+                            Margin = "10"  
+                            Width = "150" 
+                            HorizontalAlignment = "Center" 
+                            Foreground = "Gray"
+                            />
+                        <ComboBox x:Name="CategoryCombo" Header="Draft Category" Height="54" Width="240" Foreground="White"                                 
+                         ItemsSource="{x:Bind ViewModel.CategoryList, Mode=TwoWay}" />
                         <!--  Command="{x:Bind ViewModel.SaveCommand}"-->
    
                     </StackPanel>

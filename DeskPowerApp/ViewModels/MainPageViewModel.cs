@@ -12,7 +12,7 @@ namespace DeskPowerApp.ViewModels
 {
     public class MainPageViewModel : ViewModelBase
     {
-       
+        
         private SampleData.SampleData sampleClass;
         public MainPageViewModel()
         {
@@ -21,6 +21,7 @@ namespace DeskPowerApp.ViewModels
                 
             }
         }
+        
 
         //public Draft t;
         public Draft DraftObject { get; set; } = new Draft();

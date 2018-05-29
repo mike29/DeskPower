@@ -5,9 +5,9 @@
   </Roots.Interfaces>
   <Roots.PropertyPathNames>
     <RootPropertyPathName Name="DraftTitle" />
+    <RootPropertyPathName Name="DraftObject" />
     <RootPropertyPathName Name="ActualWidth" />
     <RootPropertyPathName Name="ActualHeight" />
-    <RootPropertyPathName Name="DraftObject" />
     <RootPropertyPathName Name="DraftContent" />
     <RootPropertyPathName Name="DraftCreatedDate" />
     <RootPropertyPathName Name="DraftCategory" />
@@ -230,19 +230,19 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="Height" />
       <RootProperty Name="ItemTemplate" />
-      <RootProperty Name="Name" />
       <RootProperty Name="SelectedItem" />
+      <RootProperty Name="Name" />
       <RootProperty Name="ItemsPanel" />
+      <RootEvent Name="ItemClick" />
       <RootEvent Name="PointerEntered" />
       <RootEvent Name="PointerExited" />
-      <RootEvent Name="ItemClick" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.DataTemplate">
       <RootProperty Name="Template" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Data.Binding">
-      <RootProperty Name="RelativeSource" />
       <RootProperty Name="Mode" />
+      <RootProperty Name="RelativeSource" />
       <RootProperty Name="UpdateSourceTrigger" />
       <RootProperty Name="ElementName" />
       <RootProperty Name="Converter" />
@@ -276,6 +276,14 @@
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Foreground" />
       <RootProperty Name="Command" />
+      <RootEvent Name="Click" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
+      <RootProperty Name="Header" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Foreground" />
+      <RootProperty Name="ItemsSource" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.AppBarButton">
       <RootProperty Name="IsCompact" />
@@ -321,7 +329,6 @@
     <RootType FullName="Windows.UI.Xaml.Controls.AutoSuggestBox">
       <RootProperty Name="Name" />
       <RootProperty Name="PlaceholderText" />
-      <RootProperty Name="QueryIcon" />
       <RootProperty Name="Width" />
       <RootProperty Name="BorderThickness" />
       <RootProperty Name="BorderBrush" />

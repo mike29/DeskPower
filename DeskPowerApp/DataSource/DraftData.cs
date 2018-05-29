@@ -54,11 +54,11 @@ namespace DeskPowerApp.DataSource
         /// <summary>
         /// Deletes the drafts.
         /// </summary>
-        /// <param name="course">The course.</param>
+        /// <param name="draft">The course.</param>
         /// <returns></returns>
-        public async Task<bool> DeleteDrafts(Draft course)
+        public async Task<bool> DeleteDrafts(Draft draft)
         {
-            var response = await _client.DeleteAsync($"drafts\\{course.DraftId}").ConfigureAwait(false);
+            var response = await _client.DeleteAsync($"drafts\\{draft.DraftId}").ConfigureAwait(false);
             return response.IsSuccessStatusCode || response.StatusCode == System.Net.HttpStatusCode.NotFound; 
 
         }
@@ -80,10 +80,10 @@ namespace DeskPowerApp.DataSource
         /// </summary>
         /// <param name="draft">The draft.</param>
         /// <returns></returns>
-        public async Task<bool> PutDraft(Draft draft)
+        public async Task<bool> PutDraft(Draft draft, Draft newUpdateDraft)
         {
             await DeleteDrafts(draft);
-            await AddDraft(draft);
+            await AddDraft(newUpdateDraft);
             return true;
 
         }

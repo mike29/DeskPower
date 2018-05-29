@@ -31,7 +31,7 @@ namespace DeskPowerApp.Services.DraftEditorManager
             /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
             /// <param name="draftEditor">The draft editor.</param>
             /// <returns></returns>
-            internal async static Task OpenDraft(object sender, RoutedEventArgs e, RichEditBox draftEditor)
+        internal async static Task OpenDraft(object sender, RoutedEventArgs e, RichEditBox draftEditor)
         {
             // Open a text file.
             Windows.Storage.Pickers.FileOpenPicker open =
@@ -121,6 +121,16 @@ namespace DeskPowerApp.Services.DraftEditorManager
 
             }); 
                 
+        }
+
+        internal async static Task DeleteDataInDb(Draft draftToBeDeleted)
+        {
+            await DataSource.DraftData.Instance.DeleteDrafts(draftToBeDeleted);
+        }
+
+        internal async static Task UpdateDataInDb(Draft draftToBeUpdated, Draft newUpdateDraft)
+        {
+            await DataSource.DraftData.Instance.PutDraft(draftToBeUpdated, newUpdateDraft);
         }
     }
 }

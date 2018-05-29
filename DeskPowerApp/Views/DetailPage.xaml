@@ -87,7 +87,9 @@
                         <GridView ItemsSource="{x:Bind ViewModel.Drafts}"                        
                           IsItemClickEnabled="true"     
                           Margin="10,20,10,10" 
-                          Height="300" >
+                          Height="300" 
+                          ItemClick="{x:Bind ViewModel.DraftSelected}"
+                           SelectedItem="{Binding DraftObject ,Mode=TwoWay}"   >
 
                             <GridView.ItemTemplate>
                                 <DataTemplate x:Name="ImageTextDataTemplate" x:DataType="model:Draft">

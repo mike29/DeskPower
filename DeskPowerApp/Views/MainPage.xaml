@@ -35,10 +35,7 @@
                         <Setter Target="BigBanner.Visibility" Value="Collapsed" />
                         <Setter Target="GridToBanner.Height" Value="0" />
                         <Setter Target="PageHolderGrid.Padding" Value="50,0,10,0" />
-                        
-                        
-                        
-                       
+                   
                     </VisualState.Setters>
                 </VisualState>
                 <VisualState x:Name="VisualStateNormal">
@@ -69,18 +66,15 @@
                              RelativePanel.AlignTopWithPanel="True" 
                              Text="Desk Power"
                              FontSize="20"                 
-                             Background="#FF6BB61C"
-                                                          
-                             >
+                             Background="#FF6BB61C" >
             <controls:PageHeader.PrimaryCommands>
-                <AppBarButton Icon="Find" Label="Save" Foreground="#fff"/>
                 
             </controls:PageHeader.PrimaryCommands>
              <controls:PageHeader.Content>
                 <AutoSuggestBox 
                     PlaceholderText="Search" 
                     Name="AutoSuggestBox"
-                    QueryIcon="Find" Width="250"
+                    Width="250"
                     BorderThickness="0"
                     BorderBrush="red"
                     KeyDown="AutoSuggestBox_KeyDown"
