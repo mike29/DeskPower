@@ -12,6 +12,7 @@ using System.Web.Http.Description;
 using DeskPowerApp.DataAcess;
 using DeskPowerApp.Model;
 using System.Data.SqlClient;
+using System.Diagnostics;
 
 namespace DeskPower.Datat.Api.Controllers
 {
@@ -124,10 +125,10 @@ namespace DeskPower.Datat.Api.Controllers
                     await cmd.ExecuteNonQueryAsync();
                 }
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
                 // Log the specific problem, and mask the issue with a general 500 status code
-                // Log(ex);
+                Debug.Write(e.Message);
                 return InternalServerError();
             }
 

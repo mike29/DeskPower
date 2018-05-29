@@ -94,7 +94,8 @@ namespace DeskPowerApp.Views
                 if (CurrentDate() != null)
                 {
                     DateTime DraftCreatedDate = CurrentDate();
-                    await DraftAccessor.SaveToDb(Dtitle, value, CategoryCombo.SelectionBoxItem.ToString(), DraftCreatedDate, "ms-appx:///Assets/img/music.jpg");
+                    await DraftAccessor.SaveToDb(Dtitle, value,(DraftCategories) CategoryCombo.SelectionBoxItem, DraftCreatedDate, "ms-appx:///Assets/img/music.jpg");
+                  
                 }
                 else
                 {
@@ -196,7 +197,7 @@ namespace DeskPowerApp.Views
         private DateTime CurrentDate()
         {
             DateTimeOffset sourceTime = draftCalendarDatePicker.Date ?? DateTimeOffset.Now;
-            Debug.Write((DateTimeOffset)draftCalendarDatePicker.Date);
+        
             return sourceTime.DateTime;
         }
 

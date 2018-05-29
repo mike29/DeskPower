@@ -316,3 +316,5 @@ C:\Users\Michael M. Simon\Documents\HIØF\endaDesk\DeskPower\DeskPower.Datat.Api
 C:\Users\Michael M. Simon\Documents\HIØF\endaDesk\DeskPower\DeskPower.Datat.Api\obj\Debug\DeskPower.Datat.Api.csproj.CopyComplete
 C:\Users\Michael M. Simon\Documents\HIØF\endaDesk\DeskPower\DeskPower.Datat.Api\obj\Debug\DeskPower.Datat.Api.dll
 C:\Users\Michael M. Simon\Documents\HIØF\endaDesk\DeskPower\DeskPower.Datat.Api\obj\Debug\DeskPower.Datat.Api.pdb
+C:\Users\Michael M. Simon\Documents\HIØF\endaDesk\DeskPower\DeskPower.Datat.Api\bin\DeskPower.Datat.Api.dll.CodeAnalysisLog.xml
+C:\Users\Michael M. Simon\Documents\HIØF\endaDesk\DeskPower\DeskPower.Datat.Api\bin\DeskPower.Datat.Api.dll.lastcodeanalysissucceeded
