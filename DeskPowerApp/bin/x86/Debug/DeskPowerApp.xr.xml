@@ -4,8 +4,8 @@
     <RootInterface FullName="Windows.UI.Xaml.Data.IValueConverter" />
   </Roots.Interfaces>
   <Roots.PropertyPathNames>
-    <RootPropertyPathName Name="DraftTitle" />
     <RootPropertyPathName Name="DraftObject" />
+    <RootPropertyPathName Name="DraftTitle" />
     <RootPropertyPathName Name="ActualWidth" />
     <RootPropertyPathName Name="ActualHeight" />
     <RootPropertyPathName Name="DraftContent" />
@@ -154,7 +154,7 @@
       <RootProperty Name="Resources" />
       <RootProperty Name="Background" />
     </RootType>
-    <RootType FullName="DeskPowerApp.ViewModels.DetailDraftViewModel" />
+    <RootType FullName="DeskPowerApp.ViewModels.DetailPageViewModel" />
     <RootType FullName="Windows.UI.Xaml.Controls.RelativePanel">
       <RootProperty Name="Background" />
       <RootProperty Name="Children" />
@@ -229,16 +229,13 @@
       <RootProperty Name="IsItemClickEnabled" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Height" />
-      <RootProperty Name="ItemTemplate" />
       <RootProperty Name="SelectedItem" />
+      <RootProperty Name="ItemTemplate" />
       <RootProperty Name="Name" />
       <RootProperty Name="ItemsPanel" />
       <RootEvent Name="ItemClick" />
       <RootEvent Name="PointerEntered" />
       <RootEvent Name="PointerExited" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.DataTemplate">
-      <RootProperty Name="Template" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Data.Binding">
       <RootProperty Name="Mode" />
@@ -247,8 +244,9 @@
       <RootProperty Name="ElementName" />
       <RootProperty Name="Converter" />
     </RootType>
-    <RootType FullName="DeskPowerApp.Views.DetailDraftView" />
-    <RootType FullName="DeskPowerApp.ViewModels.DetailPageViewModel" />
+    <RootType FullName="Windows.UI.Xaml.DataTemplate">
+      <RootProperty Name="Template" />
+    </RootType>
     <RootType FullName="DeskPowerApp.Views.DetailPage" />
     <RootType FullName="DeskPowerApp.ViewModels.EditorViewModel" />
     <RootType FullName="Windows.UI.Xaml.Data.RelativeSource">

@@ -61,13 +61,7 @@ namespace DeskPowerApp.Views
             await DraftAccessor.OpenDraft(sender, e, draftEditor); 
           
         }
-        private String ExtractText()
-        {
-            string value = string.Empty;
-            draftEditor.Document.GetText(Windows.UI.Text.TextGetOptions.AdjustCrlf, out value);
-            return value;
-        }
-
+       
         /// <summary>
         /// 
         /// Handles the Click event of the SaveButton control.
@@ -86,14 +80,11 @@ namespace DeskPowerApp.Views
             // Store to database
             SaveDataToDb(textValue);
         }
-
-        private DateTime CurrentDate()
-        {           
-            DateTimeOffset sourceTime = draftCalendarDatePicker.Date ?? DateTimeOffset.Now;
-            Debug.Write((DateTimeOffset)draftCalendarDatePicker.Date);
-            return sourceTime.DateTime;
-        }
-
+        
+        /// <summary>
+        /// Saves the data to database.
+        /// </summary>
+        /// <param name="value">The value.</param>
         private async void SaveDataToDb(string value)
         {
             string Dtitle = title.Text;
@@ -117,7 +108,12 @@ namespace DeskPowerApp.Views
                 Debug.Write("error occured accessing data");
             }
         }
-        
+
+        /// <summary>
+        /// Updates the draft.
+        /// </summary>
+        /// <param name="sender">The sender.</param>
+        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
         private async void UpdateData(object sender, RoutedEventArgs e)
         {
             string textValue = ExtractText();
@@ -137,6 +133,11 @@ namespace DeskPowerApp.Views
             await DraftAccessor.UpdateDataInDb(selectedDraft, newUpdatedDraft);            
         }
 
+        /// <summary>
+        /// Deletes the draft.
+        /// </summary>
+        /// <param name="sender">The sender.</param>
+        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
         private async void DeleteData(object sender, RoutedEventArgs e)
         {
             selectedDraft = ((Draft)draftsList.SelectedItem);
@@ -144,47 +145,71 @@ namespace DeskPowerApp.Views
  
         }
 
+        /// <summary>
+        /// Handles the Click event of the BoldButton control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
         private void BoldButton_Click(object sender, RoutedEventArgs e)
         {
             Windows.UI.Text.ITextSelection selectedText = draftEditor.Document.Selection;
             if (selectedText != null)
             {
-                Windows.UI.Text.ITextCharacterFormat charFormatting = selectedText.CharacterFormat;
-                charFormatting.Bold = Windows.UI.Text.FormatEffect.Toggle;
-                selectedText.CharacterFormat = charFormatting;
+                ViewModel.BoldBtnClicked(selectedText);
+               
             }
         }
 
+        /// <summary>
+        /// Handles the Click event of the ItalicButton control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
         private void ItalicButton_Click(object sender, RoutedEventArgs e)
         {
             Windows.UI.Text.ITextSelection selectedText = draftEditor.Document.Selection;
             if (selectedText != null)
             {
-                Windows.UI.Text.ITextCharacterFormat charFormatting = selectedText.CharacterFormat;
-                charFormatting.Italic = Windows.UI.Text.FormatEffect.Toggle;
-                selectedText.CharacterFormat = charFormatting;
+                ViewModel.ItalicBtnClicked(selectedText);
             }
         }
 
+        /// <summary>
+        /// Handles the Click event of the UnderlineButton control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
         private void UnderlineButton_Click(object sender, RoutedEventArgs e)
         {
             Windows.UI.Text.ITextSelection selectedText = draftEditor.Document.Selection;
             if (selectedText != null)
             {
-                Windows.UI.Text.ITextCharacterFormat charFormatting = selectedText.CharacterFormat;
-                if (charFormatting.Underline == Windows.UI.Text.UnderlineType.None)
-                {
-                    charFormatting.Underline = Windows.UI.Text.UnderlineType.Single;
-                }
-                else
-                {
-                    charFormatting.Underline = Windows.UI.Text.UnderlineType.None;
-                }
-                selectedText.CharacterFormat = charFormatting;
+                ViewModel.Underline(selectedText);
             }
         }
 
+        // LOCAL HELPERS
+        /// <summary>
+        /// retur date time.
+        /// </summary>
+        /// <returns></returns>
+        private DateTime CurrentDate()
+        {
+            DateTimeOffset sourceTime = draftCalendarDatePicker.Date ?? DateTimeOffset.Now;
+            Debug.Write((DateTimeOffset)draftCalendarDatePicker.Date);
+            return sourceTime.DateTime;
+        }
 
+        /// <summary>
+        /// Extracts the text from text editor.
+        /// </summary>
+        /// <returns></returns>
+        private String ExtractText()
+        {
+            string value = string.Empty;
+            draftEditor.Document.GetText(Windows.UI.Text.TextGetOptions.AdjustCrlf, out value);
+            return value;
+        }
     }
 
    

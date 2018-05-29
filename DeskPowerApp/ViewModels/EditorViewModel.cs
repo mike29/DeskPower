@@ -32,9 +32,14 @@ namespace DeskPowerApp.ViewModels
                                     .Cast<DraftCategories>()
                                     .ToList();
 
-
-   
+           
         ObservableCollection<Draft> _drafts;
+        /// <summary>
+        /// Gets or sets the drafts.
+        /// </summary>
+        /// <value>
+        /// The drafts.
+        /// </value>
         public ObservableCollection<Draft> Drafts
         {
             get
@@ -51,16 +56,13 @@ namespace DeskPowerApp.ViewModels
 
         public string Saved { get { return _saved; } set { Set(ref _saved, value); } }
         string _saved;
-
         
-        
-
         public override async Task OnNavigatedToAsync(object parameter, NavigationMode mode, IDictionary<string, object> suspensionState)
         {
            // Saved = "NEW VALUE";
             if (Drafts != null)
             {
-                Drafts = new ObservableCollection<Draft>(await DataSource.DraftData.Instance.GetDrafts());
+                Drafts = await DataSource.DraftData.Instance.GetDrafts();
 
             }
             
@@ -71,8 +73,8 @@ namespace DeskPowerApp.ViewModels
             await Task.CompletedTask;
         }
 
-            private AwaitableDelegateCommand _SaveCommand;
-         /*   public AwaitableDelegateCommand SaveCommand =>
+        private AwaitableDelegateCommand _SaveCommand;
+        /*   public AwaitableDelegateCommand SaveCommand =>
                 _SaveCommand ?? (_SaveCommand = new AwaitableDelegateCommand(
                     new Func<AwaitableDelegateCommandParameter, Task>(async (param) =>
                     {
@@ -90,7 +92,7 @@ namespace DeskPowerApp.ViewModels
                 ));
         */
 
-    /*    private Task SaveFileBtnClickedAsync()
+        /*    private Task SaveFileBtnClickedAsync()
         {
             System.Diagnostics.Debug.WriteLine("---- SAVE BUTTON CLICKED ---");
             // saved.Document.GetText(Windows.UI.Text.TextGetOptions.AdjustCrlf, out value);
@@ -98,76 +100,47 @@ namespace DeskPowerApp.ViewModels
 
         }
 */
-        RichEditBox draftREBS = new RichEditBox();
+        // RichEditBox draftREBS = new RichEditBox();
         
-     /* public async Task OpenFileBtnClickedAsync()
+
+        /// <summary>
+        /// Bolds the text selected.
+        /// </summary>
+        /// <param name="selectedText">The selected text.</param>
+        public void BoldBtnClicked(Windows.UI.Text.ITextSelection selectedText)
         {
-            // Open a text file.
-            Windows.Storage.Pickers.FileOpenPicker open =
-                new Windows.Storage.Pickers.FileOpenPicker();
-            open.SuggestedStartLocation =
-                Windows.Storage.Pickers.PickerLocationId.DocumentsLibrary;
-            open.FileTypeFilter.Add(".rtf");
+            Windows.UI.Text.ITextCharacterFormat charFormatting = selectedText.CharacterFormat;
+            charFormatting.Bold = Windows.UI.Text.FormatEffect.Toggle;
+            selectedText.CharacterFormat = charFormatting;
+        }
 
-            Windows.Storage.StorageFile file = await open.PickSingleFileAsync();
-
-           
-            if (file != null)
+        /// <summary>
+        /// Italics the text selected.
+        /// </summary>
+        /// <param name="selectedText">The selected text.</param>
+        public void ItalicBtnClicked(Windows.UI.Text.ITextSelection selectedText)
+        {
+            Windows.UI.Text.ITextCharacterFormat charFormatting = selectedText.CharacterFormat;
+            charFormatting.Italic = Windows.UI.Text.FormatEffect.Toggle;
+            selectedText.CharacterFormat = charFormatting;
+        }
+        
+        /// <summary>
+        /// Underlines the specified selected text.
+        /// </summary>
+        /// <param name="selectedText">The selected text.</param>
+        public void Underline(Windows.UI.Text.ITextSelection selectedText)
+        {
+            Windows.UI.Text.ITextCharacterFormat charFormatting = selectedText.CharacterFormat;
+            if (charFormatting.Underline == Windows.UI.Text.UnderlineType.None)
             {
-                try
-                {
-                    Windows.Storage.Streams.IRandomAccessStream randAccStream =
-                await file.OpenAsync(Windows.Storage.FileAccessMode.Read);
-
-                    // Load the file into the Document property of the RichEditBox.
-                    draftREBS.Document.LoadFromStream(Windows.UI.Text.TextSetOptions.FormatRtf, randAccStream);
-                  
-                    //        draftREBS.Document.GetText(Windows.UI.Text.TextGetOptions.AdjustCrlf,out d);
-    
-                      Saved =   draftREBS.Document.GetRange(0,10).Text;
-                  
-                    System.Diagnostics.Debug.WriteLine("XOXOXOXOXOX" + Saved);
-
-
-                }
-                catch (Exception)
-                {
-                    
-                    Windows.UI.Xaml.Controls.ContentDialog errorDialog = new Windows.UI.Xaml.Controls.ContentDialog()
-                    {
-                        Title = "File open error",
-                        Content = "Sorry, I couldn't open the file.",
-                        PrimaryButtonText = "Ok"
-                    };
-
-                    await errorDialog.ShowAsync();
-                }
+                charFormatting.Underline = Windows.UI.Text.UnderlineType.Single;
             }
-        }*/
-
-        private RichEditBox GetEditorBox()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void SaveFileBtnClicked()
-        {
-            System.Diagnostics.Debug.WriteLine("Hello bebe");
-        }
-
-        public void BoldBtnClicked()
-        {
-            System.Diagnostics.Debug.WriteLine("Hello bebe");
-        }
-
-        public void ItalicBtnClicked()
-        {
-            System.Diagnostics.Debug.WriteLine("Hello bebe");
-        }
-
-        public void OpenFileBtnClicked()
-        {
-            System.Diagnostics.Debug.WriteLine("Hello bebe");
+            else
+            {
+                charFormatting.Underline = Windows.UI.Text.UnderlineType.None;
+            }
+            selectedText.CharacterFormat = charFormatting;
         }
 
 

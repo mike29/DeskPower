@@ -91,16 +91,6 @@ namespace DeskPowerApp.Views
             }
         }
 
-        private void SoundGridView_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-
-        protected override void OnNavigatedTo(NavigationEventArgs e)
-        {
-          
-        }
-
         private void button_PointerEntered(object sender, PointerRoutedEventArgs e)
         {
             Windows.UI.Xaml.Window.Current.CoreWindow.PointerCursor = new Windows.UI.Core.CoreCursor(Windows.UI.Core.CoreCursorType.Hand, 1);

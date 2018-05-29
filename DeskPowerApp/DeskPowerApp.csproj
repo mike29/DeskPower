@@ -100,16 +100,12 @@
     <Compile Include="SampleData\SampleData.cs" />
     <Compile Include="Services\DraftEditorManager\DraftAccessor.cs" />
     <Compile Include="Services\SettingsServices\SettingsService.cs" />
-    <Compile Include="ViewModels\DetailDraftViewModel.cs" />
     <Compile Include="ViewModels\EditorViewModel.cs" />
     <Compile Include="ViewModels\MainPageViewModel.cs" />
     <Compile Include="ViewModels\DetailPageViewModel.cs" />
     <Compile Include="ViewModels\SettingsPageViewModel.cs" />
     <Compile Include="Views\Busy.xaml.cs">
       <DependentUpon>Busy.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\DetailDraftView.xaml.cs">
-      <DependentUpon>DetailDraftView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\DetailPage.xaml.cs">
       <DependentUpon>DetailPage.xaml</DependentUpon>
@@ -171,10 +167,6 @@
     <Page Include="Views\Busy.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Views\DetailDraftView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\DetailPage.xaml">
       <SubType>Designer</SubType>
