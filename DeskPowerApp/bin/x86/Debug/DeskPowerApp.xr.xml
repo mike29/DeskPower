@@ -234,8 +234,6 @@
       <RootProperty Name="Name" />
       <RootProperty Name="ItemsPanel" />
       <RootEvent Name="ItemClick" />
-      <RootEvent Name="PointerEntered" />
-      <RootEvent Name="PointerExited" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Data.Binding">
       <RootProperty Name="Mode" />
@@ -281,6 +279,7 @@
       <RootProperty Name="Height" />
       <RootProperty Name="Width" />
       <RootProperty Name="Foreground" />
+      <RootProperty Name="SelectedItem" />
       <RootProperty Name="ItemsSource" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.AppBarButton">

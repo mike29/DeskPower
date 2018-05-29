@@ -15,46 +15,49 @@ namespace DeskPowerApp.Views
 {
     public sealed partial class MainPage : Page
     {
-        
-
+        private int isEmprty = 0;
         public MainPage()
         {
             InitializeComponent();            
             NavigationCacheMode = NavigationCacheMode.Enabled;
         }
 
-        private void pageHeader_Opened(object sender, object e)
-        {
-
-        }
+        /// <summary>
+        /// Handles the KeyDown event of the AutoSuggestBox control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="KeyRoutedEventArgs"/> instance containing the event data.</param>
         private void AutoSuggestBox_KeyDown(object sender, KeyRoutedEventArgs e)
         {
-            // Only get results when it was a user typing,
-            // otherwise assume the value got filled in by TextMemberPath
-            // or the handler for SuggestionChosen.
-          
-            //Set the ItemsSource to be your filtered dataset
-            //sender.ItemsSource = dataset;
+            // create a list of categories to be viewed in the combo
             List<string> _nameList = new List<string>();
 
-            if(AutoSuggestBox.Text.Length == 0)
+            // Hold intial drafts from viewModel if user didn't search for one.
+            if(AutoSuggestBox.Text.Length == isEmprty)
             {
                 DraftsGrid.ItemsSource = ViewModel.Drafts;
             }
-
+            //Assign the category 
             foreach (Draft d in ViewModel.Drafts)
             {
                 _nameList.Add(d.DraftTitle.ToLower());
             }
-            _listSuggestion = _nameList.Where(x => x.StartsWith(AutoSuggestBox.Text.ToLower())).ToList();
-                
+
+            // Assign to the suggestion
+            _listSuggestion = _nameList.Where(x => x.StartsWith(AutoSuggestBox.Text.ToLower())).ToList();                
             AutoSuggestBox.ItemsSource = _listSuggestion;
             
         }
 
         List<string> _listSuggestion = null;
+        /// <summary>
+        /// Automatics the suggest box suggestion chosen.
+        /// </summary>
+        /// <param name="sender">The sender.</param>
+        /// <param name="args">The <see cref="AutoSuggestBoxSuggestionChosenEventArgs"/> instance containing the event data.</param>
         private void AutoSuggestBox_SuggestionChosen(AutoSuggestBox sender, AutoSuggestBoxSuggestionChosenEventArgs args)
         {
+            // A temporary list that holds the search match drafts
             var tempList = new List<Draft>();
             var selectedItem = args.SelectedItem.ToString();
             
@@ -62,15 +65,16 @@ namespace DeskPowerApp.Views
             {
                 if (d.DraftTitle.ToLower().Contains(selectedItem))
                 {
-                    tempList.Add(d);
-                    Debug.WriteLine(d.DraftId);
+                    tempList.Add(d);                   
                 }
             }
+            // Display the drafts that match the search
             DraftsGrid.ItemsSource = tempList;
         }
 
+       
 
-        private void AutoSuggestBox_QuerySubmitted(AutoSuggestBox sender, AutoSuggestBoxQuerySubmittedEventArgs args)
+        private async void AutoSuggestBox_QuerySubmitted(AutoSuggestBox sender, AutoSuggestBoxQuerySubmittedEventArgs args)
         {
             try
             {
@@ -83,23 +87,16 @@ namespace DeskPowerApp.Views
                     // Use args.QueryText to determine what to do.
                     AutoSuggestBox.Text = args.ChosenSuggestion.ToString();
                 }
-
             }
-            catch
+            catch (NullReferenceException e)
             {
-                
+
+                Messages.DisplayDialogMessage("Insert text", "Write some text before searching");
+
             }
+
         }
 
-        private void button_PointerEntered(object sender, PointerRoutedEventArgs e)
-        {
-            Windows.UI.Xaml.Window.Current.CoreWindow.PointerCursor = new Windows.UI.Core.CoreCursor(Windows.UI.Core.CoreCursorType.Hand, 1);
-        }
-        private void button_PointerExited(object sender, PointerRoutedEventArgs e)
-        {
-            Windows.UI.Xaml.Window.Current.CoreWindow.PointerCursor = new Windows.UI.Core.CoreCursor(Windows.UI.Core.CoreCursorType.Arrow, 1);
-        }
-
+    }
       
     }
-}

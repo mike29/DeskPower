@@ -273,7 +273,7 @@
                             HorizontalAlignment = "Center" 
                             Foreground = "Gray"
                             />
-                        <ComboBox x:ConnectionId='16' x:Name="CategoryCombo" Header="Draft Category" Height="54" Width="240" Foreground="White"                                 
+                        <ComboBox x:ConnectionId='16' x:Name="CategoryCombo" Header="Draft Category" Height="54" Width="240" Foreground="White" SelectedItem="Not_Specified"                                 
                                                                                     />
                         <!--  Command="{x:Bind ViewModel.SaveCommand}"-->
    

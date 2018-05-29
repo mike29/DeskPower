@@ -448,5 +448,3 @@ C:\Users\Michael M. Simon\Documents\HIØF\endaDesk\DeskPower\DeskPowerApp.DataAc
 C:\Users\Michael M. Simon\Documents\HIØF\endaDesk\DeskPower\DeskPowerApp.DataAcess\obj\Debug\DeskPowerApp.DataAcess.csproj.CopyComplete
 C:\Users\Michael M. Simon\Documents\HIØF\endaDesk\DeskPower\DeskPowerApp.DataAcess\obj\Debug\DeskPowerApp.DataAcess.dll
 C:\Users\Michael M. Simon\Documents\HIØF\endaDesk\DeskPower\DeskPowerApp.DataAcess\obj\Debug\DeskPowerApp.DataAcess.pdb
-C:\Users\Michael M. Simon\Documents\HIØF\endaDesk\DeskPower\DeskPowerApp.DataAcess\bin\Debug\DeskPowerApp.DataAcess.dll.CodeAnalysisLog.xml
-C:\Users\Michael M. Simon\Documents\HIØF\endaDesk\DeskPower\DeskPowerApp.DataAcess\bin\Debug\DeskPowerApp.DataAcess.dll.lastcodeanalysissucceeded

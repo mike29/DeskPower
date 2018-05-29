@@ -6,6 +6,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -48,8 +49,7 @@ namespace DeskPowerApp.Views
                  DraftAccessor.OpenDraftFromDb(draftEditor, selectedDraft);
             }
             
-        }
-        
+        }        
 
         /// <summary>
         /// Handles the Click event of the OpenButton control.
@@ -72,13 +72,32 @@ namespace DeskPowerApp.Views
         /// <param name="e">The <see cref="RoutedEventArgs" /> instance containing the event data.</param>
         private async void SaveButton_Click(object sender, RoutedEventArgs e)
         {
-            // Store to local
-             await DraftAccessor.SaveDraft(sender, e, draftEditor);
-            // draftEditor.Document.SetText(Windows.UI.Text.TextSetOptions.None, "randAccStream");
+           
             string textValue = ExtractText();
 
-            // Store to database
-            SaveDataToDb(textValue);
+            Task<Boolean> confirmLocalSave = Messages.DisplaySaveFileDialog("Select storage", "Where would you like to save the file?", "Local", "Online");
+
+            if (await confirmLocalSave)
+            {
+                // Store to local
+                await DraftAccessor.SaveDraft(sender, e, draftEditor);
+                // draftEditor.Document.SetText(Windows.UI.Text.TextSetOptions.None, "randAccStream");
+            }
+            else
+            {
+                // TODO
+                // Validate other possible inputs also make a validator class so it shouldn't be done here
+                if (title.Text != "" && author.Text != "")
+                {
+                    // Store to database
+                    SaveDataToDb(textValue);
+                }
+                else
+                {
+                    Messages.DisplayDialogMessage("Empty text input", "Please complete all draft information!");
+                }                
+            }
+                       
         }
         
         /// <summary>
@@ -89,24 +108,17 @@ namespace DeskPowerApp.Views
         {
             string Dtitle = title.Text;
             try
-            {
-              
-                if (CurrentDate() != null)
-                {
-                    DateTime DraftCreatedDate = CurrentDate();
-                    await DraftAccessor.SaveToDb(Dtitle, value,(DraftCategories) CategoryCombo.SelectionBoxItem, DraftCreatedDate, "ms-appx:///Assets/img/music.jpg");
-                  
-                }
-                else
-                {
-                    //TODO
-                    // return meaningfull error to user
-                    Debug.Write("no date & data not stored");
-                }
+            {                           
+                    var date = draftCalendarDatePicker.Date;
+                    DateTime DateAndtime = date.Value.DateTime;
+                
+                    await DraftAccessor.SaveToDb(Dtitle, value,(DraftCategories) CategoryCombo.SelectionBoxItem, DateAndtime, "ms-appx:///Assets/img/music.jpg");                
+                 
+
             }
-            catch
-            {
-                Debug.Write("error occured accessing data");
+            catch (Exception e)
+            {                      
+                    Debug.Write("error occured accessing data-", e.Message);                  
             }
         }
 
@@ -118,7 +130,9 @@ namespace DeskPowerApp.Views
         private async void UpdateData(object sender, RoutedEventArgs e)
         {
             string textValue = ExtractText();
-            DateTime DraftCreatedDate = CurrentDate();
+            var date = draftCalendarDatePicker.Date;
+            DateTime DraftCreatedDate = date.Value.DateTime;
+            
 
             newUpdatedDraft = new Model.Draft()
             {
@@ -141,9 +155,13 @@ namespace DeskPowerApp.Views
         /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
         private async void DeleteData(object sender, RoutedEventArgs e)
         {
-            selectedDraft = ((Draft)draftsList.SelectedItem);
-            await DraftAccessor.DeleteDataInDb(selectedDraft);
- 
+          Task<Boolean> confirm = Messages.DisplayDeleteFileDialog("Delete Draft", "Confirm delete draft?");
+         
+            if (await confirm) {
+                selectedDraft = ((Draft)draftsList.SelectedItem);
+                await DraftAccessor.DeleteDataInDb(selectedDraft);
+            }
+           
         }
 
         /// <summary>
@@ -191,15 +209,11 @@ namespace DeskPowerApp.Views
 
         // LOCAL HELPERS
         /// <summary>
-        /// retur date time.
+        /// returns date time.
         /// </summary>
         /// <returns></returns>
-        private DateTime CurrentDate()
-        {
-            DateTimeOffset sourceTime = draftCalendarDatePicker.Date ?? DateTimeOffset.Now;
-        
-            return sourceTime.DateTime;
-        }
+       
+            
 
         /// <summary>
         /// Extracts the text from text editor.

@@ -116,6 +116,7 @@
     <Compile Include="Views\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Messages.cs" />
     <Compile Include="Views\SettingCustom.xaml.cs">
       <DependentUpon>SettingCustom.xaml</DependentUpon>
     </Compile>

@@ -129,9 +129,7 @@
 
                 <!--SelectionChanged="SoundGridView_SelectionChanged"-->
 
-                <GridView x:ConnectionId='11'                                        
-                                                                 
-                                                              
+                <GridView x:ConnectionId='11'                                                               
                           IsItemClickEnabled="true"
                                                                         
                           SelectedItem="{Binding DraftObject ,Mode=TwoWay}"                          
@@ -162,8 +160,7 @@
 />
                                     </StackPanel>
                                     <StackPanel>
-                                    <Image 
-                                        
+                                    <Image                                         
                                            Stretch="UniformToFill" 
                                            Width="350"
                                            Height="240"                                            

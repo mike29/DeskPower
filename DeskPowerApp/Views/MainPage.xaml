@@ -129,9 +129,7 @@
 
                 <!--SelectionChanged="SoundGridView_SelectionChanged"-->
 
-                <GridView ItemsSource="{x:Bind ViewModel.Drafts}"
-                          PointerEntered="button_PointerEntered" 
-                          PointerExited="button_PointerExited"
+                <GridView ItemsSource="{x:Bind ViewModel.Drafts}"                       
                           IsItemClickEnabled="true"
                           ItemClick="{x:Bind ViewModel.GotoDetailsPage}"
                           SelectedItem="{Binding DraftObject ,Mode=TwoWay}"                          
@@ -162,8 +160,7 @@
 />
                                     </StackPanel>
                                     <StackPanel>
-                                    <Image 
-                                        
+                                    <Image                                         
                                            Stretch="UniformToFill" 
                                            Width="350"
                                            Height="240"                                            

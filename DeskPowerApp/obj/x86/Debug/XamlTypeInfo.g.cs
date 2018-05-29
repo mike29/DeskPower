@@ -887,6 +887,7 @@ namespace DeskPowerApp.DeskPowerApp_XamlTypeInfo
 
             case 57:   //  DraftCategories
                 userType = new global::DeskPowerApp.DeskPowerApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
+                userType.AddEnumValue("Not_Specified", global::DraftCategories.Not_Specified);
                 userType.AddEnumValue("Sport", global::DraftCategories.Sport);
                 userType.AddEnumValue("Poletic", global::DraftCategories.Poletic);
                 userType.AddEnumValue("Entertainment", global::DraftCategories.Entertainment);

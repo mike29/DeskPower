@@ -273,7 +273,7 @@
                             HorizontalAlignment = "Center" 
                             Foreground = "Gray"
                             />
-                        <ComboBox x:Name="CategoryCombo" Header="Draft Category" Height="54" Width="240" Foreground="White"                                 
+                        <ComboBox x:Name="CategoryCombo" Header="Draft Category" Height="54" Width="240" Foreground="White" SelectedItem="Not_Specified"                                 
                          ItemsSource="{x:Bind ViewModel.CategoryList, Mode=TwoWay}" />
                         <!--  Command="{x:Bind ViewModel.SaveCommand}"-->
    

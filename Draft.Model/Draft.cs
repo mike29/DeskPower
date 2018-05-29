@@ -141,6 +141,7 @@ namespace DeskPowerApp.Model
 /// </summary>
 public enum DraftCategories
     {
+        Not_Specified,
         Sport,
         Poletic,
         Entertainment,
