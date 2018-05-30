@@ -33,16 +33,14 @@ namespace DeskPowerApp.Views
 
             ContentDialogResult result = await deleteFileDialog.ShowAsync();
 
-            // Delete the file if the user clicked the primary button.
-            /// Otherwise, do nothing.
+            
             if (result == ContentDialogResult.Primary)
             {
                 return true;
             }
             else
             {
-                // The user clicked the CLoseButton, pressed ESC, Gamepad B, or the system back button.
-                // Do nothing.
+             
                 return false;
             }
         }

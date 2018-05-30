@@ -10,16 +10,24 @@ using Windows.UI.Xaml.Input;
 using System.Diagnostics;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
+using System.Net.Http;
+using Windows.Storage.Streams;
+using Windows.UI.Xaml.Media.Imaging;
+using System.Threading;
+using Windows.UI.Core;
 
 namespace DeskPowerApp.Views
 {
     public sealed partial class MainPage : Page
     {
         private int isEmprty = 0;
+        private Timer timer1;
         public MainPage()
         {
             InitializeComponent();            
             NavigationCacheMode = NavigationCacheMode.Enabled;
+            
         }
 
         /// <summary>
@@ -49,6 +57,7 @@ namespace DeskPowerApp.Views
             
         }
 
+
         List<string> _listSuggestion = null;
         /// <summary>
         /// Automatics the suggest box suggestion chosen.
@@ -71,11 +80,10 @@ namespace DeskPowerApp.Views
             // Display the drafts that match the search
             DraftsGrid.ItemsSource = tempList;
         }
-
-       
-
+                
         private async void AutoSuggestBox_QuerySubmitted(AutoSuggestBox sender, AutoSuggestBoxQuerySubmittedEventArgs args)
         {
+        
             try
             {
                 if (args.ChosenSuggestion != null)
@@ -98,5 +106,5 @@ namespace DeskPowerApp.Views
         }
 
     }
-      
-    }
+
+}

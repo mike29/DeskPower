@@ -15,7 +15,7 @@ namespace DeskPowerApp.ViewModels
     public class DetailPageViewModel : ViewModelBase
     {
        
-        private SampleData.SampleData sampleClass;
+       // private SampleData.SampleData sampleClass;
         public DetailPageViewModel()
         {
             if (Windows.ApplicationModel.DesignMode.DesignModeEnabled)
@@ -23,6 +23,9 @@ namespace DeskPowerApp.ViewModels
                 DraftIdValue = "Designtime value";
             }
         }
+        /// <summary>
+        /// Hold the value of clicked list rfom detail page similar drafts
+        /// </summary>
         public Draft DetailClickedDraft;
 
         //Hold clicked from detail page grid view
@@ -54,13 +57,12 @@ namespace DeskPowerApp.ViewModels
 
         //TODO
         /// <summary>
-        /// Drafts the selected.
-        /// When user select one of the grid view items from the detail page, they will be displayed 
+        /// When user select one of the grid view items from the detail page, they should be displayed 
         /// </summary>
         public void DraftSelected ()
         {
             DetailClickedDraft = DraftObject;
-            System.Diagnostics.Debug.WriteLine(".....Display selected item", DraftObject.DraftTitle);
+            System.Diagnostics.Debug.WriteLine(".....Display selected item in UI", DraftObject.DraftTitle);
         }
 
 
@@ -75,40 +77,34 @@ namespace DeskPowerApp.ViewModels
         {
             DraftIdValue = (suspensionState.ContainsKey(nameof(DraftIdValue))) ? suspensionState[nameof(DraftIdValue)]?.ToString() : parameter?.ToString();
             int tempIntId = int.Parse(DraftIdValue);
-
             
-                sampleClass = new SampleData.SampleData();
-            //  Drafts = sampleClass.DraftSamplpeData;
-                Drafts = await DataSource.DraftData.Instance.GetDrafts();
+            // TODO
+            // Maybe it's not neccssary to send a get request again. use the object value and select from there
+            // sampleClass = new SampleData.SampleData();         
+            Drafts = await DataSource.DraftData.Instance.GetDrafts();
 
-
+            /*
+            // When user clicked a draft from main page the id will be taken here
+            // And used to select the clicked one
+            // Select the clicked draft by ID
+            */
             foreach (Draft _draft in Drafts)
              {
                  if (_draft.DraftId == tempIntId)
-                 {
-                    // Log the two same values
-                     System.Diagnostics.Debug.WriteLine(_draft.DraftId + " " + tempIntId);
-                 if (Drafts != null)
-                 {
-                   
-                        DetailClickedDraft = _draft;
-                 }
-
-                 }
-                 
+                 {                    
+                     if (Drafts != null)
+                     {                   
+                         DetailClickedDraft = _draft;
+                     }
+                 }                 
              }
 
-
             await Task.CompletedTask;
-            System.Diagnostics.Debug.WriteLine("..... "+ DraftIdValue);
+           
         }
 
         public override async Task OnNavigatedFromAsync(IDictionary<string, object> suspensionState, bool suspending)
-        {
-            if (suspending)
-            {
-                //suspensionState[nameof(DraftIdValue)] = DraftIdValue;
-            }
+        {      
             await Task.CompletedTask;
         }
 

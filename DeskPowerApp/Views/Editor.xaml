@@ -239,7 +239,10 @@
 
                         <TextBlock Foreground="#fff">Author</TextBlock>
                         <TextBox Name="author"></TextBox>
-                       
+
+                        <TextBlock Foreground="#fff">Image Url</TextBlock>
+                        <TextBox Name="image"></TextBox>
+                        
                         <CalendarDatePicker 
                         x:Name="draftCalendarDatePicker" 
                         Header="Created date"

@@ -1,21 +1,17 @@
 ﻿using DeskPowerApp.Model;
 using DeskPowerApp.Services.DraftEditorManager;
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
+using System.Net;
+using System.Net.Http;
 using System.Threading.Tasks;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
+using Windows.Storage.Streams;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Navigation;
+using Windows.UI.Xaml.Media.Imaging;
+
+
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -112,7 +108,7 @@ namespace DeskPowerApp.Views
                     var date = draftCalendarDatePicker.Date;
                     DateTime DateAndtime = date.Value.DateTime;
                 
-                    await DraftAccessor.SaveToDb(Dtitle, value,(DraftCategories) CategoryCombo.SelectionBoxItem, DateAndtime, "ms-appx:///Assets/img/music.jpg");                
+                    await DraftAccessor.SaveToDb(Dtitle, value,(DraftCategories) CategoryCombo.SelectionBoxItem, DateAndtime, image.Text);                
                  
 
             }
@@ -225,6 +221,62 @@ namespace DeskPowerApp.Views
             draftEditor.Document.GetText(Windows.UI.Text.TextGetOptions.AdjustCrlf, out value);
             return value;
         }
+
+
+
+        // IMAGE
+
+
+       
+
+     
+      
+
+      
+
+
+
+
+
+
+
+
+/*
+
+private async void Button_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+
+
+         
+            var _bitmap = new RenderTargetBitmap();
+            await _bitmap.RenderAsync(img);    //-----> This is my ImageControl.
+
+            var savePicker = new FileSavePicker();
+            savePicker.SuggestedStartLocation = PickerLocationId.PicturesLibrary;
+            savePicker.FileTypeChoices.Add("Image", new List<string>() { ".jpg" });
+            savePicker.SuggestedFileName = "Card" + DateTime.Now.ToString("yyyyMMddhhmmss");
+            StorageFile savefile = await savePicker.PickSaveFileAsync();
+            if (savefile == null)
+                return;
+
+            var pixels = await _bitmap.GetPixelsAsync();
+            using (IRandomAccessStream stream = await savefile.OpenAsync(FileAccessMode.ReadWrite))
+            {
+                var encoder = await
+                BitmapEncoder.CreateAsync(BitmapEncoder.JpegEncoderId, stream);
+                byte[] bytes = pixels.ToArray();
+                encoder.SetPixelData(BitmapPixelFormat.Bgra8,
+                                        BitmapAlphaMode.Ignore,
+                                        (uint)_bitmap.PixelWidth,
+                                    (uint)_bitmap.PixelHeight,
+                                        200,
+                                        200,
+                                        bytes);
+
+                await encoder.FlushAsync();
+            }
+        }
+        */
     }
 
    

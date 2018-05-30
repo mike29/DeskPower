@@ -111,7 +111,7 @@
                     >
                
                 <Image 
-                    Name="BigBanner"
+                    Name="bigBanner"
                     Stretch="UniformToFill" 
                     Source="ms-appx:///Assets/img/BGJournalist.png" 
                     Height="260"
@@ -160,11 +160,12 @@
 />
                                     </StackPanel>
                                     <StackPanel>
-                                    <Image                                         
+                                    <Image    
+                                           Name="draftImage"
                                            Stretch="UniformToFill" 
                                            Width="350"
                                            Height="240"                                            
-                                           Margin="0,0,0,0"
+                                           Margin="0,0,0,0"                                        
                                            Source="{Binding DraftImageUrl }">
                                     </Image>
                                     </StackPanel>
