@@ -1,21 +1,12 @@
 ﻿using System;
-using DeskPowerApp.ViewModels;
-using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
-using System.Collections.ObjectModel;
-using Template10.Services.NavigationService;
 using DeskPowerApp.Model;
 using Windows.UI.Xaml.Input;
-using System.Diagnostics;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
-using System.Net.Http;
-using Windows.Storage.Streams;
-using Windows.UI.Xaml.Media.Imaging;
 using System.Threading;
-using Windows.UI.Core;
+
 
 namespace DeskPowerApp.Views
 {

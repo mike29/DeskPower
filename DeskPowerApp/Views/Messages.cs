@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using System.Diagnostics;
 using System.Threading.Tasks;
 using Windows.UI.Xaml.Controls;
 
@@ -9,6 +7,9 @@ namespace DeskPowerApp.Views
 {
     public static class Messages
     {
+        // TODO
+        // Create one method that accepts the arguments and adjust the primary, secondary and cancel message
+        // No need to add three methods
         public static async void DisplayDialogMessage(string title, string content)
         {
             ContentDialog noWifiDialog = new ContentDialog
@@ -17,8 +18,15 @@ namespace DeskPowerApp.Views
                 Content = content,
                 PrimaryButtonText = "Ok"
             };
-
-            ContentDialogResult result = await noWifiDialog.ShowAsync();
+            try
+            {
+                ContentDialogResult result = await noWifiDialog.ShowAsync();
+            }
+            catch (Exception e)
+            {
+                Debug.Write("Update corrupted", e.Message);
+            }
+           
         }
 
         public static async Task<bool> DisplayDeleteFileDialog(string title, string content)

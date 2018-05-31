@@ -1,16 +1,11 @@
 ﻿using Template10.Mvvm;
 using System.Collections.Generic;
-using System;
-using System.Linq;
 using System.Threading.Tasks;
 using Template10.Services.NavigationService;
 using Windows.UI.Xaml.Navigation;
 using System.Collections.ObjectModel;
 using DeskPowerApp.Model;
 using System.Diagnostics;
-using System.Net.Http;
-using Windows.Storage.Streams;
-using Windows.UI.Xaml.Media.Imaging;
 
 namespace DeskPowerApp.ViewModels
 {
@@ -37,6 +32,7 @@ namespace DeskPowerApp.ViewModels
         public Draft DraftObject { get; set; } = new Draft();
         public ObservableCollection<Draft> Drafts { get; set; }
 
+
         /// <summary>
         /// Called when [navigated to asynchronous].
         /// </summary>
@@ -50,7 +46,7 @@ namespace DeskPowerApp.ViewModels
             if (Drafts == null)
             {
                 Drafts = await DataSource.DraftData.Instance.GetDrafts();
-            }          
+            }
 
         }
 
@@ -75,11 +71,26 @@ namespace DeskPowerApp.ViewModels
             args.Cancel = false;
             await Task.CompletedTask;
         }
-        
+
         //TODO
         // Throughs not set instance of an object error, when navigating to other pages before searching
-        public void GotoDetailsPage() =>
-            NavigationService.Navigate(typeof(Views.DetailPage), DraftObject.DraftId.ToString());
+        public void GotoDetailsPage() {
+            try
+            {
+                if (DraftObject.DraftId.ToString() != null)
+                {
+                    NavigationService.Navigate(typeof(Views.DetailPage), DraftObject.DraftId.ToString());
+                }
+                
+            }
+            finally
+            {
+                // When copying the draft object the ID will start from null. A same navigation to detail error that caused the navigate to detail occurs on the copied list also
+                Debug.Write("Null value on ID exception");
+            }
+           
+        }
+           
 
         public void GotoSettings() =>
             NavigationService.Navigate(typeof(Views.SettingCustom), 0);

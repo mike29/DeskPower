@@ -22,10 +22,7 @@
                             NavButtonForeground="White"
                             NavButtonPressedBackground="White"
                             NavButtonCheckedBackground="#ba0000"
-                            NavButtonHoverBackground="#ba0000"
-                      
-                            
-                            >
+                            NavButtonHoverBackground="#ba0000">
 
         <Controls:HamburgerMenu.PrimaryButtons>
             <!--  mainpage button  -->
@@ -58,7 +55,7 @@
                                 Symbol="PostUpdate" />
                     <TextBlock Margin="12,0,0,0"
                                VerticalAlignment="Center"
-                               Text="Arkieve" />
+                               Text="Task Assign" />
                 </StackPanel>
             </Controls:HamburgerButtonInfo>
 

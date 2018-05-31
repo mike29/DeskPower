@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.ComponentModel.DataAnnotations;
@@ -21,6 +18,8 @@ namespace DeskPowerApp.Model
         /// Occurs when a property value changes.
         /// </summary>
         public event PropertyChangedEventHandler PropertyChanged;
+        private string draftTitle;
+
 
         /// <summary>
         /// Called when [property changed].
@@ -31,16 +30,8 @@ namespace DeskPowerApp.Model
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
-        /// <summary>
-        /// Sets the field.
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="field">The field.</param>
-        /// <param name="value">The value.</param>
-        /// <param name="propertyName">Name of the property.</param>
-        /// <returns></returns>
         protected bool SetField<T>(ref T field, T value,
-       [CallerMemberName] string propertyName = null)
+        [CallerMemberName] string propertyName = null)
         {
             if (EqualityComparer<T>.Default.Equals(field, value))
                 return false;
@@ -64,7 +55,17 @@ namespace DeskPowerApp.Model
         /// The draf title.
         /// </value>
         [Required]
-        public string DraftTitle { get; set; }
+        public string DraftTitle {
+            get { return draftTitle; }
+            set
+            {
+                if (SetField(ref draftTitle, value))
+                {
+                    OnPropertyChanged(nameof(draftTitle));
+                   
+                }
+            }
+        }
 
         /// <summary>
         /// Gets or sets the content of the draft.
@@ -95,7 +96,14 @@ namespace DeskPowerApp.Model
         /// </value>
         public string DraftImageUrl {
             get { return draftImageUrl; }
-            set { SetField(ref draftImageUrl, value); }
+            set
+            {
+                if (SetField(ref draftImageUrl, value))
+                {
+                    OnPropertyChanged(nameof(draftImageUrl));
+
+                }
+            }
         }
 
         /// <summary>

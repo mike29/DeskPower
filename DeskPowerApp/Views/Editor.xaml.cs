@@ -2,14 +2,9 @@
 using DeskPowerApp.Services.DraftEditorManager;
 using System;
 using System.Diagnostics;
-using System.IO;
-using System.Net;
-using System.Net.Http;
 using System.Threading.Tasks;
-using Windows.Storage.Streams;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Media.Imaging;
 
 
 
@@ -22,7 +17,6 @@ namespace DeskPowerApp.Views
     /// </summary>
     public sealed partial class Editor : Page
     {
-
         Draft selectedDraft = null;
         Draft newUpdatedDraft;
 
@@ -33,7 +27,6 @@ namespace DeskPowerApp.Views
         {
             this.InitializeComponent();
             NavigationCacheMode = Windows.UI.Xaml.Navigation.NavigationCacheMode.Enabled;
-          
         }
 
         private  void DraftSelectionChanged (object sender, SelectionChangedEventArgs e)
@@ -108,13 +101,20 @@ namespace DeskPowerApp.Views
                     var date = draftCalendarDatePicker.Date;
                     DateTime DateAndtime = date.Value.DateTime;
                 
-                    await DraftAccessor.SaveToDb(Dtitle, value,(DraftCategories) CategoryCombo.SelectionBoxItem, DateAndtime, image.Text);                
-                 
+                if(await DraftAccessor.SaveToDb(Dtitle, value,(DraftCategories) CategoryCombo.SelectionBoxItem, DateAndtime, image.Text))
+                {
+                    Messages.DisplayDialogMessage("Saved", "The file is saved");
+
+                }
+                else
+                {
+                    Messages.DisplayDialogMessage("Saving interrupted", "The update is not saved, try again");
+                }
 
             }
             catch (Exception e)
             {                      
-                    Debug.Write("error occured accessing data-", e.Message);                  
+                    Debug.Write("error occured when accessing data-", e.Message);                  
             }
         }
 
@@ -126,22 +126,30 @@ namespace DeskPowerApp.Views
         private async void UpdateData(object sender, RoutedEventArgs e)
         {
             string textValue = ExtractText();
-            var date = draftCalendarDatePicker.Date;
-            DateTime DraftCreatedDate = date.Value.DateTime;
-            
+            var date = draftCalendarDatePicker.Date == null ? DateTime.Now : draftCalendarDatePicker.Date;
+            DateTime DraftCreatedDate = date.Value.DateTime;            
 
-            newUpdatedDraft = new Model.Draft()
+            newUpdatedDraft = new Draft()
             {
                 DraftTitle = (title.Text == "") ? selectedDraft.DraftTitle : title.Text ,
                 DraftContent = textValue,
-                DraftCategory = (DraftCategories) CategoryCombo.SelectionBoxItem,
+                DraftCategory = CategoryCombo.SelectedIndex == -1 ? selectedDraft.DraftCategory : (DraftCategories)CategoryCombo.SelectionBoxItem,
                 DraftCreatedDate = (DraftCreatedDate == null) ? selectedDraft.DraftCreatedDate : DraftCreatedDate,
-                DraftImageUrl = "ms-appx:///Assets/img/photo-1504.jpg",
+                DraftImageUrl = (image.Text == "")? selectedDraft.DraftImageUrl : image.Text
 
             };
         
             selectedDraft = ((Draft)draftsList.SelectedItem);
-            await DraftAccessor.UpdateDataInDb(selectedDraft, newUpdatedDraft);            
+            if (!await DraftAccessor.UpdateDataInDb(selectedDraft, newUpdatedDraft))
+            {
+                Messages.DisplayDialogMessage("Saving interrupted", "The update is not saved, try again");
+            }   
+            else
+            {
+                Messages.DisplayDialogMessage("Updated", "Succesfully updated");
+            }
+            
+            
         }
 
         /// <summary>
@@ -156,8 +164,10 @@ namespace DeskPowerApp.Views
             if (await confirm) {
                 selectedDraft = ((Draft)draftsList.SelectedItem);
                 await DraftAccessor.DeleteDataInDb(selectedDraft);
+             
             }
-           
+
+            
         }
 
         /// <summary>
@@ -223,9 +233,7 @@ namespace DeskPowerApp.Views
         }
 
 
-
-        // IMAGE
-
+        
 
        
 

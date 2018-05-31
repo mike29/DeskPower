@@ -2,8 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls; 
@@ -108,10 +106,9 @@ namespace DeskPowerApp.Services.DraftEditorManager
             }
         }
 
-        internal async static Task SaveToDb(string title, string content, DraftCategories category, DateTime createdDate, string DraftImageUrl)
+        internal async static Task<Boolean> SaveToDb(string title, string content, DraftCategories category, DateTime createdDate, string DraftImageUrl)
         {
-           
-            await DataSource.DraftData.Instance.AddDraft(new Model.Draft()
+           if(await DataSource.DraftData.Instance.AddDraft(new Model.Draft()
             {
                 DraftTitle = title,
                 DraftContent = content,
@@ -119,7 +116,15 @@ namespace DeskPowerApp.Services.DraftEditorManager
                 DraftCreatedDate = createdDate,
                 DraftImageUrl = DraftImageUrl,
 
-            }); 
+            }))
+            {
+                return true;
+            }
+           else
+            {
+                return false;
+            }
+           
                 
         }
 
@@ -128,9 +133,10 @@ namespace DeskPowerApp.Services.DraftEditorManager
             await DataSource.DraftData.Instance.DeleteDrafts(draftToBeDeleted);
         }
 
-        internal async static Task UpdateDataInDb(Draft draftToBeUpdated, Draft newUpdateDraft)
+        internal async static Task<Boolean> UpdateDataInDb(Draft draftToBeUpdated, Draft newUpdateDraft)
         {
-            await DataSource.DraftData.Instance.PutDraft(draftToBeUpdated, newUpdateDraft);
+            if(await DataSource.DraftData.Instance.PutDraft(draftToBeUpdated, newUpdateDraft)) return true;
+            return false;
         }
     }
 }

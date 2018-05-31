@@ -82,10 +82,18 @@ namespace DeskPowerApp.DataSource
         /// <returns></returns>
         public async Task<bool> PutDraft(Draft draft, Draft newUpdateDraft)
         {
-            await DeleteDrafts(draft);
-            await AddDraft(newUpdateDraft);
-            return true;
+            try
+            {
+                await DeleteDrafts(draft);
+                await AddDraft(newUpdateDraft);
+                return true;
+            }
 
+            catch (Exception e)
+            {
+                Debug.WriteLine(e.Message);
+                return false;
+            }
         }
 
 
