@@ -14,276 +14,321 @@
     <Page.DataContext>
         <vm:EditorViewModel x:Name="ViewModel"/>
     </Page.DataContext>
-    
 
-    <Grid  Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">      
-            <VisualStateManager.VisualStateGroups>
-                <VisualStateGroup x:Name="AdaptiveVisualStateGroup">
-                    <VisualState x:Name="VisualStateNarrow">
-                        <VisualState.StateTriggers>
-                            <AdaptiveTrigger MinWindowWidth="{StaticResource NarrowMinWidth}" />
-                        </VisualState.StateTriggers>
-                        <VisualState.Setters>
-                            <!--  TODO: change properties for narrow view  -->
-                        </VisualState.Setters>
-                    </VisualState>
-                    <VisualState x:Name="VisualStateNormal">
-                        <VisualState.StateTriggers>
-                            <AdaptiveTrigger MinWindowWidth="{StaticResource NormalMinWidth}" />
-                        </VisualState.StateTriggers>
-                        <VisualState.Setters>
-                            <!--  TODO: change properties for normal view  -->
-                        </VisualState.Setters>
-                    </VisualState>
-                    <VisualState x:Name="VisualStateWide">
-                        <VisualState.StateTriggers>
-                            <AdaptiveTrigger MinWindowWidth="{StaticResource WideMinWidth}" />
-                        </VisualState.StateTriggers>
-                        <VisualState.Setters>
-                            <!--  TODO: change properties for wide view  -->
-                        </VisualState.Setters>
-                    </VisualState>
-                </VisualStateGroup>
-            </VisualStateManager.VisualStateGroups>
-       
+
+    <Grid  Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="AdaptiveVisualStateGroup">
+                <VisualState x:Name="VisualStateNarrow">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="{StaticResource NarrowMinWidth}" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+
+                        <Setter Target="row1C.Width" Value="2*"/>
+                        <Setter Target="row2C.Width" Value="auto"/>
+                        <Setter Target="row3C.Width" Value="auto"/>
+
+                        <!--  TODO: change properties for narrow view  -->
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="VisualStateNormal">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="{StaticResource NormalMinWidth}" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <!--  TODO: change properties for normal view  -->
+                        <Setter Target="row1C.Width" Value="1*"/>
+                        <Setter Target="row2C.Width" Value="auto"/>
+                        <Setter Target="row3C.Width" Value="auto"/>
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="VisualStateWide">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="{StaticResource WideMinWidth}" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <!--  TODO: change properties for wide view  -->
+                        <Setter Target="row1C.Width" Value="1*"/>
+                        <Setter Target="row2C.Width" Value="2*"/>
+                        <Setter Target="row3C.Width" Value="1*"/>
+
+                        <Setter Target="row1.Height" Value="auto"/>
+                        <Setter Target="row2.Height" Value="*"/>
+
+                        <Setter Target="contentGrid.Margin" Value="1"/>
+
+                        <Setter Target="listGrid.Row" Value="0"/>
+                        <Setter Target="contentGrid.Row" Value="0"/>
+                        <Setter Target="metaDataGrid.Row" Value="0"/>
+
+                        <Setter Target="listGrid.(Grid.ColumnSpan)" Value="1*"/>
+                        <Setter Target="contentGrid.(Grid.ColumnSpan)" Value="1*"/>
+                        <Setter Target="metaDataGrid.(Grid.ColumnSpan)" Value="1*"/>
+
+                        <Setter Target="contentGrid.Column" Value="1"/>
+                        <Setter Target="listGrid.Column" Value="0"/>
+                        <Setter Target="metaDataGrid.Column" Value="2"/>
+
+
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+
         <!--  header  -->
-            <controls:PageHeader 
+        <controls:PageHeader 
                 x:Name="pageHeader" Frame="{x:Bind Frame}"                             
                 RelativePanel.AlignLeftWithPanel="True"   
                 RelativePanel.AlignRightWithPanel="True" 
                 RelativePanel.AlignTopWithPanel="True"                                  
                 Text="Draft Editor" />
-        
+
         <!--  ALL CONTENTS  -->
         <Grid x:Name="FullScreenEditor"
              Margin="0,48,0,0"
-              Background="#010101"
-             RelativePanel.Below="pageHeader">            
-       
+             Background="#2C2626"
+             RelativePanel.Below="pageHeader">
+
             <!--CONTENT EDITOR THREE COLUMN CONTAINER-->
             <Grid 
                     x:Name="controlGrid"
                     HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
                     Width="{Binding ActualWidth, RelativeSource = {RelativeSource Mode=TemplatedParent}}" 
                     Height="{Binding ActualHeight, RelativeSource ={RelativeSource Mode=TemplatedParent}}" >
-                
+
                 <Grid.RowDefinitions>
-                    <RowDefinition/>
+                    <RowDefinition x:Name="row1" Height="1*"/>
+                    <RowDefinition x:Name="row2" Height="1*"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="1*" />
-                    <ColumnDefinition Width="3*" />
-                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition x:Name="row1C" Width="1*" />
+                    <ColumnDefinition x:Name="row2C" Width="3*" />
+                    <ColumnDefinition x:Name="row3C" Width="1*" />
                 </Grid.ColumnDefinitions>
-                
-                <!--VIEW LIST OF DRAFTS SECTION-->
-                <ScrollViewer 
+
+                <Grid x:Name="listGrid" Grid.Column="0" Grid.Row="0" Background="#0078d7" >
+                    <!--VIEW LIST OF DRAFTS SECTION-->
+                    <ScrollViewer 
+                    x:Name="listScroll"
                  BringIntoViewOnFocusChange="True"
                   VerticalScrollBarVisibility="Auto">
-                    <StackPanel 
+                        <StackPanel 
                             Grid.Column="0"  
                             Margin="0,0,0,0"
                             Padding="2"
                             Background="#2C2626"
                             Height="{Binding ActualHeight, RelativeSource ={RelativeSource Mode=TemplatedParent}}">
-        
-                        <ListView 
+
+                            <ListView 
                          Name="draftsList"
                          IsItemClickEnabled="True"
                          SelectionChanged="DraftSelectionChanged" 
                          ItemsSource="{x:Bind ViewModel.Drafts}"  
                          Height="834">
-                         
-                        <ListView.ItemTemplate>
-                            <DataTemplate 
+
+                                <ListView.ItemTemplate>
+                                    <DataTemplate 
                                 x:Name="TripleLineDataTemplate" 
                                 x:DataType="model:Draft" >
-                                
-                                <StackPanel  
+
+                                        <StackPanel  
                                     Height="auto" 
                                     Padding="10" 
                                     AutomationProperties.Name="{x:Bind DraftTitle}">
-                                    
-                                    <TextBlock 
+
+                                            <TextBlock 
                                         Text="{x:Bind DraftTitle}"  
                                         TextWrapping="Wrap" 
                                         Style="{ThemeResource BaseTextBlockStyle}"    
                                         Foreground="#FFF"                                               
                                         Margin="0,0,0,0"/>
-                                    
-                                    <TextBlock 
+
+                                            <TextBlock 
                                         Text="{x:Bind DraftCategory}" 
                                         Style="{ThemeResource CaptionTextBlockStyle}" 
                                         Foreground="#FFF" 
                                         Opacity=".8" 
                                         Margin="0,0,0,0"/>
-                                    
-                                    <TextBlock 
+
+                                            <TextBlock 
                                         Text="{x:Bind DraftCreatedDate}" 
                                         Style="{ThemeResource CaptionTextBlockStyle}" 
                                         Foreground="#FFF" 
                                         Opacity=".6" 
                                         Margin="0,0,0,0"/>
-                                </StackPanel>
-                            </DataTemplate>
-                        </ListView.ItemTemplate>
-                    </ListView>
-                 
-                </StackPanel>
-                </ScrollViewer>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
 
+                        </StackPanel>
+                    </ScrollViewer>
+                </Grid>
                 <!--CONTENT EDITOR SECTION-->
-                <StackPanel 
+                <Grid x:Name="contentGrid" Grid.Row="1" Background="#F00" Grid.ColumnSpan="3" Margin="5,5,15,5">
+                    <ScrollViewer 
+                         x:Name="contentScroll"
+                         BringIntoViewOnFocusChange="True"
+                         VerticalScrollBarVisibility="Auto">
+
+                        <StackPanel 
+                            x:Name="contentEditor"
                             Grid.Column="1"                     
                             Background="#211E1E">
-                    <Grid 
+
+                            <Grid 
                                 Padding="12,8,0,0" 
                                 RelativePanel.AlignBottomWithPanel="True"
                                 RelativePanel.AlignLeftWithPanel="True"
                                 RelativePanel.AlignRightWithPanel="True"
                                 RelativePanel.Below="FullScreenEditor"                        
                                 Height="759">
-                        
-                         <!--TEXT AREA AND FORMAT BUTTONS-->
-                        <!--Fixthe the stack panel that holds the buttons -->
-                        <RelativePanel Margin="0,0,10,5" 
-                                       HorizontalAlignment="Stretch" 
-                                       Background="#FFF">
-                            <RelativePanel.Resources>
-                                    <Style 
-                                        TargetType="AppBarButton">
-                                    <Setter 
-                                        Property="IsCompact" 
-                                        Value="True"/>
-                                </Style>
-                            </RelativePanel.Resources>
-                            
-                            <!--FORMAT BUTTONS-->
-                            <StackPanel Orientation="Horizontal" 
+
+                                <!--TEXT AREA AND FORMAT BUTTONS-->
+                                <!--Fixthe the stack panel that holds the buttons -->
+                                <RelativePanel 
+                                        Margin="0,0,10,5" 
+                                        HorizontalAlignment="Stretch" 
+                                        Background="#FFF">
+                                    <RelativePanel.Resources>
+                                        <Style 
+                                            TargetType="AppBarButton">
+                                            <Setter 
+                                            Property="IsCompact" 
+                                            Value="True"/>
+                                        </Style>
+                                    </RelativePanel.Resources>
+
+                                    <!--FORMAT BUTTONS-->
+                                    <StackPanel Orientation="Horizontal" 
                                         RelativePanel.AlignLeftWithPanel="True" 
-                                        RelativePanel.AlignRightWithPanel="True"        
-                                      
+                                        RelativePanel.AlignRightWithPanel="True"                                           
                                         Background="#5F5C5C">
 
-                                <AppBarButton 
-                                    x:Name="openFileButton"   
+                                        <AppBarButton 
+                                            x:Name="openFileButton"   
                                    
-                                    Click="OpenButton_Click"
-                                    Icon="OpenFile"
-                                    ToolTipService.ToolTip="Open file" 
-                                    Margin="8,0,10,0"
-                                    Foreground="#FFF"/>
-                                
-                                <AppBarButton 
-                                    Icon="Save" 
-                                    ToolTipService.ToolTip="Save file"
-                                    Click="SaveButton_Click" 
-                                    RelativePanel.RightOf="openFileButton" 
-                                    Margin="8,0,10,0"
-                                    Foreground="#FFF"/>
+                                            Click="OpenButton_Click"
+                                            Icon="OpenFile"
+                                            ToolTipService.ToolTip="Open file" 
+                                            Margin="8,0,10,0"
+                                            Foreground="#FFF"/>
 
-                                <AppBarButton 
-                                    Icon="Bold"  
-                                    ToolTipService.ToolTip="Bold"
-                                    Click="BoldButton_Click" 
-                                    RelativePanel.LeftOf="italicButton" 
-                                    Margin="0,0,10,0"
-                                    Foreground="#FFF"/>
+                                        <AppBarButton 
+                                            Icon="Save" 
+                                            ToolTipService.ToolTip="Save file"
+                                            Click="SaveButton_Click" 
+                                            RelativePanel.RightOf="openFileButton" 
+                                            Margin="8,0,10,0"
+                                            Foreground="#FFF"/>
 
-                                <AppBarButton 
-                                    x:Name="italicButton"                                     
-                                    Icon="Italic" 
-                                    Click="ItalicButton_Click"     
-                                    ToolTipService.ToolTip="Italic" 
-                                    RelativePanel.LeftOf="underlineButton" 
-                                    Margin="0,0,10,0"
-                                    Foreground="#FFF"/>
-                                
+                                        <AppBarButton 
+                                            Icon="Bold"  
+                                            ToolTipService.ToolTip="Bold"
+                                            Click="BoldButton_Click" 
+                                            RelativePanel.LeftOf="italicButton" 
+                                            Margin="0,0,10,0"
+                                            Foreground="#FFF"/>
 
-                                    <AppBarButton 
-                                    x:Name="underlineButton" 
-                                    Icon="Underline" 
-                                    Click="UnderlineButton_Click"
-                                    ToolTipService.ToolTip="Underline" 
-                                    RelativePanel.AlignRightWithPanel="True" 
-                                    Margin="0,0,10,0"
-                                    Foreground="#FFF"/>
-                            </StackPanel>
-                    
-                            <!--RICH TEXT EDITOR-->
-                        <RichEditBox   
-                            PlaceholderText = "{x:Bind ViewModel.Saved, Mode=TwoWay}"                              
-                            IsSpellCheckEnabled="True"
-                            Margin="0,65,0,0"
-                            Name="draftEditor" 
-                            Height="700"   
-                            Background="#EFECEC"
-                            RelativePanel.AlignLeftWithPanel="True" 
-                            RelativePanel.AlignRightWithPanel="True" />
-                            <!--TextChanged="editor_TextChanged"-->
+                                        <AppBarButton 
+                                            x:Name="italicButton"                                     
+                                            Icon="Italic" 
+                                            Click="ItalicButton_Click"     
+                                            ToolTipService.ToolTip="Italic" 
+                                            RelativePanel.LeftOf="underlineButton" 
+                                            Margin="0,0,10,0"
+                                            Foreground="#FFF"/>
 
-                        </RelativePanel>
-                    </Grid>
-                </StackPanel>
-                
-                <!--DRAFT META DATA INSERTION SECTION-->
-                <StackPanel 
-                            Grid.Column="2" 
-                            Background="#2C2626"
-                            Orientation="Vertical">
-                    
-                    <StackPanel Margin="10">
+                                        <AppBarButton 
+                                            x:Name="underlineButton" 
+                                            Icon="Underline" 
+                                            Click="UnderlineButton_Click"
+                                            ToolTipService.ToolTip="Underline" 
+                                            RelativePanel.AlignRightWithPanel="True" 
+                                            Margin="0,0,10,0"
+                                            Foreground="#FFF"/>
+                                    </StackPanel>
 
-                        <TextBlock Foreground="#fff">Title</TextBlock>
-                        <TextBox Name="title"></TextBox>
+                                    <!--RICH TEXT EDITOR-->
+                                    <RichEditBox   
+                                            PlaceholderText = "{x:Bind ViewModel.Saved, Mode=TwoWay}"                              
+                                            IsSpellCheckEnabled="True"                                            
+                                            Margin="0,65,0,10"
+                                            Name="draftEditor" 
+                                            Height="700"   
+                                            Background="#EFECEC"
+                                            RelativePanel.AlignLeftWithPanel="True" 
+                                            RelativePanel.AlignRightWithPanel="True" />
+                                    <!--TextChanged="editor_TextChanged"-->
 
-                        <TextBlock Foreground="#fff">Author</TextBlock>
-                        <TextBox Name="author"></TextBox>
+                                </RelativePanel>
 
-                        <TextBlock Foreground="#fff">Image Url</TextBlock>
-                        <TextBox Name="image"></TextBox>
-                        
-                        <CalendarDatePicker 
-                        x:Name="draftCalendarDatePicker" 
-                        Header="Created date"
-                        Foreground="#FFF" />
+                            </Grid>
+                        </StackPanel>
+                    </ScrollViewer>
+                </Grid>
+                <Grid x:Name="metaDataGrid" Grid.Column="1" Grid.Row="0" Background="#0078d7" >
 
-                        <Button
-                            x:Name = "save_data"  
-                            Click="SaveButton_Click"
-                            Content = "Save New" 
-                            Margin = "10"  
-                            Width = "150" 
-                            HorizontalAlignment = "Center" 
-                            Foreground = "Gray"
-                            />
+                    <!--DRAFT META DATA INSERTION SECTION-->
+                    <StackPanel 
+                        x:Name="metaData"
+                        Grid.Column="2" 
+                        Background="#2C2626"
+                        Orientation="Vertical">
 
-                        <Button
-                            x:Name = "update_data"  
-                            Click="UpdateData"
-                            Content = "Update" 
-                            Margin = "10"  
-                            Width = "150" 
-                            HorizontalAlignment = "Center" 
-                            Foreground = "Gray"
-                            />
-                        <Button
-                            x:Name = "delete_data"  
-                            Click="DeleteData"
-                            Content = "Delete" 
-                            Margin = "10"  
-                            Width = "150" 
-                            HorizontalAlignment = "Center" 
-                            Foreground = "Gray"
-                            />
-                        <ComboBox x:Name="CategoryCombo" Header="Draft Category" Height="54" Width="240" Foreground="White" SelectedItem="Not_Specified"                                 
-                         ItemsSource="{x:Bind ViewModel.CategoryList, Mode=TwoWay}" />
-                        <!--  Command="{x:Bind ViewModel.SaveCommand}"-->
-   
+                        <StackPanel Margin="10">
+
+                            <TextBlock Foreground="#fff">Title</TextBlock>
+                            <TextBox Name="title"></TextBox>
+
+                            <TextBlock Foreground="#fff">Author</TextBlock>
+                            <TextBox Name="author"></TextBox>
+
+                            <TextBlock Foreground="#fff">Image Url</TextBlock>
+                            <TextBox Name="image"></TextBox>
+
+                            <CalendarDatePicker 
+                            x:Name="draftCalendarDatePicker" 
+                            Header="Created date"
+                            Foreground="#FFF" />
+
+                            <Button
+                                x:Name = "save_data"  
+                                Click="SaveButton_Click"
+                                Content = "Save New" 
+                                Margin = "10"  
+                                Width = "150" 
+                                HorizontalAlignment = "Center" 
+                                Foreground = "Gray"
+                                />
+
+                            <Button
+                                x:Name = "update_data"  
+                                Click="UpdateData"
+                                Content = "Update" 
+                                Margin = "10"  
+                                Width = "150" 
+                                HorizontalAlignment = "Center" 
+                                Foreground = "Gray"
+                                />
+                            <Button
+                                x:Name = "delete_data"  
+                                Click="DeleteData"
+                                Content = "Delete" 
+                                Margin = "10"  
+                                Width = "150" 
+                                HorizontalAlignment = "Center" 
+                                Foreground = "Gray"
+                                />
+                            <ComboBox x:Name="CategoryCombo" Header="Draft Category" Height="54" Width="240" Foreground="White" SelectedItem="Not_Specified"                                 
+                                 ItemsSource="{x:Bind ViewModel.CategoryList, Mode=TwoWay}" />
+                            <!--  Command="{x:Bind ViewModel.SaveCommand}"-->
+
+                        </StackPanel>
                     </StackPanel>
-                </StackPanel>
+                </Grid>
             </Grid>
         </Grid>
     </Grid>
-    
 </Page>
